@@ -60,8 +60,8 @@ public class ChapterDisplay : MonoBehaviour
             return;
         }
 
-
         Dialogue curr = dialogueQueue.Dequeue();
+
         // Carga el texto a pantalla.
         textComponent.text = curr.text;
 
