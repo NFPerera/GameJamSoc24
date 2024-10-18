@@ -26,7 +26,8 @@ public class ChapterDisplay : MonoBehaviour
 
     public void CloseChapterUI()
     {
-        if (dialogueUI.activeInHierarchy) dialogueUI.SetActive(false);
+
+        if (dialogueUI.activeInHierarchy) dialogueUI.GetComponent<DialogueDisplay>().OnDisable_();
     }
 
     public void LoadChapter(Chapter chapter)
