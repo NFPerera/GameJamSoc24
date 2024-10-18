@@ -1,8 +1,8 @@
-﻿using Bullets.Attack;
-using Bullets.Movement;
+﻿using Main.Scripts.BaseGame.ScriptableObjects.Bullets.Attack;
+using Main.Scripts.BaseGame.ScriptableObjects.Bullets.Movement;
 using UnityEngine;
 
-namespace Bullets
+namespace Main.Scripts.BaseGame.ScriptableObjects.Bullets
 {
     [CreateAssetMenu(fileName = "BulletData", menuName = "_main/Bullet/Data/BulletData", order = 0)]
     public class BulletData : ScriptableObject

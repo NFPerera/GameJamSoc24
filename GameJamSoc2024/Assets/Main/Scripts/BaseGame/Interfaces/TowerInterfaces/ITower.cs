@@ -1,4 +1,4 @@
-﻿namespace Interfaces.TowerInterfaces
+﻿namespace Main.Scripts.BaseGame.Interfaces.TowerInterfaces
 {
     public interface ITower
     {

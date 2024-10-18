@@ -1,10 +1,10 @@
-﻿using _Managers;
-using Commands;
+﻿using Main.Scripts.BaseGame._Managers;
+using Main.Scripts.BaseGame.Commands;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = System.Random;
 
-namespace Controllers
+namespace Main.Scripts.BaseGame.Controllers
 {
     public class WaveController : MonoBehaviour
     {

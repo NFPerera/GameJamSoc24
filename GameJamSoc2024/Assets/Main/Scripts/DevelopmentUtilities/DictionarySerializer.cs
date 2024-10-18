@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using _Main.Scripts.Networking;
 
-namespace _Main.Scripts.DevelopmentUtilities
+namespace Main.Scripts.DevelopmentUtilities
 {
     public class DictionarySerializer
     {

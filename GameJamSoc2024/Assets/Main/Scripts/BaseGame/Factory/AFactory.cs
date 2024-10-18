@@ -1,7 +1,7 @@
-﻿using Interfaces.FactoriesInterfaces;
+﻿using Main.Scripts.BaseGame.Interfaces.FactoriesInterfaces;
 using UnityEngine;
 
-namespace Factory
+namespace Main.Scripts.BaseGame.Factory
 {
     public class AFactory<T> : IFactory<T> where T : Object
     {

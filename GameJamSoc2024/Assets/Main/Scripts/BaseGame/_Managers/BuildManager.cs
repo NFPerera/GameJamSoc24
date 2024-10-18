@@ -1,7 +1,7 @@
-﻿using Commands;
+﻿using Main.Scripts.BaseGame.Commands;
 using UnityEngine;
 
-namespace _Managers
+namespace Main.Scripts.BaseGame._Managers
 {
     public class BuildManager : MonoBehaviour
     {

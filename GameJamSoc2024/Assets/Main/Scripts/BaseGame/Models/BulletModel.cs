@@ -1,11 +1,11 @@
-﻿using Bullets;
-using Clases;
-using Commands;
-using Interfaces.BulletsInterfaces;
-using Interfaces.EnemiesInterfaces;
+﻿using Main.Scripts.BaseGame.Clases;
+using Main.Scripts.BaseGame.Commands;
+using Main.Scripts.BaseGame.Interfaces.BulletsInterfaces;
+using Main.Scripts.BaseGame.Interfaces.EnemiesInterfaces;
+using Main.Scripts.BaseGame.ScriptableObjects.Bullets;
 using UnityEngine;
 
-namespace Models
+namespace Main.Scripts.BaseGame.Models
 {
     [RequireComponent(typeof(MovementController))]
     public class BulletModel : MonoBehaviour, IBullet

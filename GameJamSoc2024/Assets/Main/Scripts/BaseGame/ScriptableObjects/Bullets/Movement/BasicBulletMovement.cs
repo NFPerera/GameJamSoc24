@@ -1,9 +1,9 @@
-﻿using _Managers;
-using Commands;
-using Models;
+﻿using Main.Scripts.BaseGame._Managers;
+using Main.Scripts.BaseGame.Commands;
+using Main.Scripts.BaseGame.Models;
 using UnityEngine;
 
-namespace Bullets.Movement
+namespace Main.Scripts.BaseGame.ScriptableObjects.Bullets.Movement
 {
     [CreateAssetMenu(fileName = "BasicBulletMovement", menuName = "_main/Bullet/Data/Movement/BasicBulletMovement", order = 0)]
     public class BasicBulletMovement : BulletMovement

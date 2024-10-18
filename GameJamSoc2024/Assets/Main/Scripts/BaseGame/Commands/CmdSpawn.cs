@@ -1,10 +1,10 @@
-﻿using _Managers;
-using Factory;
-using Interfaces;
-using Models;
+﻿using Main.Scripts.BaseGame._Managers;
+using Main.Scripts.BaseGame.Factory;
+using Main.Scripts.BaseGame.Interfaces;
+using Main.Scripts.BaseGame.Models;
 using UnityEngine;
 
-namespace Commands
+namespace Main.Scripts.BaseGame.Commands
 {
     public class CmdSpawn : ICommando
     {

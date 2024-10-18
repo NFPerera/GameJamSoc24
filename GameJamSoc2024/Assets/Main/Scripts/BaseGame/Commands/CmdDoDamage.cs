@@ -1,7 +1,7 @@
-﻿using Interfaces;
-using Interfaces.EnemiesInterfaces;
+﻿using Main.Scripts.BaseGame.Interfaces;
+using Main.Scripts.BaseGame.Interfaces.EnemiesInterfaces;
 
-namespace Commands
+namespace Main.Scripts.BaseGame.Commands
 {
     public class CmdDoDamage : ICommando
     {

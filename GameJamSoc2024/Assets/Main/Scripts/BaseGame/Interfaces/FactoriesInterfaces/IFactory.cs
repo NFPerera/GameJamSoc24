@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Interfaces.FactoriesInterfaces
+﻿namespace Main.Scripts.BaseGame.Interfaces.FactoriesInterfaces
 {
     public interface IFactory<T>
     {

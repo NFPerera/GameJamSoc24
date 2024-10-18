@@ -1,10 +1,10 @@
-﻿using _Managers;
-using Commands;
-using Interfaces.EnemiesInterfaces;
-using Models;
+﻿using Main.Scripts.BaseGame._Managers;
+using Main.Scripts.BaseGame.Commands;
+using Main.Scripts.BaseGame.Interfaces.EnemiesInterfaces;
+using Main.Scripts.BaseGame.Models;
 using UnityEngine;
 
-namespace Bullets.Attack
+namespace Main.Scripts.BaseGame.ScriptableObjects.Bullets.Attack
 {
     [CreateAssetMenu(fileName = "BulletRocket", menuName = "_main/Bullet/Data/Attack/RocketBulletAttack", order = 0)]
     public class BulletRocket : BulletAttack

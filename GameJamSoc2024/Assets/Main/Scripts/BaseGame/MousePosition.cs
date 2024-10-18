@@ -1,21 +1,24 @@
-﻿using _Managers;
+﻿using Main.Scripts.BaseGame._Managers;
 using UnityEngine;
 
-public class MousePosition : MonoBehaviour
+namespace Main.Scripts.BaseGame
 {
-    private Vector3 _mousePosition;
-    void Update()
+    public class MousePosition : MonoBehaviour
     {
-        _mousePosition = GameManager.Instance.GetCamera().ScreenToWorldPoint(Input.mousePosition);
-        _mousePosition.z = 0f;
-        transform.position = _mousePosition;
-    }
+        private Vector3 _mousePosition;
+        void Update()
+        {
+            _mousePosition = GameManager.Instance.GetCamera().ScreenToWorldPoint(Input.mousePosition);
+            _mousePosition.z = 0f;
+            transform.position = _mousePosition;
+        }
 
 
-    public Vector3 GetMousePosition()
-    {
-        _mousePosition.z = 0f;
+        public Vector3 GetMousePosition()
+        {
+            _mousePosition.z = 0f;
             
-        return _mousePosition;
-    } 
+            return _mousePosition;
+        } 
+    }
 }

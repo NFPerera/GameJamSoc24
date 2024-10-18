@@ -1,8 +1,8 @@
-﻿using Clases;
-using Interfaces;
+﻿using Main.Scripts.BaseGame.Clases;
+using Main.Scripts.BaseGame.Interfaces;
 using UnityEngine;
 
-namespace Commands
+namespace Main.Scripts.BaseGame.Commands
 {
     public class CmdMove : ICommando
     {

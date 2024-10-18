@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Controllers;
+using Main.Scripts.BaseGame.Controllers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace _Main.Scripts.Networking
+namespace Main.Scripts
 {
     public class MasterManager : MonoBehaviour
     {

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using _Managers;
-using Clases;
-using Enemies;
-using Interfaces.EnemiesInterfaces;
+using Main.Scripts.BaseGame._Managers;
+using Main.Scripts.BaseGame.Clases;
+using Main.Scripts.BaseGame.Interfaces.EnemiesInterfaces;
+using Main.Scripts.BaseGame.ScriptableObjects.Enemies;
 using UnityEngine;
 
-namespace Models
+namespace Main.Scripts.BaseGame.Models
 {
     [RequireComponent(typeof(MovementController))]
     public class EnemyModel : MonoBehaviour, IDamageable

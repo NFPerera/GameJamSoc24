@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Clases
+namespace Main.Scripts.BaseGame.Clases
 {
     public class MovementController : MonoBehaviour
     {

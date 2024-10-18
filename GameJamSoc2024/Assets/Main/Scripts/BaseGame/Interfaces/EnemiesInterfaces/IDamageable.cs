@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Interfaces.EnemiesInterfaces
+namespace Main.Scripts.BaseGame.Interfaces.EnemiesInterfaces
 {
     public interface IDamageable
     {

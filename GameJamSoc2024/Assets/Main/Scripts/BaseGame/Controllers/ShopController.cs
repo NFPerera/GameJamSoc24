@@ -1,8 +1,8 @@
-using _Managers;
-using Models;
+using Main.Scripts.BaseGame._Managers;
+using Main.Scripts.BaseGame.Models;
 using UnityEngine;
 
-namespace Controllers
+namespace Main.Scripts.BaseGame.Controllers
 {
     public class ShopController : MonoBehaviour
     {

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Interfaces.EnemiesInterfaces;
-using Models;
+using Main.Scripts.BaseGame.Interfaces.EnemiesInterfaces;
+using Main.Scripts.BaseGame.Models;
 using UnityEngine;
 
-namespace Towers
+namespace Main.Scripts.BaseGame.ScriptableObjects.Towers
 {
     [CreateAssetMenu(fileName = "AttackInRange", menuName = "_main/Tower/Attack/Range", order = 0)]
     public class AttackInRange : TowerAttack

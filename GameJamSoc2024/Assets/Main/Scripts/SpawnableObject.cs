@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _Main.Scripts.Networking
+namespace Main.Scripts
 {
     public class SpawnableObject : MonoBehaviour
     {

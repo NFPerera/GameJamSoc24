@@ -1,4 +1,4 @@
-﻿namespace Interfaces
+﻿namespace Main.Scripts.BaseGame.Interfaces
 {
     public interface ICommando
     {

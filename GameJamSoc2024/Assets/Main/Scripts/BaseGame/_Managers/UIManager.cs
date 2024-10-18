@@ -1,10 +1,10 @@
-﻿using TMPro;
-using Towers;
+﻿using Main.Scripts.BaseGame.ScriptableObjects.Towers;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace _Managers
+namespace Main.Scripts.BaseGame._Managers
 {
     public class UIManager : MonoBehaviour
     {

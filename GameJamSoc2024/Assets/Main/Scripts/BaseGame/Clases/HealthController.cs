@@ -1,4 +1,4 @@
-﻿namespace Clases
+﻿namespace Main.Scripts.BaseGame.Clases
 {
     public class HealthController
     {

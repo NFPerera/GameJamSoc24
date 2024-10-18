@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Interfaces.BulletsInterfaces
+namespace Main.Scripts.BaseGame.Interfaces.BulletsInterfaces
 {
     public interface IBullet
     {

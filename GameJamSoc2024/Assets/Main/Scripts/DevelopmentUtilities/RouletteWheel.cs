@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace _Main.Scripts.DevelopmentUtilities
+namespace Main.Scripts.DevelopmentUtilities
 {
     public class RouletteWheel<T>
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Interfaces;
-using Interfaces.EnemiesInterfaces;
+using Main.Scripts.BaseGame.Interfaces;
+using Main.Scripts.BaseGame.Interfaces.EnemiesInterfaces;
 using UnityEngine;
 
-namespace _Managers
+namespace Main.Scripts.BaseGame._Managers
 {
     public class GameManager : MonoBehaviour
     {

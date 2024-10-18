@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Interfaces.EnemiesInterfaces;
-using Interfaces.TowerInterfaces;
-using Towers;
+using Main.Scripts.BaseGame.Interfaces.EnemiesInterfaces;
+using Main.Scripts.BaseGame.Interfaces.TowerInterfaces;
+using Main.Scripts.BaseGame.ScriptableObjects.Towers;
 using UnityEngine;
 
-namespace Models
+namespace Main.Scripts.BaseGame.Models
 {
     public class TowerModel : MonoBehaviour, ITower
     {
