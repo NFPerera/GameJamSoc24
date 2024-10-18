@@ -1,0 +1,22 @@
+.header {
+    font-size: 96px;
+    -unity-font-style: bold;
+    color: rgb(255, 206, 251);
+}
+
+.button {
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+    width: 220px;
+    height: 100px;
+    align-self: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
+}

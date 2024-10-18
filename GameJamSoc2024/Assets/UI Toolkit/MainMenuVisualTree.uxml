@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/HUDStyle.uss?fileID=7433441132597879392&amp;guid=fd3029f8c09f949c1ba6353107fc5b20&amp;type=3#HUDStyle" />
+    <ui:VisualElement name="Container" style="flex-grow: 1;">
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" class="header" />
+        <ui:Button text="Start" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Button1" class="button" />
+        <ui:Button text="Start" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Button2" class="button" />
+        <ui:Button text="Start" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Button3" class="button" />
+        <ui:Button text="Start" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Button4" class="button" />
+        <ui:Button text="Start" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Button5" class="button" />
+    </ui:VisualElement>
+</ui:UXML>
