@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7599709c0794002b1e4b03fea6088dd, type: 3}
+  m_Name: TowerDataLanzaMisiles
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Lanza Cohetes
+  <Cost>k__BackingField: 100
+  <Damage>k__BackingField: 50
+  <Range>k__BackingField: 200
+  <TowerAttack>k__BackingField: {fileID: 11400000, guid: f0a9f4b5a449b8f45a488dc66625b9a3, type: 2}
+  <BulletPrefabs>k__BackingField: {fileID: 7978137536831577102, guid: 366050ebe40025341b4ec3f32096fc1f, type: 3}
+  Speed: 0
+  description: 
