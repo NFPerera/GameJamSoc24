@@ -12,7 +12,7 @@ public struct Dialogue
 [Serializable]
 public struct Chapter
 {
-    public Texture2D char1, char2;
+    public Sprite char1, char2;
     public Dialogue[] dialogues;
 
 }

@@ -5,10 +5,14 @@ using UnityEngine;
 public class ChapterController : MonoBehaviour
 {
     public Chapter[] chapters;
+    ChapterDisplay display;
     // Start is called before the first frame update
     void Start()
     {
+        display = GetComponent<ChapterDisplay>();
 
+        // TEMP
+        display.LoadChapter(chapters[0]);
     }
 
     // Update is called once per frame
@@ -17,8 +21,13 @@ public class ChapterController : MonoBehaviour
 
     }
 
-    void StartChapter(int index)
+    public void StartChapter(int index)
     {
-        // View Chapter.
+        display.LoadChapter(chapters[index]);
+    }
+
+    public void NextDialogue()
+    {
+        display.NextDialogue();
     }
 }
