@@ -7,6 +7,7 @@ using TMPro;
 public class ChapterDisplay : MonoBehaviour
 {
     public Image leftchar, rightchar;
+    public Image background;
     public TextMeshProUGUI textComponent;
     public GameObject dialogueUI;
 
@@ -35,6 +36,9 @@ public class ChapterDisplay : MonoBehaviour
         // Pone los personajes recibidos en sus imagenes correspondientes.
         leftchar.sprite = chapter.char1;
         rightchar.sprite = chapter.char2; // Can be null. mirar por si acaso
+
+        // Pone el background recibido.
+        background.sprite = chapter.bg;
 
         // Pone en cola todos los dialogos del chapter.
         dialogueQueue.Clear();

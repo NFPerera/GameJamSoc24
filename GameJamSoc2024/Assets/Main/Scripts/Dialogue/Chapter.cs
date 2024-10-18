@@ -13,6 +13,7 @@ public struct Dialogue
 public struct Chapter
 {
     public Sprite char1, char2;
+    public Sprite bg;
     public Dialogue[] dialogues;
 
 }
