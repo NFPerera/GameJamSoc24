@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Mouse
+  - Target
+  - Wall
   layers:
   - Default
   - TransparentFX
