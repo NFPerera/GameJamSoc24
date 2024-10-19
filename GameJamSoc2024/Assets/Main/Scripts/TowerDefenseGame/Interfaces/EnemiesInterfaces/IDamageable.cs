@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Main.Scripts.TowerDefenseGame.Models;
+using UnityEngine;
 
 namespace Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces
 {
@@ -8,6 +9,6 @@ namespace Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces
         void DoDamage(int damage);
         void Heal(int healAmount);
         
-        event System.Action<IDamageable> OnDeath;
+        event System.Action<EnemyModel> OnDeath;
     }
 }

@@ -11,5 +11,6 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets
         [field: SerializeField] public float BulletLifeTime { get; private set; }
         [field: SerializeField] public BulletAttack BulletAttack { get; private set; }
         [field: SerializeField] public BulletMovement BulletMovement { get; private set; }
+        [field: SerializeField] public LayerMask TargetLayer { get; private set; }
     }
 }
