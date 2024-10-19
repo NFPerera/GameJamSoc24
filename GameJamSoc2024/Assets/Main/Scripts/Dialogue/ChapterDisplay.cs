@@ -34,8 +34,8 @@ public class ChapterDisplay : MonoBehaviour
     public void LoadChapter(Chapter chapter)
     {
         // Pone los personajes recibidos en sus imagenes correspondientes.
-        leftchar.sprite = chapter.char1;
-        rightchar.sprite = chapter.char2; // Can be null. mirar por si acaso
+        leftchar.sprite = chapter.leftChar;
+        rightchar.sprite = chapter.rightChar; // Can be null. mirar por si acaso
 
         // Pone el background recibido.
         background.sprite = chapter.bg;
@@ -65,16 +65,21 @@ public class ChapterDisplay : MonoBehaviour
         // Carga el texto a pantalla.
         textComponent.text = curr.text;
 
-        // Check is_char1, si es asi hacer opuesto mas oscuro.
-        if (curr.is_char1)
+        // Check enum con switch
+        switch (curr.speaker)
         {
-            leftchar.color = foregroundColor;
-            rightchar.color = backgroundColor;
-        }
-        else
-        {
-            leftchar.color = backgroundColor;
-            rightchar.color = foregroundColor;
+            case Dialogue.Speaker.LEFT:
+                leftchar.color = foregroundColor;
+                rightchar.color = backgroundColor;
+                break;
+            case Dialogue.Speaker.RIGHT:
+                leftchar.color = backgroundColor;
+                rightchar.color = foregroundColor;
+                break;
+            case Dialogue.Speaker.NARRATOR:
+                leftchar.color = backgroundColor;
+                rightchar.color = backgroundColor;
+                break;
         }
     }
 

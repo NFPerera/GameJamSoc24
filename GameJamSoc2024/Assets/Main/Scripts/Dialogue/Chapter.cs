@@ -1,18 +1,18 @@
 using System;
-// using Unity.VisualScripting;
 using UnityEngine;
 
 [Serializable]
 public struct Dialogue
 {
+    public enum Speaker { LEFT, RIGHT, NARRATOR };
     public string text;
-    public bool is_char1;
+    public Speaker speaker;
 }
 
 [Serializable]
 public struct Chapter
 {
-    public Sprite char1, char2;
+    public Sprite leftChar, rightChar;
     public Sprite bg;
     public Dialogue[] dialogues;
 

@@ -1380,16 +1380,44 @@ MonoBehaviour:
     char2: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
     bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
     dialogues:
-    - text: MrBeast
+    - text: "\xBFC\xF3mo andas querido primo? Hace tanto tiempo que no te veo, y
+        ahora lograste defender nuestra gran ciudad de los sucios bandidos que la
+        quieren ver arder. Es un logro no solo para Chudistan sino para nuestra misma
+        sangre."
       is_char1: 0
-    - text: Todd Howard
+    - text: Es un honor muy grande recibir semejantes bendiciones, rey Jack.
       is_char1: 1
-    - text: Nose que mierda hago
-      is_char1: 1
-    - text: Sape!
+    - text: "Es lo minimo que puedo hacer. Estoy seguro que tu familia dir\xEDa lo
+        mismo."
       is_char1: 0
-    - text: Soy vegano...
+  - char1: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+    char2: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
+    bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+    dialogues:
+    - text: "Chad! Ven\xED para ac\xE1, te tengo que decir algo importante."
+      is_char1: 0
+    - text: "Qu\xE9 pasa General, \xBFcual es el problema?"
       is_char1: 1
+    - text: "No es tanto un problema sino una oportunidad. En la \xFAltima invasi\xF3n
+        encontramos que un b\xE1rbaro sobrevivi\xF3 nuestras defensas y la pudimos
+        capturar. Se encuentra ahora mismo en nuestras c\xE1rceles."
+      is_char1: 0
+    - text: "\xBFC\xF3mo que \u201Cla\u201D capturamos? \xBFEs una mujer? "
+      is_char1: 1
+    - text: "No cualquier mujer, sospechamos que ocupaba un rol importante entre
+        ellos. Intentamos sacarle informaci\xF3n pero no abre la boca, por eso quiero
+        que en alg\xFAn momento vayas a interrogarla."
+      is_char1: 0
+    - text: "\xBFPor qu\xE9? Si tenemos gente que se dedica a extraer informaci\xF3n
+        de prisioneros."
+      is_char1: 1
+    - text: "\xBFMe est\xE1s cuestionando? De donde sacaste la confianza para desobedecer
+        a tus superiores. "
+      is_char1: 0
+    - text: "Perd\xF3n General, me descuide. Har\xE9 lo que usted diga."
+      is_char1: 1
+    - text: "M\xE1s te vale."
+      is_char1: 0
 --- !u!4 &1107827723
 Transform:
   m_ObjectHideFlags: 0
