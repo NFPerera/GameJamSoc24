@@ -22,7 +22,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
         private float m_speed;
         private int m_indexPathPoints;
 
-        public event Action<EnemyModel> OnDeath;
+        public event Action<IDamageable> OnDeath;
 
         private void Awake()
         {

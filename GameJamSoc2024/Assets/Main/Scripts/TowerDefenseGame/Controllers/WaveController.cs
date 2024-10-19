@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using Main.Scripts.DevelopmentUtilities.Pools;
 using Main.Scripts.TowerDefenseGame._Managers;
-using Main.Scripts.TowerDefenseGame.Commands;
 using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
 using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
 using UnityEngine.UI;
-using Random = System.Random;
 
 namespace Main.Scripts.TowerDefenseGame.Controllers
 {
@@ -124,7 +122,7 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
         }
 
         
-        private void OnEnemyOnDeath(EnemyModel p_obj)
+        private void OnEnemyOnDeath(IDamageable p_obj)
         {
             p_obj.OnDeath -= OnEnemyOnDeath;
             m_allEnemies.Remove(p_obj);

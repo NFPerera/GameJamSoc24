@@ -8,6 +8,7 @@ namespace Main.Scripts
 {
     public class MasterManager : MonoBehaviour
     {
+        [SerializeField] private ChapterController chapterController;
         public static MasterManager Instance => m_instance;
         private static MasterManager m_instance;
 
@@ -23,9 +24,12 @@ namespace Main.Scripts
             m_instance = this;
             
             DontDestroyOnLoad(this.gameObject);
-
         }
 
+        public void StartDialogue(string p_id)
+        {
+            chapterController.StartChapter(p_id);
+        }
             
     }
 }

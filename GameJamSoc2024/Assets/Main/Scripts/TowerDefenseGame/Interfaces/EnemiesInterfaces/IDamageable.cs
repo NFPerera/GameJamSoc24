@@ -9,6 +9,6 @@ namespace Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces
         void DoDamage(int damage);
         void Heal(int healAmount);
         
-        event System.Action<EnemyModel> OnDeath;
+        event System.Action<IDamageable> OnDeath;
     }
 }

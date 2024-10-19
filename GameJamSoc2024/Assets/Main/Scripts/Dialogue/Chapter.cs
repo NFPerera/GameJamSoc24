@@ -9,7 +9,7 @@ public struct Dialogue
     public Speaker speaker;
 }
 
-[Serializable]
+[System.Serializable]
 public struct Chapter
 {
     public Sprite leftChar, rightChar;
