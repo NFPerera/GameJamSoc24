@@ -8,6 +8,7 @@ TagManager:
   - Target
   - Wall
   - NPC
+  - Turret
   layers:
   - Default
   - TransparentFX

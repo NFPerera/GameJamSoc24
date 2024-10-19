@@ -11,11 +11,20 @@ public class WanderingCondition : Condition {
     public override bool CheckCondition() {
         Collider[] hitColliders = Physics.OverlapSphere(npc.transform.position, checkDistance);
         foreach (var hitCollider in hitColliders) {
-            npcIA otherNPC = hitCollider.GetComponent<npcIA>();
-            if (otherNPC != null && otherNPC.isAlly != npc.isAlly) {
-                return true; // Enemy nearby, switch to running
+            if (IsEnemyOrTurret(hitCollider) || IsEnemyPlayer(hitCollider)) {
+                return true; // Enemy, turret, or player nearby, switch to running
             }
         }
         return false; // No enemies nearby
+    }
+
+    private bool IsEnemyOrTurret(Collider hitCollider) {
+        npcIA otherNPC = hitCollider.GetComponent<npcIA>();
+        return otherNPC != null && (otherNPC.isAlly != npc.isAlly || hitCollider.CompareTag("Turret"));
+    }
+
+    private bool IsEnemyPlayer(Collider hitCollider) {
+        npcIA otherNPC = hitCollider.GetComponent<npcIA>();
+        return otherNPC != null && !otherNPC.isAlly && hitCollider.CompareTag("Player");
     }
 }

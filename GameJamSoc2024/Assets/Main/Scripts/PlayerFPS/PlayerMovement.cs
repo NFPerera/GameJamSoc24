@@ -4,66 +4,76 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float walkSpeed = 6f;
+    public float sprintSpeed = 12f;
+    public float jumpForce = 8f;
+    public float gravity = -20f;  // Increased gravity for quicker fall
+    public float groundCheckDistance = 0.4f;
+
     private CharacterController controller;
-        public float speed = 12f;
-    public float gravity = -9.81f;
-    public float jumpHeight = 3f;
+    private Vector3 velocity;
+    private bool isGrounded;
 
-    public Transform groundCheck;
-    public float groundDistance = 0.4f;
     public LayerMask groundMask;
+    public Transform groundCheck;
 
-    Vector3 velocity;
-    bool isGrounded;
-    bool isMoving;
-    private Vector3 lastPosition = new Vector3(0f,0f,0f);
-
-
-    // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        // Check if the player is grounded
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckDistance, groundMask);
 
+        // Reset velocity when grounded to ensure constant contact with the ground
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        // Handle movement
+        Move();
 
-        Vector3 move = transform.right * x + transform.forward * z;
-
-        controller.Move(speed * Time.deltaTime * move);
-
+        // Handle jumping
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            Jump();
         }
 
-        velocity.y += gravity * Time.deltaTime;
+        // Apply gravity each frame
+        ApplyGravity();
 
+        // Apply the velocity to the CharacterController
         controller.Move(velocity * Time.deltaTime);
+    }
 
-        if (lastPosition != transform.position)
-        {
-            isMoving = true;
-        }
-        else
-        {
-            isMoving = false;
-        }
+    void Move()
+    {
+        // Get input for movement (WASD / arrow keys)
+        float moveX = Input.GetAxis("Horizontal");
+        float moveZ = Input.GetAxis("Vertical");
 
-        lastPosition = transform.position;
+        // Create a movement direction vector
+        Vector3 moveDirection = transform.right * moveX + transform.forward * moveZ;
 
-        
+        // Check for sprinting input
+        float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed;
 
+        // Move the player based on the current speed
+        controller.Move(moveDirection * currentSpeed * Time.deltaTime);
+    }
 
+    void Jump()
+    {
+        // Apply jump force
+        velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+    }
+
+    void ApplyGravity()
+    {
+        // Apply gravity force over time
+        velocity.y += gravity * Time.deltaTime;
     }
 }

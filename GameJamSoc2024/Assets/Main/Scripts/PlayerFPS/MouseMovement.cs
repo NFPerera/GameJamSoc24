@@ -1,23 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MouseMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
     public float mouseSensivity = 800f;
 
-    float xRotation = 0f;
-    float yRotation = 0f;
+    private float xRotation = 0f;
+    private float yRotation = 0f;
 
     public float topClamp = -90f;
     public float bottomClamp = 90f;
+
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensivity * Time.deltaTime;
