@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Numerics;
+using Main.Scripts.DevelopmentUtilities.Extensions;
 using Main.Scripts.TowerDefenseGame.Interfaces.BulletsInterfaces;
 using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
 using Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets;
@@ -42,7 +43,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
             {
                 data.BulletMovement.Move(this);
             }
-            else Destroy(gameObject);
+            //else Destroy(gameObject);
 
             m_lifeTime -= Time.deltaTime;
             if(m_lifeTime <= 0f)
@@ -55,7 +56,18 @@ namespace Main.Scripts.TowerDefenseGame.Models
         }
         private void OnTriggerEnter(Collider p_col)
         {
-            if (!p_col.TryGetComponent(out IDamageable l_damageable)) return;
+
+            if (!p_col.TryGetComponent(out IDamageable l_damageable))
+            {
+                Debug.Log($"Le pegue a allgo");
+                if (data.TargetLayer.Includes(p_col.gameObject.layer))
+                {
+                    Debug.Log($"LE PEGUE ALL PISO");
+                    data.BulletAttack.Attack(this);
+                    m_reachTarget = true;
+                }
+                return;
+            }
 
             if (!m_reachTarget)
             {

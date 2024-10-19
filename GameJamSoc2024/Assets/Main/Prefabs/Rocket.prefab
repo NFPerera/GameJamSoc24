@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7978137536831577102}
   - component: {fileID: 954022746097081328}
   - component: {fileID: 585857019947094876}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 6112055712023755505}
   - component: {fileID: 3304232211261745689}
   - component: {fileID: 4624933549496434505}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

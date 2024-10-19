@@ -8,12 +8,17 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Movement
     public class ParableBulletMovement : BulletMovement
     {
         [SerializeField] private float force;
-        private float gravity = 9.81f; // Gravity constant
+        
+        [SerializeField] private float timer;
         private class MovementData
         {
             public Vector3 StartPos;
             public Transform TargetTransform;
             public Vector3 InitVel;
+
+            public float currentTime;
+
+            public Rigidbody rb;
         }
 
         private Dictionary<BulletModel, MovementData> m_dictionary = new Dictionary<BulletModel, MovementData>();
@@ -24,38 +29,32 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Movement
             m_dictionary[p_model].StartPos = p_model.transform.position;
             
             m_dictionary[p_model].TargetTransform = p_model.GetTargetTransform();
-            CalculateVelocity(m_dictionary[p_model].TargetTransform.position, p_model);
+
+            m_dictionary[p_model].currentTime= timer;
+
             
 
             if (p_model.TryGetComponent<Rigidbody>(out var rb))
             {
-                rb.velocity = m_dictionary[p_model].InitVel;
+                m_dictionary[p_model].rb = rb;
+                rb.velocity = Vector3.up*force;                
             }
         }
         
-        void CalculateVelocity(Vector3 p_targetPos, BulletModel p_model)
-        {
-            Vector3 l_direction = p_targetPos - m_dictionary[p_model].StartPos;
-
-            // Separate direction into XZ (horizontal) and Y (vertical) components
-            Vector3 l_directionXZ = new Vector3(l_direction.x, 0, l_direction.z);
-            float l_distanceXZ = l_directionXZ.magnitude;
-            float l_heightDifference = l_direction.y;
-            
-
-            // Solve the quadratic equation for time based on vertical motion
-            float l_velocityXZ = force;
-            float l_time = l_distanceXZ / l_velocityXZ;
-            
-            // Use the flight time to calculate the vertical velocity needed to reach the target
-            float l_velocityY = gravity*l_time/2 + l_heightDifference/l_time;
-
-            // Save the initial velocities and flight time
-            m_dictionary[p_model].InitVel = new Vector3(l_directionXZ.normalized.x * l_velocityXZ, l_velocityY, l_directionXZ.normalized.z * l_velocityXZ);
-        }
-
         public override void Move(BulletModel p_model)
         {
+            
+            m_dictionary[p_model].currentTime -= Time.deltaTime;
+            if (m_dictionary[p_model].currentTime <= 0)
+            {
+                if (m_dictionary[p_model].rb.velocity.y > 0){
+                    m_dictionary[p_model].rb.velocity = Vector3.zero;
+                }
+                Vector3 l_targetPosition = m_dictionary[p_model].TargetTransform.position;
+                p_model.transform.position  = new Vector3(l_targetPosition.x, p_model.transform.position.y,l_targetPosition.z);
+            }
+
+            
         }
 
         public override void OnReachTarget(BulletModel p_model)

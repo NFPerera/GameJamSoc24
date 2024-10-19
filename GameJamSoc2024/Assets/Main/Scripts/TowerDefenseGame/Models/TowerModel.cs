@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
 using Main.Scripts.TowerDefenseGame.Interfaces.TowerInterfaces;
 using Main.Scripts.TowerDefenseGame.ScriptableObjects.Towers;
@@ -12,20 +13,30 @@ namespace Main.Scripts.TowerDefenseGame.Models
         [SerializeField] private Transform shootPoint;
         [SerializeField] private GameObject pivot;
 
+        [SerializeField] private bool userControlled;
+ 
         private List<IDamageable> m_enemiesInRange = new List<IDamageable>();
         private float m_timer;
+
+        private Vector3 m_targetPos;
 
         private void Start()
         {
             var trigger = GetComponent<SphereCollider>();
-
-            trigger.radius = data.Range;
+            if (userControlled)
+            {
+                m_targetPos = new Vector3(0, 0, 0);
+                trigger.radius = float.MaxValue;
+            }else{
+                
+                trigger.radius = data.Range;
+            }
         }
 
         private void Update()
         {
             m_timer += Time.deltaTime;
-            if(m_enemiesInRange.Count > 0 && m_enemiesInRange[0] != null)
+             if(!userControlled && m_enemiesInRange.Count > 0 && m_enemiesInRange[0] != null)
                 ChangeAimDir(m_enemiesInRange[0].GetTransform().position);
             
             if (m_timer >= data.AttackSpeed)
@@ -49,7 +60,14 @@ namespace Main.Scripts.TowerDefenseGame.Models
             if (!p_col.TryGetComponent(out IDamageable l_damageable)) return;
             
             m_enemiesInRange.Add(l_damageable);
+            l_damageable.OnDeath += HandleEnemyDeath;
         }
+
+        private void HandleEnemyDeath(IDamageable enemy)
+        {
+            m_enemiesInRange.Remove(enemy);
+        }
+
         private void OnTriggerExit(Collider p_other)
         {
             if (!p_other.TryGetComponent(out IDamageable l_damageable)) return;
@@ -61,6 +79,8 @@ namespace Main.Scripts.TowerDefenseGame.Models
             public TowerData GetData() => data;
             public List<IDamageable> GetEnemiesInRange() => m_enemiesInRange;
             public Transform GetShootPoint() => shootPoint;
+
+            
 
         #endregion
     }
