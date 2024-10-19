@@ -30,28 +30,18 @@ namespace Main.Scripts
             // Calculate initial velocity for reaching the target
             CalculateVelocity(targetTransform.position);
             timeElapsed = 0f;
-        }
 
-        private void Update()
-        {
-            Move();
+            if (TryGetComponent<Rigidbody>(out var rb))
+            {
+                rb.velocity = InitVel;
+            }
+            
         }
 
 
         public float Speed;
         private float timeElapsed;
         private float FlightTime;
-        public void Move()
-        {
-            timeElapsed += Time.deltaTime;
-            
-            // Calculate current position of the projectile
-            Vector3 currentPosition = CalculateProjectilePosition(timeElapsed);
-            
-            
-
-            transform.position += currentPosition * Speed * Time.deltaTime;
-        }
 
         public Vector3 InitVel;
         // Calculate initial velocity to reach the target
@@ -63,31 +53,21 @@ namespace Main.Scripts
             Vector3 directionXZ = new Vector3(direction.x, 0, direction.z);
             float distanceXZ = directionXZ.magnitude;
             float heightDifference = direction.y;
+            print(heightDifference);
+            print(distanceXZ);
+            
 
             // Solve the quadratic equation for time based on vertical motion
             float velocityXZ = Speed;
             float time = distanceXZ / velocityXZ;
-
+            print("flighttime:"+  time);       
             // Use the flight time to calculate the vertical velocity needed to reach the target
-            float velocityY = (heightDifference + 0.5f * gravity * time * time) / time;
+            float velocityY = gravity*time/2;
 
             // Save the initial velocities and flight time
             InitVel = new Vector3(directionXZ.normalized.x * velocityXZ, velocityY, directionXZ.normalized.z * velocityXZ);
             FlightTime = time;
         }
 
-        // Calculate projectile position based on elapsed time
-        Vector3 CalculateProjectilePosition(float time)
-        {
-            Vector3 initialPos = InitPos;
-            Vector3 initialVel = InitVel;
-
-            // Parabolic motion equations
-            float x = initialPos.x + initialVel.x * time;
-            float z = initialPos.z + initialVel.z * time;
-            float y = initialPos.y + initialVel.y * time - 0.5f * gravity * time * time;
-
-            return new Vector3(x, y, z);
-        }
     }
 }
