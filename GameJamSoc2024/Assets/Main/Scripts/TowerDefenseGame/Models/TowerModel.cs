@@ -25,7 +25,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
         private void Update()
         {
             m_timer += Time.deltaTime;
-            if(m_enemiesInRange.Count > 0)
+            if(m_enemiesInRange.Count > 0 && m_enemiesInRange[0] != null)
                 ChangeAimDir(m_enemiesInRange[0].GetTransform().position);
             
             if (m_timer >= data.AttackSpeed)
