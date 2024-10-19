@@ -1,6 +1,10 @@
-﻿using Main.Scripts.DevelopmentUtilities.Pools;
+﻿using System;
+using System.Collections.Generic;
+using Main.Scripts.DevelopmentUtilities.Pools;
 using Main.Scripts.TowerDefenseGame._Managers;
 using Main.Scripts.TowerDefenseGame.Commands;
+using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
+using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = System.Random;
@@ -9,6 +13,13 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
 {
     public class WaveController : MonoBehaviour
     {
+        
+        [System.Serializable]
+        public class Level
+        {
+            public Wave[] Waves;
+        }
+        
         [System.Serializable]
         public class Wave
         {
@@ -17,25 +28,37 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
             public float countDownBetweenEnemies;
         }
 
-        [SerializeField] private Wave[] waves;
+        [SerializeField] private Level[] levels;
+        private int m_levelId;
+        private Level m_currLevel;
         private int m_nextWave;
         private int m_spawnedEnemies;
         private float m_timer;
         private bool m_isWaveActive;
+        private bool m_isLevelFinished;
         
         [SerializeField] private Transform spawnPoint;
         [SerializeField] private Button waveButton;
 
         private PoolGeneric<GameObject> m_pool;
         private UIManager m_ui;
+        
+        public event Action OnLevelFinished;
         private void Awake()
         {
+            m_isLevelFinished = false;
             m_ui = GetComponent<UIManager>();
+            m_levelId = 0;
+            m_currLevel = levels[m_levelId];
         }
 
         private void Update()
         {
-            if (m_nextWave < waves.Length)
+            if(m_levelId > levels.Length)
+                return;
+            
+            
+            if (m_nextWave < m_currLevel.Waves.Length)
             {
                 if (m_isWaveActive)
                 {
@@ -43,12 +66,13 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
                 }
                 else
                 {
-                    m_timer = waves[m_nextWave].countDownBetweenEnemies;
+                    m_timer = m_currLevel.Waves[m_nextWave].countDownBetweenEnemies;
                     m_spawnedEnemies = 0;
                 }
             }
             else
             {
+                //Final cut and load scene
                 m_ui.ActivateGameOverScreen(true);
             }
         }
