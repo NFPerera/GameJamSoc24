@@ -6,7 +6,8 @@ using UnityEngine;
 public class DialogueDisplay : MonoBehaviour
 {
     Animation animator;
-    void OnEnable()
+    
+    public void PlayAnim()
     {
         animator = GetComponent<Animation>();
         animator.Play("DialogueDisplayOnEnable");
