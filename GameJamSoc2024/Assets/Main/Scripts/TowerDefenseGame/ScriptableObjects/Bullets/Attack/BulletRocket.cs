@@ -15,7 +15,8 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Attack
         {
             if (model.GetTargetTransform() != null)
             {
-                GameManager.Instance.AddEventQueue(new CmdDoDamage(model.GetTargetIDamageable(), model.GetDamage()));
+                if(model.GetTargetIDamageable() != null)
+                    GameManager.Instance.AddEventQueue(new CmdDoDamage(model.GetTargetIDamageable(), model.GetDamage()));
                 
                 var l_count = Physics.OverlapSphereNonAlloc(model.transform.position, 3, m_overlapResults, enemyLayer);
 
@@ -28,7 +29,7 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Attack
                         GameManager.Instance.AddEventQueue(new CmdDoDamage(damageable, model.GetDamage()));
                     }
                 }
-            
+                Debug.Log($"Pumba");
                 Destroy(model.gameObject);
             }
             else
