@@ -62,7 +62,7 @@ namespace Main.Scripts
             float time = distanceXZ / velocityXZ;
             print("flighttime:"+  time);       
             // Use the flight time to calculate the vertical velocity needed to reach the target
-            float velocityY = gravity*time/2;
+            float velocityY = gravity*time/2 + heightDifference/time;
 
             // Save the initial velocities and flight time
             InitVel = new Vector3(directionXZ.normalized.x * velocityXZ, velocityY, directionXZ.normalized.z * velocityXZ);
