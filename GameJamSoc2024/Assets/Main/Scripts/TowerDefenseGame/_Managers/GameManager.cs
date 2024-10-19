@@ -70,6 +70,17 @@ namespace Main.Scripts.TowerDefenseGame._Managers
             }
         }
 
+        public void SpawnBullet(Transform p_target, int p_damage, float p_lifeTime)
+        {
+            
+            
+        }
+
+        private void ReturnBulletToPool(BulletModel p_model)
+        {
+            
+        }
+
         #region Facade
 
             public void AddEventQueue(ICommando p_commando) => m_events.Add(p_commando);

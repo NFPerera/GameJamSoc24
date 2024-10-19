@@ -11,7 +11,7 @@ namespace Main.Scripts
         public static MasterManager Instance => m_instance;
         private static MasterManager m_instance;
 
-        public event Action OnLevelFinished;
+        
         private void Awake()
         {
             if (m_instance != null && m_instance != this)
