@@ -37,11 +37,7 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
         {
             if (m_nextWave < waves.Length)
             {
-                if (m_nextWave == waves.Length - 1)
-                {
-                    SpawnFinalWave();
-                }
-                else if (m_isWaveActive)
+                if (m_isWaveActive)
                 {
                     SpawnWave();
                 }
@@ -57,21 +53,45 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
             }
         }
 
+        private void FinishLevel()
+        {
+            if (m_levelId < levels.Length - 1)
+            {
+                m_levelId++;
+                m_currLevel = levels[m_levelId];
+                m_nextWave = 0;
+                OnLevelFinished?.Invoke();
+                
+            }
+            else
+            {
+                
+                //Final cut and load scene
+            }
+                
+        }
+
+        private List<IDamageable> m_allEnemies = new List<IDamageable>();
         private void SpawnWave()
         {
+            m_isLevelFinished = false;
+            m_isWaveActive = true;
             m_timer -= Time.deltaTime;
             
             if (m_timer <= 0)
             {
-                Random l_rnd = new Random();
-                //var aux = rnd.Next(0, 3);
+                var enemie = Instantiate(m_currLevel.Waves[m_nextWave].enemy[0], spawnPoint.position,
+                    Quaternion.identity);
+                var model = enemie.GetComponent<EnemyModel>();
                 
-                GameManager.Instance.AddEventQueue(new CmdSpawn(waves[m_nextWave].enemy[0], spawnPoint.position));
-                m_timer = waves[m_nextWave].countDownBetweenEnemies;
+                model.OnDeath += OnEnemyOnDeath;
+                m_allEnemies.Add(model);
+                //GameManager.Instance.AddEventQueue(new CmdSpawn(m_currLevel.Waves[m_nextWave].enemy[0], spawnPoint.position));
+                m_timer = m_currLevel.Waves[m_nextWave].countDownBetweenEnemies;
                 m_spawnedEnemies++;
             }
 
-            if (m_spawnedEnemies > waves[m_nextWave].numberOfEnemies)
+            if (m_spawnedEnemies > m_currLevel.Waves[m_nextWave].numberOfEnemies)
             {
                 waveButton.interactable = true;
                 m_nextWave++;
@@ -79,27 +99,47 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
             }
         }
 
-        private void SpawnFinalWave()
+        
+        private void OnEnemyOnDeath(EnemyModel p_obj)
         {
+            p_obj.OnDeath -= OnEnemyOnDeath;
+            m_allEnemies.Remove(p_obj);
+
+            if (m_allEnemies.Count <= 0)
+                FinishLevel();
+        }
+
+        private void SpawnFinalLevelWave()
+        {
+            Debug.Log($"Final wave");
+            m_isLevelFinished = false;
+            m_isWaveActive = true;
+            
             m_timer -= Time.deltaTime;
             
             if (m_timer <= 0)
             {
-                Random l_rnd = new Random();
-                var l_aux = l_rnd.Next(0, 4);
+                var enemie = Instantiate(m_currLevel.Waves[m_nextWave].enemy[0], spawnPoint.position,
+                    Quaternion.identity);
+                var model = enemie.GetComponent<EnemyModel>();
                 
-                GameManager.Instance.AddEventQueue(new CmdSpawn(waves[m_nextWave].enemy[l_aux], spawnPoint.position));
-                m_timer = waves[m_nextWave].countDownBetweenEnemies;
+                model.OnDeath += OnEnemyOnDeath;
+                m_allEnemies.Add(model);
+                
+                //GameManager.Instance.AddEventQueue(new CmdSpawn(m_currLevel.Waves[m_nextWave].enemy[0], spawnPoint.position));
+                m_timer = m_currLevel.Waves[m_nextWave].countDownBetweenEnemies;
                 m_spawnedEnemies++;
             }
 
-            if (m_spawnedEnemies > waves[m_nextWave].numberOfEnemies)
+            if (m_spawnedEnemies > m_currLevel.Waves[m_nextWave].numberOfEnemies) 
             {
                 waveButton.interactable = true;
                 m_nextWave++;
                 m_isWaveActive = false;
+                m_isLevelFinished = true;
             }
         }
+
         public void ActivateWave() => m_isWaveActive = true;
     }
 }

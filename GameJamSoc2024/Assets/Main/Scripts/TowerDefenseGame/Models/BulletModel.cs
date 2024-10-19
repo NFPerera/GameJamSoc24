@@ -59,10 +59,8 @@ namespace Main.Scripts.TowerDefenseGame.Models
 
             if (!p_col.TryGetComponent(out IDamageable l_damageable))
             {
-                Debug.Log($"Le pegue a allgo");
                 if (data.TargetLayer.Includes(p_col.gameObject.layer))
                 {
-                    Debug.Log($"LE PEGUE ALL PISO");
                     data.BulletAttack.Attack(this);
                     m_reachTarget = true;
                 }
