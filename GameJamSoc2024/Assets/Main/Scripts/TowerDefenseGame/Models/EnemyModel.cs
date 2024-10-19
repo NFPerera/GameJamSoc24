@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Main.Scripts.TowerDefenseGame._Managers;
 using Main.Scripts.TowerDefenseGame.Clases;
 using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
@@ -20,6 +21,8 @@ namespace Main.Scripts.TowerDefenseGame.Models
         private List<Transform> m_pathPoints;
         private float m_speed;
         private int m_indexPathPoints;
+
+        public event Action<IDamageable> OnDeath;
 
         private void Awake()
         {
@@ -98,6 +101,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
         private void OnDie()
         {
             GameManager.Instance.OnChangeMoney.Invoke(10);
+            OnDeath?.Invoke(this);
             Destroy(gameObject);
         }
     }

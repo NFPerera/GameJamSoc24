@@ -7,5 +7,7 @@ namespace Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces
         Transform GetTransform();
         void DoDamage(int damage);
         void Heal(int healAmount);
+        
+        event System.Action<IDamageable> OnDeath;
     }
 }

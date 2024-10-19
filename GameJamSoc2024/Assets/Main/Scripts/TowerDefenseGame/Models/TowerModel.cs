@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
 using Main.Scripts.TowerDefenseGame.Interfaces.TowerInterfaces;
 using Main.Scripts.TowerDefenseGame.ScriptableObjects.Towers;
@@ -49,7 +50,14 @@ namespace Main.Scripts.TowerDefenseGame.Models
             if (!p_col.TryGetComponent(out IDamageable l_damageable)) return;
             
             m_enemiesInRange.Add(l_damageable);
+            l_damageable.OnDeath += HandleEnemyDeath;
         }
+
+        private void HandleEnemyDeath(IDamageable enemy)
+        {
+            m_enemiesInRange.Remove(enemy);
+        }
+
         private void OnTriggerExit(Collider p_other)
         {
             if (!p_other.TryGetComponent(out IDamageable l_damageable)) return;
