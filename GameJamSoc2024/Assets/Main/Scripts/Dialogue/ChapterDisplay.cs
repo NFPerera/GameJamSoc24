@@ -48,7 +48,9 @@ public class ChapterDisplay : MonoBehaviour
     {
         // Pone los personajes recibidos en sus imagenes correspondientes.
         leftchar.sprite = chapter.leftChar;
-        rightchar.sprite = chapter.rightChar; // Can be null. mirar por si acaso
+        rightchar.sprite = chapter.rightChar;
+
+        if (!rightchar.sprite) rightchar.color = new(0, 0, 0, 0);
 
         // Pone el background recibido.
         background.sprite = chapter.bg;
@@ -78,6 +80,7 @@ public class ChapterDisplay : MonoBehaviour
         // Limpia el texto anterior
         if (is_running) StopCoroutine(currDialogueCoroutine);
         textComponent.text = "";
+
         // Carga el texto a pantalla.
         if (instantText) textComponent.text = curr.text;
         else currDialogueCoroutine = StartCoroutine(DisplayText(curr.text));
@@ -87,15 +90,15 @@ public class ChapterDisplay : MonoBehaviour
         {
             case Dialogue.Speaker.LEFT:
                 leftchar.color = foregroundColor;
-                rightchar.color = backgroundColor;
+                if (rightchar.sprite) rightchar.color = backgroundColor;
                 break;
             case Dialogue.Speaker.RIGHT:
                 leftchar.color = backgroundColor;
-                rightchar.color = foregroundColor;
+                if (rightchar.sprite) rightchar.color = foregroundColor;
                 break;
             case Dialogue.Speaker.NARRATOR:
                 leftchar.color = backgroundColor;
-                rightchar.color = backgroundColor;
+                if (rightchar.sprite) rightchar.color = backgroundColor;
                 break;
         }
     }
