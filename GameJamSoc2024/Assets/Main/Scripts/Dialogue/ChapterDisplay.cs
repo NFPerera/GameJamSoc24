@@ -6,14 +6,27 @@ using TMPro;
 
 public class ChapterDisplay : MonoBehaviour
 {
-    public Image leftchar, rightchar;
+    [Header("Components")]
     public Image background;
+    public Image leftchar, rightchar;
     public TextMeshProUGUI textComponent;
     public GameObject dialogueUI;
 
-    Queue<Dialogue> dialogueQueue;
+    [Header("Lighting")]
+    public Color foregroundColor;
+    public Color backgroundColor;
 
-    public Color foregroundColor, backgroundColor;
+    [Header("Text")]
+    public bool instantText;
+    public float textSpeed;
+
+
+    // Dialogue vars
+    Queue<Dialogue> dialogueQueue;
+    Coroutine currDialogueCoroutine;
+    bool is_running;
+
+
 
     void Start()
     {
@@ -34,8 +47,10 @@ public class ChapterDisplay : MonoBehaviour
     public void LoadChapter(Chapter chapter)
     {
         // Pone los personajes recibidos en sus imagenes correspondientes.
-        leftchar.sprite = chapter.char1;
-        rightchar.sprite = chapter.char2; // Can be null. mirar por si acaso
+        leftchar.sprite = chapter.leftChar;
+        rightchar.sprite = chapter.rightChar;
+
+        if (!rightchar.sprite) rightchar.color = new(0, 0, 0, 0);
 
         // Pone el background recibido.
         background.sprite = chapter.bg;
@@ -62,20 +77,41 @@ public class ChapterDisplay : MonoBehaviour
 
         Dialogue curr = dialogueQueue.Dequeue();
 
-        // Carga el texto a pantalla.
-        textComponent.text = curr.text;
+        // Limpia el texto anterior
+        if (is_running) StopCoroutine(currDialogueCoroutine);
+        textComponent.text = "";
 
-        // Check is_char1, si es asi hacer opuesto mas oscuro.
-        if (curr.is_char1)
+        // Carga el texto a pantalla.
+        if (instantText) textComponent.text = curr.text;
+        else currDialogueCoroutine = StartCoroutine(DisplayText(curr.text));
+
+        // Check enum con switch
+        switch (curr.speaker)
         {
-            leftchar.color = foregroundColor;
-            rightchar.color = backgroundColor;
+            case Dialogue.Speaker.LEFT:
+                leftchar.color = foregroundColor;
+                if (rightchar.sprite) rightchar.color = backgroundColor;
+                break;
+            case Dialogue.Speaker.RIGHT:
+                leftchar.color = backgroundColor;
+                if (rightchar.sprite) rightchar.color = foregroundColor;
+                break;
+            case Dialogue.Speaker.NARRATOR:
+                leftchar.color = backgroundColor;
+                if (rightchar.sprite) rightchar.color = backgroundColor;
+                break;
         }
-        else
+    }
+
+    IEnumerator DisplayText(string text)
+    {
+        is_running = true;
+        foreach (char c in text.ToCharArray())
         {
-            leftchar.color = backgroundColor;
-            rightchar.color = foregroundColor;
+            textComponent.text += c;
+            yield return new WaitForSeconds(1 / textSpeed);
         }
+        is_running = false;
     }
 
 }
