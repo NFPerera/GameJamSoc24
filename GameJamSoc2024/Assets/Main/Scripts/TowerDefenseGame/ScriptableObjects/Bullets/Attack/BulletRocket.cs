@@ -29,7 +29,7 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Attack
                         GameManager.Instance.AddEventQueue(new CmdDoDamage(damageable, model.GetDamage()));
                     }
                 }
-                Debug.Log($"Pumba");
+                
                 Destroy(model.gameObject);
             }
             else

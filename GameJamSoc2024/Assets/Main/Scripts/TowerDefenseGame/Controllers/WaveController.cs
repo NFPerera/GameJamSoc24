@@ -58,11 +58,7 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
             
             if (m_nextWave < m_currLevel.Waves.Length)
             {
-                if (m_nextWave == m_currLevel.Waves.Length - 1)
-                {
-                    SpawnFinalLevelWave();
-                }
-                else if (m_isWaveActive)
+                if (m_isWaveActive)
                 {
                     SpawnWave();
                 }
@@ -77,24 +73,21 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
                 //Final cut and load scene
                 m_ui.ActivateGameOverScreen(true);
             }
-            
-            
-            if(m_allEnemies.Count <= 0 && !m_isWaveActive && m_isLevelFinished)
-                FinishLevel();
         }
 
         private void FinishLevel()
         {
-            Debug.Log($"TERMINASTE EL NIVEL {m_levelId}");
             if (m_levelId < levels.Length - 1)
             {
                 m_levelId++;
                 m_currLevel = levels[m_levelId];
                 m_nextWave = 0;
                 OnLevelFinished?.Invoke();
+                
             }
             else
             {
+                
                 //Final cut and load scene
             }
                 
@@ -104,6 +97,7 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
         private void SpawnWave()
         {
             m_isLevelFinished = false;
+            m_isWaveActive = true;
             m_timer -= Time.deltaTime;
             
             if (m_timer <= 0)
@@ -127,14 +121,22 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
             }
         }
 
-        private void OnEnemyOnDeath(IDamageable p_obj)
+        
+        private void OnEnemyOnDeath(EnemyModel p_obj)
         {
+            p_obj.OnDeath -= OnEnemyOnDeath;
             m_allEnemies.Remove(p_obj);
+
+            if (m_allEnemies.Count <= 0)
+                FinishLevel();
         }
 
         private void SpawnFinalLevelWave()
         {
             Debug.Log($"Final wave");
+            m_isLevelFinished = false;
+            m_isWaveActive = true;
+            
             m_timer -= Time.deltaTime;
             
             if (m_timer <= 0)
@@ -151,7 +153,7 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
                 m_spawnedEnemies++;
             }
 
-            if (m_spawnedEnemies > m_currLevel.Waves[m_nextWave].numberOfEnemies)
+            if (m_spawnedEnemies > m_currLevel.Waves[m_nextWave].numberOfEnemies) 
             {
                 waveButton.interactable = true;
                 m_nextWave++;
