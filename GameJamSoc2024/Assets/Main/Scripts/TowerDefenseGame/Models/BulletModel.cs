@@ -1,66 +1,76 @@
-﻿using Main.Scripts.BaseGame.Clases;
-using Main.Scripts.BaseGame.Commands;
-using Main.Scripts.BaseGame.Interfaces.BulletsInterfaces;
-using Main.Scripts.BaseGame.Interfaces.EnemiesInterfaces;
-using Main.Scripts.BaseGame.ScriptableObjects.Bullets;
+﻿using System;
+using System.Numerics;
+using Main.Scripts.TowerDefenseGame.Interfaces.BulletsInterfaces;
+using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
+using Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
-namespace Main.Scripts.BaseGame.Models
+namespace Main.Scripts.TowerDefenseGame.Models
 {
-    [RequireComponent(typeof(MovementController))]
     public class BulletModel : MonoBehaviour, IBullet
     {
         [SerializeField] private BulletData data;
 
-        private Transform _target;
-        private IDamageable _targetDamageable;
-        private MovementController _movementController;
-        private CmdMove _cmdMove;
-        private int _damage;
-        private bool _reachTarget;
+        private Transform m_target;
+        public Vector3 InitPos { get; private set; }
+        private IDamageable m_targetDamageable;
+        private int m_damage;
+        private bool m_reachTarget;
+        private float m_lifeTime;
 
         public BulletData GetData() => data;
-        public void InitializeBullet(Transform target, int damage)
+        public void InitializeBullet(Transform p_target, int p_damage, float p_lifeTime, Vector3 p_initPos)
         {
-            _damage = damage;
-            _target = target;
-            _reachTarget = false;
-
-            _movementController = gameObject.GetComponent<MovementController>();
-            _movementController.SetSpeed(data.Speed);
-
-            var dir = (_target.position - transform.position).normalized;
-            _cmdMove = new CmdMove(_movementController, dir);
+            InitPos = p_initPos;
+            m_damage = p_damage;
+            m_target = p_target;
+            m_lifeTime = p_lifeTime;
+            m_reachTarget = false;
+            
+            data.BulletMovement.Initialize(this);
         }
+
+        private void OnDestroy()
+        {
+            data.BulletMovement.OnReachTarget(this);
+        }
+
         private void Update()
         {
-            if (!_reachTarget && _target != null)
+            if (!m_reachTarget && m_target != null)
             {
-                _cmdMove.Execute();
-                //GameManager.Instance.AddEventQueue(_cmdMove);
+                data.BulletMovement.Move(this);
             }
             else Destroy(gameObject);
+
+            m_lifeTime -= Time.deltaTime;
+            if(m_lifeTime <= 0f)
+                Destroy(gameObject);
         }
 
-        private void OnTriggerEnter2D(Collider2D col)
+        public void Move(Vector3 p_dir, float p_speed)
         {
-            if (!col.TryGetComponent(out IDamageable damageable)) return;
+            transform.position += p_dir * (p_speed * Time.deltaTime);
+        }
+        private void OnTriggerEnter(Collider p_col)
+        {
+            if (!p_col.TryGetComponent(out IDamageable l_damageable)) return;
 
-            if (!_reachTarget)
+            if (!m_reachTarget)
             {
-                SetTargetDamageable(damageable);
+                SetTargetDamageable(l_damageable);
                 data.BulletAttack.Attack(this);
-                _reachTarget = true;
+                m_reachTarget = true;
             }
         }
 
-        private void SetTargetDamageable(IDamageable target) => _targetDamageable = target;
+        private void SetTargetDamageable(IDamageable p_target) => m_targetDamageable = p_target;
 
         #region Getters
-            public IDamageable GetTargetIDamageable() => _targetDamageable;
-            public Transform GetTargetTransform() => _target;
-            public int GetDamage() => _damage;
-            public MovementController GetMovementController() => _movementController;
+            public IDamageable GetTargetIDamageable() => m_targetDamageable;
+            public Transform GetTargetTransform() => m_target;
+            public int GetDamage() => m_damage;
 
         #endregion
         

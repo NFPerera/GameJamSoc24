@@ -1,8 +1,8 @@
-﻿using Main.Scripts.BaseGame.ScriptableObjects.Bullets.Attack;
-using Main.Scripts.BaseGame.ScriptableObjects.Bullets.Movement;
+﻿using Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Attack;
+using Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Movement;
 using UnityEngine;
 
-namespace Main.Scripts.BaseGame.ScriptableObjects.Bullets
+namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets
 {
     [CreateAssetMenu(fileName = "BulletData", menuName = "_main/Bullet/Data/BulletData", order = 0)]
     public class BulletData : ScriptableObject

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Main.Scripts.BaseGame.Models
+namespace Main.Scripts.TowerDefenseGame.Models
 {
     public class BuildingModel : MonoBehaviour
     {

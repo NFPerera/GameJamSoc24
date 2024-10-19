@@ -1,29 +1,29 @@
-﻿using Main.Scripts.BaseGame._Managers;
-using Main.Scripts.BaseGame.Commands;
-using Main.Scripts.BaseGame.Interfaces.EnemiesInterfaces;
-using Main.Scripts.BaseGame.Models;
+﻿using Main.Scripts.TowerDefenseGame._Managers;
+using Main.Scripts.TowerDefenseGame.Commands;
+using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
+using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
 
-namespace Main.Scripts.BaseGame.ScriptableObjects.Bullets.Attack
+namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Attack
 {
     [CreateAssetMenu(fileName = "BulletRocket", menuName = "_main/Bullet/Data/Attack/RocketBulletAttack", order = 0)]
     public class BulletRocket : BulletAttack
     {
-        private Collider2D[] _overlapArea = new Collider2D[64];
-        
+        private Collider[] m_overlapResults = new Collider[64];
+        [SerializeField] private LayerMask enemyLayer;
         public override void Attack(BulletModel model)
         {
             if (model.GetTargetTransform() != null)
             {
                 GameManager.Instance.AddEventQueue(new CmdDoDamage(model.GetTargetIDamageable(), model.GetDamage()));
                 
-                Physics2D.OverlapCircleNonAlloc(model.transform.position, 3, _overlapArea);
-                foreach (Collider2D collider in _overlapArea)
-                {
-                    if(!collider.CompareTag("Enemies"))
-                        return;
+                var l_count = Physics.OverlapSphereNonAlloc(model.transform.position, 3, m_overlapResults, enemyLayer);
 
-                    if (collider.TryGetComponent(out IDamageable damageable))
+                for (int i = 0; i < l_count; i++)
+                {
+                    var col = m_overlapResults[i];
+
+                    if (col.TryGetComponent(out IDamageable damageable))
                     {
                         GameManager.Instance.AddEventQueue(new CmdDoDamage(damageable, model.GetDamage()));
                     }

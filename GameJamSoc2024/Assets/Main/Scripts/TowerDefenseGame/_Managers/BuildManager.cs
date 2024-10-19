@@ -1,15 +1,14 @@
-﻿using Main.Scripts.BaseGame.Commands;
-using Main.Scripts.BaseGame.Models;
-using UnityEditor;
+﻿using Main.Scripts.TowerDefenseGame.Commands;
+using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
 
-namespace Main.Scripts.BaseGame._Managers
+namespace Main.Scripts.TowerDefenseGame._Managers
 {
     public class BuildManager : MonoBehaviour
     {
         public static BuildManager Instance;
-        [SerializeField] private GameObject areaTowerPrefab;
-        [SerializeField] private GameObject rangeTowerPrefab;
+        [SerializeField] private GameObject mortarTowerPrefab;
+        [SerializeField] private GameObject gatlingTowerPrefab;
         [SerializeField] private GameObject rocketTowerPrefab;
 
         private GameObject _towerToBuild;
@@ -51,8 +50,8 @@ namespace Main.Scripts.BaseGame._Managers
 
 
 
-        public GameObject GetAreaTowerPrefab() => areaTowerPrefab;
-        public GameObject GetRangeTowerPrefab() => rangeTowerPrefab;
+        public GameObject GetMortarTowerPrefab() => mortarTowerPrefab;
+        public GameObject GetGatlingTowerPrefab() => gatlingTowerPrefab;
         public GameObject GetRocketTowerPrefab() => rocketTowerPrefab;
         
         

@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using _Main.Scripts.DevelopmentUtilities.DictionaryUtilities;
-using Main.Scripts.BaseGame.ScriptableObjects.Towers;
+﻿using Main.Scripts.DevelopmentUtilities.Extensions.IENumerableExtensions.DictionaryUtilities;
+using Main.Scripts.TowerDefenseGame.ScriptableObjects.Towers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Main.Scripts.BaseGame._Managers
+namespace Main.Scripts.TowerDefenseGame._Managers
 {
     public class UIManager : MonoBehaviour
     {

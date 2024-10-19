@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using System.Reflection;
 using System;
-using _Main.Scripts.DevelopmentUtilities.DictionaryUtilities;
+using Main.Scripts.DevelopmentUtilities.Extensions.IENumerableExtensions.DictionaryUtilities;
 
 [CustomPropertyDrawer(typeof(SerializableDictionaryBase), true)]
 #if NET_4_6 || NET_STANDARD_2_0
