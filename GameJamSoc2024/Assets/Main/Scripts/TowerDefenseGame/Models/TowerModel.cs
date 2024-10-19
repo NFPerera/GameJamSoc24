@@ -1,21 +1,32 @@
 ﻿using System.Collections.Generic;
-using Main.Scripts.BaseGame.Interfaces.EnemiesInterfaces;
-using Main.Scripts.BaseGame.Interfaces.TowerInterfaces;
-using Main.Scripts.BaseGame.ScriptableObjects.Towers;
+using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
+using Main.Scripts.TowerDefenseGame.Interfaces.TowerInterfaces;
+using Main.Scripts.TowerDefenseGame.ScriptableObjects.Towers;
 using UnityEngine;
 
-namespace Main.Scripts.BaseGame.Models
+namespace Main.Scripts.TowerDefenseGame.Models
 {
     public class TowerModel : MonoBehaviour, ITower
     {
         [SerializeField] private TowerData data;
         [SerializeField] private Transform shootPoint;
+        [SerializeField] private GameObject pivot;
 
         private List<IDamageable> m_enemiesInRange = new List<IDamageable>();
         private float m_timer;
+
+        private void Start()
+        {
+            var trigger = GetComponent<SphereCollider>();
+
+            trigger.radius = data.Range;
+        }
+
         private void Update()
         {
             m_timer += Time.deltaTime;
+            if(m_enemiesInRange.Count > 0)
+                ChangeAimDir(m_enemiesInRange[0].GetTransform().position);
             
             if (m_timer >= data.AttackSpeed)
             {
@@ -25,6 +36,13 @@ namespace Main.Scripts.BaseGame.Models
         }
         public void Attack() => data.TowerAttack.Attack(this);
 
+        public void ChangeAimDir(Vector3 p_targetPos)
+        {
+            Vector3 directionToTarget = p_targetPos - transform.position;
+            directionToTarget.Normalize();
+            Quaternion lookRotation = Quaternion.LookRotation(directionToTarget);
+            pivot.transform.rotation = lookRotation;
+        }
         
         private void OnTriggerEnter(Collider p_col)
         {

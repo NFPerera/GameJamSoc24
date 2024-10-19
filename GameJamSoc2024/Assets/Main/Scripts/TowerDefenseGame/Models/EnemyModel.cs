@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Main.Scripts.BaseGame._Managers;
-using Main.Scripts.BaseGame.Clases;
-using Main.Scripts.BaseGame.Interfaces.EnemiesInterfaces;
-using Main.Scripts.BaseGame.ScriptableObjects.Enemies;
+using Main.Scripts.TowerDefenseGame._Managers;
+using Main.Scripts.TowerDefenseGame.Clases;
+using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
+using Main.Scripts.TowerDefenseGame.ScriptableObjects.Enemies;
 using UnityEngine;
 
-namespace Main.Scripts.BaseGame.Models
+namespace Main.Scripts.TowerDefenseGame.Models
 {
     [RequireComponent(typeof(MovementController))]
     public class EnemyModel : MonoBehaviour, IDamageable

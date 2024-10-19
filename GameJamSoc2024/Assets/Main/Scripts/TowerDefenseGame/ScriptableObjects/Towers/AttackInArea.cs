@@ -1,9 +1,9 @@
-﻿using Main.Scripts.BaseGame._Managers;
-using Main.Scripts.BaseGame.Commands;
-using Main.Scripts.BaseGame.Models;
+﻿using Main.Scripts.TowerDefenseGame._Managers;
+using Main.Scripts.TowerDefenseGame.Commands;
+using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
 
-namespace Main.Scripts.BaseGame.ScriptableObjects.Towers
+namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Towers
 {
     [CreateAssetMenu(fileName = "AttackInArea", menuName = "_main/Tower/Attack/Area", order = 0)]
     public class AttackInArea : TowerAttack

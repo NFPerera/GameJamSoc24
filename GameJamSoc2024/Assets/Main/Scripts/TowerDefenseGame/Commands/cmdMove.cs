@@ -1,8 +1,8 @@
-﻿using Main.Scripts.BaseGame.Clases;
-using Main.Scripts.BaseGame.Interfaces;
+﻿using Main.Scripts.TowerDefenseGame.Clases;
+using Main.Scripts.TowerDefenseGame.Interfaces;
 using UnityEngine;
 
-namespace Main.Scripts.BaseGame.Commands
+namespace Main.Scripts.TowerDefenseGame.Commands
 {
     public class CmdMove : ICommando
     {

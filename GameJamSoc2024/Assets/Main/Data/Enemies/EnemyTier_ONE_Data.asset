@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EnemyTier_ONE_Data
   m_EditorClassIdentifier: 
   <MaxHealth>k__BackingField: 100
-  <Speed>k__BackingField: 5
+  <Speed>k__BackingField: 0.5
   <Sprite>k__BackingField: {fileID: 0}

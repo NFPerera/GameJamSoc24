@@ -1,7 +1,7 @@
-﻿using Main.Scripts.BaseGame.Interfaces.FactoriesInterfaces;
+﻿using Main.Scripts.TowerDefenseGame.Interfaces.FactoriesInterfaces;
 using UnityEngine;
 
-namespace Main.Scripts.BaseGame.Factory
+namespace Main.Scripts.TowerDefenseGame.Factory
 {
     public class AFactory<T> : IFactory<T> where T : Object
     {

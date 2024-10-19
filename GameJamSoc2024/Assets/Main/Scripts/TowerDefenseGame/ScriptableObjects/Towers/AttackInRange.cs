@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Main.Scripts.BaseGame.Interfaces.EnemiesInterfaces;
-using Main.Scripts.BaseGame.Models;
+using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
+using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
 
-namespace Main.Scripts.BaseGame.ScriptableObjects.Towers
+namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Towers
 {
     [CreateAssetMenu(fileName = "AttackInRange", menuName = "_main/Tower/Attack/Range", order = 0)]
     public class AttackInRange : TowerAttack
@@ -14,26 +14,13 @@ namespace Main.Scripts.BaseGame.ScriptableObjects.Towers
             _totalEnemiesInRange = model.GetEnemiesInRange();
             
             if(_totalEnemiesInRange == null || _totalEnemiesInRange.Count <= 0) return;
-
-            ChangeAimAngle(model);
             
             var firstEnemyInRange = _totalEnemiesInRange[0];
             var data = model.GetData();
             
             var bullet = Instantiate(data.BulletPrefabs, model.GetShootPoint().position, Quaternion.identity);
             
-            bullet.InitializeBullet(firstEnemyInRange.GetTransform(), data.Damage);
-        }
-
-
-        private void ChangeAimAngle(TowerModel model)
-        {
-            Vector3 enemyPosition = _totalEnemiesInRange[0].GetTransform().position;
-
-            Vector3 aimDirection= (enemyPosition - model.transform.position).normalized;
-            float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
-
-            model.transform.eulerAngles = new Vector3(0, 0, aimAngle);
+            bullet.InitializeBullet(firstEnemyInRange.GetTransform(), data.Damage, 10f, model.transform.position);
         }
     }
 }

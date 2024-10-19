@@ -1,38 +1,38 @@
-﻿using Main.Scripts.BaseGame._Managers;
-using Main.Scripts.BaseGame.Factory;
-using Main.Scripts.BaseGame.Interfaces;
-using Main.Scripts.BaseGame.Models;
+﻿using Main.Scripts.DevelopmentUtilities.Pools;
+using Main.Scripts.TowerDefenseGame._Managers;
+using Main.Scripts.TowerDefenseGame.Interfaces;
+using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
 
-namespace Main.Scripts.BaseGame.Commands
+namespace Main.Scripts.TowerDefenseGame.Commands
 {
     public class CmdSpawn : ICommando
     {
-        private GameObject _prefab;
-        private GameObject _instance;
-        private Vector3 _position;
+        private GameObject m_prefab;
+        private GameObject m_instance;
+        private Vector3 m_position;
 
-        private AFactory<GameObject> _GameObjectFactory = new AFactory<GameObject>();
+        private PoolManager m_poolManager = new PoolManager();
 
-        public CmdSpawn(GameObject prefab, Vector3 spawnPosition)
+        public CmdSpawn(GameObject p_prefab, Vector3 p_spawnPosition)
         {
-            _prefab = prefab;
-            _position = spawnPosition;
+            m_prefab = p_prefab;
+            m_position = p_spawnPosition;
         }
         
         public void Execute()
         {
-            _instance = _GameObjectFactory.Create(_prefab);
-            _instance.transform.position = _position;
+            m_instance = m_poolManager.Spawn(m_prefab);
+            m_instance.transform.position = m_position;
         }
         public void Undo()
         {
-            if (_instance.TryGetComponent(out TowerModel towerModel))
+            if (m_instance.TryGetComponent(out TowerModel l_towerModel))
             {
-                GameManager.Instance.OnChangeMoney(towerModel.GetData().Cost);
+                GameManager.Instance.OnChangeMoney(l_towerModel.GetData().Cost);
             }
             
-            Object.Destroy(_instance); 
+            m_poolManager.ReturnToPool(m_instance, m_prefab);
         }
     }
 }

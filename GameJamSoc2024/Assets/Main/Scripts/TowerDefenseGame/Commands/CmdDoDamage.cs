@@ -1,7 +1,7 @@
-﻿using Main.Scripts.BaseGame.Interfaces;
-using Main.Scripts.BaseGame.Interfaces.EnemiesInterfaces;
+﻿using Main.Scripts.TowerDefenseGame.Interfaces;
+using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
 
-namespace Main.Scripts.BaseGame.Commands
+namespace Main.Scripts.TowerDefenseGame.Commands
 {
     public class CmdDoDamage : ICommando
     {

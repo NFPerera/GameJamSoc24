@@ -1,8 +1,8 @@
 ﻿using System;
-using Main.Scripts.BaseGame.Models;
+using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
 
-namespace Main.Scripts.BaseGame.ScriptableObjects.Towers
+namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Towers
 {
     public enum AttackSpeed
     {

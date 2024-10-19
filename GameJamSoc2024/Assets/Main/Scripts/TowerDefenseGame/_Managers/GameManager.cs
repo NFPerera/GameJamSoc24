@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using Main.Scripts.BaseGame.Interfaces;
-using Main.Scripts.BaseGame.Interfaces.EnemiesInterfaces;
+using Main.Scripts.TowerDefenseGame.Interfaces;
+using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
+using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
 
-namespace Main.Scripts.BaseGame._Managers
+namespace Main.Scripts.TowerDefenseGame._Managers
 {
     public class GameManager : MonoBehaviour
     {
@@ -18,6 +19,7 @@ namespace Main.Scripts.BaseGame._Managers
         private Stack<ICommando> m_sellableEvents = new Stack<ICommando>();
         private List<ICommando> m_doneEvents = new List<ICommando>();
         private List<IDamageable> m_enemies = new List<IDamageable>();
+        
         private int m_lifePoints;
         private int m_money;
         
@@ -32,7 +34,6 @@ namespace Main.Scripts.BaseGame._Managers
 
         private UIManager m_ui;
 
-        
         private void Awake()
         {
             if(Instance != null) Destroy(this);
@@ -67,6 +68,17 @@ namespace Main.Scripts.BaseGame._Managers
             {
                 OnClick.Invoke();
             }
+        }
+
+        public void SpawnBullet(Transform p_target, int p_damage, float p_lifeTime)
+        {
+            
+            
+        }
+
+        private void ReturnBulletToPool(BulletModel p_model)
+        {
+            
         }
 
         #region Facade

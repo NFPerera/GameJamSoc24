@@ -1,4 +1,4 @@
-﻿namespace Main.Scripts.BaseGame.Interfaces
+﻿namespace Main.Scripts.TowerDefenseGame.Interfaces
 {
     public interface ICommando
     {

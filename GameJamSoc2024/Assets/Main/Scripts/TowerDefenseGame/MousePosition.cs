@@ -1,7 +1,7 @@
-﻿using Main.Scripts.BaseGame._Managers;
+﻿using Main.Scripts.TowerDefenseGame._Managers;
 using UnityEngine;
 
-namespace Main.Scripts.BaseGame
+namespace Main.Scripts.TowerDefenseGame
 {
     public class MousePosition : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _Main.Scripts.DevelopmentUtilities
+namespace Main.Scripts.DevelopmentUtilities.Extensions.IENumerableExtensions
 {
     public class PriorityQueue<TData>
     {

@@ -1,10 +1,11 @@
-﻿using Main.Scripts.BaseGame._Managers;
-using Main.Scripts.BaseGame.Commands;
+﻿using Main.Scripts.DevelopmentUtilities.Pools;
+using Main.Scripts.TowerDefenseGame._Managers;
+using Main.Scripts.TowerDefenseGame.Commands;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = System.Random;
 
-namespace Main.Scripts.BaseGame.Controllers
+namespace Main.Scripts.TowerDefenseGame.Controllers
 {
     public class WaveController : MonoBehaviour
     {
@@ -17,88 +18,88 @@ namespace Main.Scripts.BaseGame.Controllers
         }
 
         [SerializeField] private Wave[] waves;
-        private int _nextWave;
-        private int _spawnedEnemies;
-        private float _timer;
-        private bool _isWaveActive;
+        private int m_nextWave;
+        private int m_spawnedEnemies;
+        private float m_timer;
+        private bool m_isWaveActive;
         
         [SerializeField] private Transform spawnPoint;
         [SerializeField] private Button waveButton;
 
-
-        private UIManager _ui;
+        private PoolGeneric<GameObject> m_pool;
+        private UIManager m_ui;
         private void Awake()
         {
-            _ui = GetComponent<UIManager>();
+            m_ui = GetComponent<UIManager>();
         }
 
         private void Update()
         {
-            if (_nextWave < waves.Length)
+            if (m_nextWave < waves.Length)
             {
-                if (_nextWave == waves.Length - 1)
+                if (m_nextWave == waves.Length - 1)
                 {
                     SpawnFinalWave();
                 }
-                else if (_isWaveActive)
+                else if (m_isWaveActive)
                 {
                     SpawnWave();
                 }
                 else
                 {
-                    _timer = waves[_nextWave].countDownBetweenEnemies;
-                    _spawnedEnemies = 0;
+                    m_timer = waves[m_nextWave].countDownBetweenEnemies;
+                    m_spawnedEnemies = 0;
                 }
             }
             else
             {
-                _ui.ActivateGameOverScreen(true);
+                m_ui.ActivateGameOverScreen(true);
             }
         }
 
         private void SpawnWave()
         {
-            _timer -= Time.deltaTime;
+            m_timer -= Time.deltaTime;
             
-            if (_timer <= 0)
+            if (m_timer <= 0)
             {
-                Random rnd = new Random();
+                Random l_rnd = new Random();
                 //var aux = rnd.Next(0, 3);
                 
-                GameManager.Instance.AddEventQueue(new CmdSpawn(waves[_nextWave].enemy[0], spawnPoint.position));
-                _timer = waves[_nextWave].countDownBetweenEnemies;
-                _spawnedEnemies++;
+                GameManager.Instance.AddEventQueue(new CmdSpawn(waves[m_nextWave].enemy[0], spawnPoint.position));
+                m_timer = waves[m_nextWave].countDownBetweenEnemies;
+                m_spawnedEnemies++;
             }
 
-            if (_spawnedEnemies > waves[_nextWave].numberOfEnemies)
+            if (m_spawnedEnemies > waves[m_nextWave].numberOfEnemies)
             {
                 waveButton.interactable = true;
-                _nextWave++;
-                _isWaveActive = false;
+                m_nextWave++;
+                m_isWaveActive = false;
             }
         }
 
         private void SpawnFinalWave()
         {
-            _timer -= Time.deltaTime;
+            m_timer -= Time.deltaTime;
             
-            if (_timer <= 0)
+            if (m_timer <= 0)
             {
-                Random rnd = new Random();
-                var aux = rnd.Next(0, 4);
+                Random l_rnd = new Random();
+                var l_aux = l_rnd.Next(0, 4);
                 
-                GameManager.Instance.AddEventQueue(new CmdSpawn(waves[_nextWave].enemy[aux], spawnPoint.position));
-                _timer = waves[_nextWave].countDownBetweenEnemies;
-                _spawnedEnemies++;
+                GameManager.Instance.AddEventQueue(new CmdSpawn(waves[m_nextWave].enemy[l_aux], spawnPoint.position));
+                m_timer = waves[m_nextWave].countDownBetweenEnemies;
+                m_spawnedEnemies++;
             }
 
-            if (_spawnedEnemies > waves[_nextWave].numberOfEnemies)
+            if (m_spawnedEnemies > waves[m_nextWave].numberOfEnemies)
             {
                 waveButton.interactable = true;
-                _nextWave++;
-                _isWaveActive = false;
+                m_nextWave++;
+                m_isWaveActive = false;
             }
         }
-        public void ActivateWave() => _isWaveActive = true;
+        public void ActivateWave() => m_isWaveActive = true;
     }
 }

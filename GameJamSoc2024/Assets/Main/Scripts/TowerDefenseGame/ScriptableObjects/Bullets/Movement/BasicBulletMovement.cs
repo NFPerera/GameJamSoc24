@@ -1,22 +1,22 @@
-﻿using Main.Scripts.BaseGame._Managers;
-using Main.Scripts.BaseGame.Commands;
-using Main.Scripts.BaseGame.Models;
+﻿using System.Collections.Generic;
+using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
 
-namespace Main.Scripts.BaseGame.ScriptableObjects.Bullets.Movement
+namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Movement
 {
     [CreateAssetMenu(fileName = "BasicBulletMovement", menuName = "_main/Bullet/Data/Movement/BasicBulletMovement", order = 0)]
     public class BasicBulletMovement : BulletMovement
     {
-        public override void Move(BulletModel model)
+        
+
+        public override void Move(BulletModel p_model)
         {
-            Vector3 targetPosition = model.GetTargetTransform().position;
-            Vector3 modelPosition = model.transform.position;
-            var direction = (targetPosition - modelPosition).normalized;
+            Vector3 l_targetPosition = p_model.GetTargetTransform().position;
+            Vector3 l_modelPosition = p_model.transform.position;
+            var l_direction = (l_targetPosition - l_modelPosition).normalized;
             
-            var cmdMove = new CmdMove(model.GetMovementController(), direction);
-            
-            GameManager.Instance.AddEventQueue(cmdMove);
+            p_model.Move(l_direction, p_model.GetData().Speed);
         }
+        
     }
 }

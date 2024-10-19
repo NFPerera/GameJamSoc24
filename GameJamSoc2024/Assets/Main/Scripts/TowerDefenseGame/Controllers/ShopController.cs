@@ -1,14 +1,14 @@
-using Main.Scripts.BaseGame._Managers;
-using Main.Scripts.BaseGame.Models;
+using Main.Scripts.TowerDefenseGame._Managers;
+using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
 
-namespace Main.Scripts.BaseGame.Controllers
+namespace Main.Scripts.TowerDefenseGame.Controllers
 {
     public class ShopController : MonoBehaviour
     {
-        public void OnButtonDownRangeTower()
+        public void OnButtonDownGatlingTower()
         {
-            var tower = BuildManager.Instance.GetRangeTowerPrefab();
+            var tower = BuildManager.Instance.GetGatlingTowerPrefab();
             
             var towerCost = tower.GetComponent<TowerModel>().GetData().Cost;
 
@@ -16,9 +16,9 @@ namespace Main.Scripts.BaseGame.Controllers
                 BuyTower(tower);
         }
 
-        public void OnButtonDownAreaTower()
+        public void OnButtonDownMortarTower()
         {
-            var tower = BuildManager.Instance.GetAreaTowerPrefab();
+            var tower = BuildManager.Instance.GetMortarTowerPrefab();
             
             var towerCost = tower.GetComponent<TowerModel>().GetData().Cost;
 
@@ -35,6 +35,7 @@ namespace Main.Scripts.BaseGame.Controllers
             if (towerCost <= GameManager.Instance.GetMoney())
                 BuyTower(tower);
         }
+
         private void BuyTower(GameObject tower)
         {
             BuildManager.Instance.SetTowerToBuild(tower);
