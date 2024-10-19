@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour,IDamageable
 {
     public float walkSpeed = 6f;
     public float sprintSpeed = 12f;
@@ -16,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
 
     public LayerMask groundMask;
     public Transform groundCheck;
+
+    public event Action<IDamageable> OnDeath;
 
     void Start()
     {
@@ -75,5 +79,17 @@ public class PlayerMovement : MonoBehaviour
     {
         // Apply gravity force over time
         velocity.y += gravity * Time.deltaTime;
+    }
+
+    public Transform GetTransform() => transform;
+
+    public void DoDamage(int damage)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Heal(int healAmount)
+    {
+        throw new NotImplementedException();
     }
 }

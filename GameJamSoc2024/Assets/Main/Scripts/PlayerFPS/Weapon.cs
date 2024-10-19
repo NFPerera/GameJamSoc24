@@ -6,6 +6,8 @@ public class Weapon : MonoBehaviour
 {
     public Camera playerCamera;
 
+
+    public WeaponAnimation weaponAnimation;
     // Shooting
     public bool isShooting,readyToShoot;
     bool allowReset =true;
@@ -63,6 +65,7 @@ public class Weapon : MonoBehaviour
     private void FireWeapon()
     {
         readyToShoot = false;
+        weaponAnimation.ShootingAnimation();
         Vector3 shootingDirection = CalculateDirectionAndSpread().normalized;
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
 

@@ -8,6 +8,7 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets
     public class BulletData : ScriptableObject
     {
         [field: SerializeField] public float Speed { get; private set; }
+        [field: SerializeField] public float BulletLifeTime { get; private set; }
         [field: SerializeField] public BulletAttack BulletAttack { get; private set; }
         [field: SerializeField] public BulletMovement BulletMovement { get; private set; }
     }
