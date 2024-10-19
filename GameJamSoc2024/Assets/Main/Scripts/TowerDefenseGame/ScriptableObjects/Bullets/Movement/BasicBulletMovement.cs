@@ -11,7 +11,7 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Movement
 
         public override void Move(BulletModel p_model)
         {
-            Vector3 l_targetPosition = p_model.GetTargetTransform().position;
+            Vector3 l_targetPosition = p_model.GetTargetPos();
             Vector3 l_modelPosition = p_model.transform.position;
             var l_direction = (l_targetPosition - l_modelPosition).normalized;
             

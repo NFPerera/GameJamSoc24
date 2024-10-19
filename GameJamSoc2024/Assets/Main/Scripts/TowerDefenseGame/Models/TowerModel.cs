@@ -13,7 +13,6 @@ namespace Main.Scripts.TowerDefenseGame.Models
         [SerializeField] private Transform shootPoint;
         [SerializeField] private GameObject pivot;
 
-        [SerializeField] private bool userControlled;
  
         private List<IDamageable> m_enemiesInRange = new List<IDamageable>();
         private float m_timer;
@@ -23,20 +22,16 @@ namespace Main.Scripts.TowerDefenseGame.Models
         private void Start()
         {
             var trigger = GetComponent<SphereCollider>();
-            if (userControlled)
-            {
-                m_targetPos = new Vector3(0, 0, 0);
-                trigger.radius = float.MaxValue;
-            }else{
+            
                 
-                trigger.radius = data.Range;
-            }
+            trigger.radius = data.Range;
+            
         }
 
         private void Update()
         {
             m_timer += Time.deltaTime;
-             if(!userControlled && m_enemiesInRange.Count > 0 && m_enemiesInRange[0] != null)
+             if( m_enemiesInRange.Count > 0 && m_enemiesInRange[0] != null)
                 ChangeAimDir(m_enemiesInRange[0].GetTransform().position);
             
             if (m_timer >= data.AttackSpeed)
