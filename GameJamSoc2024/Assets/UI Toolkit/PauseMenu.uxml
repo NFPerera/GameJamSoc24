@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/UnityThemes/HUDStyle.uss?fileID=7433441132597879392&amp;guid=fd3029f8c09f949c1ba6353107fc5b20&amp;type=3#HUDStyle" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; opacity: 1; background-color: rgba(61, 52, 36, 0.59);">
+        <ui:GroupBox style="padding-top: 5px; margin-top: 200px; margin-left: 4px; justify-content: center; align-items: center; align-self: center;">
+            <ui:Label tabindex="-1" text="GAME PAUSED" parse-escape-sequences="true" display-tooltip-when-elided="true" class="header" style="width: 1160px; align-self: center; align-items: center; -unity-text-align: upper-center;" />
+            <ui:Button text="RESUME" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ResumeButton" class="button" style="align-self: center;" />
+            <ui:Button text="QUIT TO MENU" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitToMainMenuButton" class="button" style="align-self: center;" />
+            <ui:Button text="QUIT" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitButton" class="button" style="align-self: center;" />
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>
