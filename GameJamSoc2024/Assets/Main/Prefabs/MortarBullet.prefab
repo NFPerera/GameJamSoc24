@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7912668036924773705}
   - component: {fileID: 1465497844257318051}
   - component: {fileID: 5501881949740539876}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 3859880406625600751}
   - component: {fileID: 3520070235836540141}
   - component: {fileID: 3053067048039310542}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MortarBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6971945648323598557}
   - component: {fileID: -2967441692303656070}
   - component: {fileID: 5008926560787490134}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mini-Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 262165770490374328}
   - component: {fileID: 7292871116560217046}
   - component: {fileID: 4562086161627442120}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}

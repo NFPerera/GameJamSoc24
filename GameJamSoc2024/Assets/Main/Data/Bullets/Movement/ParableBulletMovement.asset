@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92fa55f36fbc42f8be63e2c38e0231da, type: 3}
   m_Name: ParableBulletMovement
   m_EditorClassIdentifier: 
-  force: 6
+  force: 60
+  timer: 1

@@ -50,6 +50,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 7c33a82c6ec6e2944a2b7817b7760037, type: 2}
   shootPoint: {fileID: 813764920302756173}
   pivot: {fileID: 4062823741120572617}
+  userControlled: 0
 --- !u!135 &7300247264295667181
 SphereCollider:
   m_ObjectHideFlags: 0

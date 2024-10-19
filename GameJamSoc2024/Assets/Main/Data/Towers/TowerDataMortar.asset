@@ -18,5 +18,5 @@ MonoBehaviour:
   <Range>k__BackingField: 200
   <TowerAttack>k__BackingField: {fileID: 11400000, guid: f0a9f4b5a449b8f45a488dc66625b9a3, type: 2}
   <BulletPrefabs>k__BackingField: {fileID: 7570553548399421236, guid: 20d7dec9c5c4c14468cefa1a7cb8452b, type: 3}
-  Speed: 1
+  Speed: 0
   description: 

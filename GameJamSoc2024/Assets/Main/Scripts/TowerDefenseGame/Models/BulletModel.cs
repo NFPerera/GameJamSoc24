@@ -42,7 +42,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
             {
                 data.BulletMovement.Move(this);
             }
-            else Destroy(gameObject);
+            //else Destroy(gameObject);
 
             m_lifeTime -= Time.deltaTime;
             if(m_lifeTime <= 0f)
