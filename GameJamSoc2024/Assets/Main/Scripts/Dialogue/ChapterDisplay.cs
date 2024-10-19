@@ -6,14 +6,27 @@ using TMPro;
 
 public class ChapterDisplay : MonoBehaviour
 {
-    public Image leftchar, rightchar;
+    [Header("Components")]
     public Image background;
+    public Image leftchar, rightchar;
     public TextMeshProUGUI textComponent;
     public GameObject dialogueUI;
 
-    Queue<Dialogue> dialogueQueue;
+    [Header("Lighting")]
+    public Color foregroundColor;
+    public Color backgroundColor;
 
-    public Color foregroundColor, backgroundColor;
+    [Header("Text")]
+    public bool instantText;
+    public float textSpeed;
+
+
+    // Dialogue vars
+    Queue<Dialogue> dialogueQueue;
+    Coroutine currDialogueCoroutine;
+    bool is_running;
+
+
 
     void Start()
     {
@@ -62,8 +75,12 @@ public class ChapterDisplay : MonoBehaviour
 
         Dialogue curr = dialogueQueue.Dequeue();
 
+        // Limpia el texto anterior
+        if (is_running) StopCoroutine(currDialogueCoroutine);
+        textComponent.text = "";
         // Carga el texto a pantalla.
-        textComponent.text = curr.text;
+        if (instantText) textComponent.text = curr.text;
+        else currDialogueCoroutine = StartCoroutine(DisplayText(curr.text));
 
         // Check enum con switch
         switch (curr.speaker)
@@ -81,6 +98,17 @@ public class ChapterDisplay : MonoBehaviour
                 rightchar.color = backgroundColor;
                 break;
         }
+    }
+
+    IEnumerator DisplayText(string text)
+    {
+        is_running = true;
+        foreach (char c in text.ToCharArray())
+        {
+            textComponent.text += c;
+            yield return new WaitForSeconds(1 / textSpeed);
+        }
+        is_running = false;
     }
 
 }
