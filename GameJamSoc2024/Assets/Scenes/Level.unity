@@ -1205,6 +1205,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2059404643}
     m_Modifications:
+    - target: {fileID: 2317213136122479128, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4976039701329174208, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1292,6 +1296,86 @@ PrefabInstance:
     - target: {fileID: 7714054532899635036, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: m_Name
       value: Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_keys.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_keys.Array.data[0]
+      value: asd
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].bg
+      value: 
+      objectReference: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].leftChar
+      value: 
+      objectReference: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].rightChar
+      value: 
+      objectReference: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[0].text
+      value: "Despu\xE9s de la gran victoria, los soldados comienzan a celebrar.
+        Chad se siente feliz de haber cumplido con su objetivo de tal manera, y se
+        une a los cantos. Poco despu\xE9s, una oleada de silencio entra al cuarto."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[1].text
+      value: Los soldados se ponen en fila, y se escuchan trompetas. Llego el Rey
+        Jack
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[2].text
+      value: "\xBFC\xF3mo andas querido primo? Hace tanto tiempo que no te veo, y
+        ahora lograste defender nuestra gran ciudad de los sucios bandidos que la
+        quieren ver arder. Es un logro no solo para Chudistan sino para nuestra misma
+        sangre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[3].text
+      value: Es un honor muy grande recibir semejantes bendiciones, rey Jack.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[4].text
+      value: "Es lo minimo que puedo hacer. Estoy seguro que tu familia dir\xEDa
+        lo mismo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[5].text
+      value: "Y con ese comentario, Jack se retira. La menci\xF3n de la familia de
+        Chad lo deja con una expresi\xF3n triste \u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[0].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[1].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[2].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[4].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[5].speaker
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
