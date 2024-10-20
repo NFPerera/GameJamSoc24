@@ -1298,6 +1298,10 @@ PrefabInstance:
       value: Dialogue
       objectReference: {fileID: 0}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: initChap
+      value: Confrontacion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: chapters.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -2696,6 +2700,12 @@ MonoBehaviour:
       - {fileID: 4377133440447333311, guid: 50d97c37cd6cead40a973f96d3794963, type: 3}
       numberOfEnemies: 5
       countDownBetweenEnemies: 2
+  dialogNames:
+  - PostPrimeraInvasion
+  - CapturaDeStacy
+  - InterrogacionDeStacy
+  - PaseoPorTerrenoCalcinado
+  - VistaFunebre
   spawnPoint: {fileID: 10000342}
   waveButton: {fileID: 1023296496}
 --- !u!4 &674865962 stripped

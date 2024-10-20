@@ -1148,6 +1148,7 @@ MonoBehaviour:
           apoyar a Chad en su misi\xF3n\u2026"
         speaker: 2
   initChap: Confrontacion
+  dialogueDisplay: {fileID: 4633479697887992963}
 --- !u!114 &6813642742194371306
 MonoBehaviour:
   m_ObjectHideFlags: 0

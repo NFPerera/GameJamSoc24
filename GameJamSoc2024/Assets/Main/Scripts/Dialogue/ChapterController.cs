@@ -6,18 +6,20 @@ using UnityEngine;
 public class ChapterController : MonoBehaviour
 {
     public SerializableDictionary<string, Chapter> allChapters;
-    public Chapter[] chapters;
+    public string initChap;
+    public DialogueDisplay dialogueDisplay;
     ChapterDisplay display;
     void Start()
     {
         display = GetComponent<ChapterDisplay>();
 
         // TEMP
-        display.LoadChapter(chapters[0]);
+        display.LoadChapter(allChapters[initChap]);
     }
 
     public void StartChapter(string p_id)
     {
+        dialogueDisplay.gameObject.SetActive(true);
         display.LoadChapter(allChapters[p_id]);
         //display.LoadChapter(chapters[p_id]);
     }
