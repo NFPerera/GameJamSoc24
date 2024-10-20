@@ -8,13 +8,13 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Target"))
         {
-            print("hit " + collision.gameObject.name + " !");
+            //print("hit " + collision.gameObject.name + " !");
             CreateBulletImpactEffect(collision);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Wall"))
         {
-            print("hit wall");
+            //print("hit wall");
             CreateBulletImpactEffect(collision);
             Destroy(gameObject);
         }

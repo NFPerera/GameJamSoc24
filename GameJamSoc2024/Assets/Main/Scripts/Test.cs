@@ -53,14 +53,14 @@ namespace Main.Scripts
             Vector3 directionXZ = new Vector3(direction.x, 0, direction.z);
             float distanceXZ = directionXZ.magnitude;
             float heightDifference = direction.y;
-            print(heightDifference);
-            print(distanceXZ);
+            //print(heightDifference);
+            //print(distanceXZ);
             
 
             // Solve the quadratic equation for time based on vertical motion
             float velocityXZ = Speed;
             float time = distanceXZ / velocityXZ;
-            print("flighttime:"+  time);       
+            //print("flighttime:"+  time);       
             // Use the flight time to calculate the vertical velocity needed to reach the target
             float velocityY = gravity*time/2 + heightDifference/time;
 

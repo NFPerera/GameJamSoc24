@@ -72,7 +72,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
 
             public void DoDamage(int p_damage,bool p_isFlying)
             {
-                print(p_isFlying+" "+data.IsFlying);
+                //print(p_isFlying+" "+data.IsFlying);
                 if (data.IsFlying && !p_isFlying) return;
                 m_healthController?.TakeDamage(p_damage);
                 

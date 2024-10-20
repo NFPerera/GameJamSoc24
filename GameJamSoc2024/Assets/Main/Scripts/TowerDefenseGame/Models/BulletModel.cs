@@ -23,12 +23,12 @@ namespace Main.Scripts.TowerDefenseGame.Models
         private Vector3 m_targetPos;
 
         public BulletData GetData() => data;
-        public void InitializeBullet(Transform p_target, int p_damage, float p_lifeTime, Vector3 p_initPos)
+        public void InitializeBullet(Transform p_target, int p_damage, Vector3 p_initPos)
         {
             InitPos = p_initPos;
             m_damage = p_damage;
             m_target = p_target;
-            m_lifeTime = p_lifeTime;
+            m_lifeTime = data.BulletLifeTime;
             m_reachTarget = false;
             m_targetPos = m_target.position;
             
@@ -37,6 +37,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
 
         private void OnDestroy()
         {
+            //print("Bullet destroyed");
             data.BulletMovement.OnReachTarget(this);
         }
 
@@ -68,7 +69,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
         }
         private void OnTriggerEnter(Collider p_col)
         {
-            print(data.HitsFlying);
+            //print(data.HitsFlying);
             if (!p_col.TryGetComponent(out IDamageable l_damageable))
             {
                 if (data.TargetLayer.Includes(p_col.gameObject.layer))
