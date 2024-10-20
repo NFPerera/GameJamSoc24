@@ -32,16 +32,23 @@ namespace Main.Scripts.TowerDefenseGame._Managers
             var l_ray = m_camera.ScreenPointToRay(Input.mousePosition);
             
             
+            
             if(_towerToBuild == null) return;
+            print("Building tower");
             
-            if (!Physics.Raycast(l_ray, out var l_raycastHit, Mathf.Infinity))
-                return;
+            if (!Physics.Raycast(l_ray, out var l_raycastHit, Mathf.Infinity, 1 << 8)){
+                print("Raycast missed");
+                return;}
+            print("Raycast hit");
 
-            if (!l_raycastHit.transform.TryGetComponent(out BuildingModel l_buildingModel)) 
-                return;
-            
+            if (!l_raycastHit.transform.TryGetComponent(out BuildingModel l_buildingModel)){ 
+                print("Building model not found");
+                print(l_raycastHit.transform.name);
+                return;}
+            print("Building model found");
             if(!l_buildingModel.IsAvailable)
                 return;
+            print("Building model is available");
             l_buildingModel.Construct();
             CmdSpawn l_cmdSpawn = new CmdSpawn(_towerToBuild, l_buildingModel.GetConstructionPos());
 
