@@ -14,7 +14,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
         [SerializeField] private Transform shootPoint;
         [SerializeField] private GameObject pivot;
         [SerializeField] private AudioSource audioSource;
-
+        [SerializeField] private float hp;
 
         private List<IDamageable> m_enemiesInRange = new List<IDamageable>();
         private float m_timer;
@@ -85,6 +85,13 @@ namespace Main.Scripts.TowerDefenseGame.Models
             m_enemiesInRange.Remove(l_damageable);
         }
 
+        public void TakeDamage(float damage)
+        {
+            hp -= damage;
+            
+            if(hp <= 0)
+                Destroy(gameObject);
+        }
         #region Getters
         public TowerData GetData() => data;
         public List<IDamageable> GetEnemiesInRange() => m_enemiesInRange;

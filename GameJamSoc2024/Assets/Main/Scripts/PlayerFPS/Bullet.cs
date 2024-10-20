@@ -1,22 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using Main.Scripts.DevelopmentUtilities.Extensions;
+using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [SerializeField] private float damage;
+    [SerializeField] private LayerMask targetMask;
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Target"))
+        if (targetMask.Includes(collision.gameObject.layer))
         {
             //print("hit " + collision.gameObject.name + " !");
+
+            if (collision.gameObject.TryGetComponent(out TowerModel l_model))
+            {
+                l_model.TakeDamage(damage);
+            }
             CreateBulletImpactEffect(collision);
             Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.CompareTag("Wall"))
-        {
-            //print("hit wall");
-            CreateBulletImpactEffect(collision);
-            Destroy(gameObject);
         }
     }
 
@@ -38,5 +41,7 @@ public class Bullet : MonoBehaviour
         hole.transform.SetParent(collision.gameObject.transform);
 
 
+        
+        
     }
 }
