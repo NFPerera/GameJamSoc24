@@ -3714,6 +3714,7 @@ MonoBehaviour:
   hud: {fileID: 7781301945059911862}
   mainMenu: {fileID: 2089124677}
   credits: {fileID: 0}
+  gameOver: {fileID: 0}
 --- !u!1001 &523685045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11442,6 +11443,72 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &1577399008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1577399011}
+  - component: {fileID: 1577399010}
+  - component: {fileID: 1577399009}
+  m_Layer: 5
+  m_Name: GameOver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1577399009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577399008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f086f82bb754495a8d8cd8473efff10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 0}
+  hud: {fileID: 7781301945059911862}
+  mainMenu: {fileID: 2089124677}
+  credits: {fileID: 1577399008}
+  gameOver: {fileID: 1577399008}
+--- !u!114 &1577399010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577399008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: c796868c20bfd47ac99b2b397a17365c, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 2f09ba71de3e11a458999ccf9612388b, type: 3}
+  m_SortingOrder: 0
+--- !u!4 &1577399011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577399008}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1582202243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13669,6 +13736,7 @@ MonoBehaviour:
   hud: {fileID: 7781301945059911862}
   mainMenu: {fileID: 2089124677}
   credits: {fileID: 1842162793}
+  gameOver: {fileID: 1577399008}
 --- !u!114 &1842162795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15441,6 +15509,7 @@ MonoBehaviour:
   hud: {fileID: 7781301945059911862}
   mainMenu: {fileID: 0}
   credits: {fileID: 0}
+  gameOver: {fileID: 1577399008}
 --- !u!114 &2089124679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16071,6 +16140,7 @@ SceneRoots:
   - {fileID: 521812628}
   - {fileID: 2089124680}
   - {fileID: 1842162796}
+  - {fileID: 1577399011}
   - {fileID: 930440495}
   - {fileID: 710549915}
   - {fileID: 592503625}

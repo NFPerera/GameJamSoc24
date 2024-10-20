@@ -62,6 +62,8 @@ namespace Main.Scripts.TowerDefenseGame._Managers
             }
             else SceneManager.LoadScene("YouLoose");
         }
+
+        public void ResetGame() => SceneManager.LoadScene("LevelDesign");
         public void OnFastButton()
         {
             if (!_toggle)

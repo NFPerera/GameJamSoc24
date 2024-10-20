@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Main.Scripts.TowerDefenseGame._Managers;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -14,6 +15,10 @@ public class TDHudEvents : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     
     [SerializeField] private GameObject credits;
+
+    [SerializeField] private GameObject gameOver;
+    [SerializeField] private bool isGameOver;
+    [SerializeField] private GameManager gameManager;
 
     private void Awake()
     {
@@ -84,6 +89,7 @@ public class TDHudEvents : MonoBehaviour
             case "ResumeButton":
                 ResumeGame();
                 break;
+            
             default:
                 Debug.Log("Unknown button clicked");
                 break;
@@ -100,6 +106,10 @@ public class TDHudEvents : MonoBehaviour
 
     private void QuitToMainMenuGame()
     {
+        if (isGameOver)
+        {
+            gameManager.ResetGame();
+        }
         Time.timeScale = 0f;
         hud.SetActive(false);
         gameObject.SetActive(false);
@@ -115,6 +125,16 @@ public class TDHudEvents : MonoBehaviour
         gameObject.SetActive(false);
         credits.SetActive(true);
         mainMenu.SetActive(false);
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0f;
+        hud.SetActive(false);
+        gameObject.SetActive(false);
+        credits.SetActive(false);
+        mainMenu.SetActive(false);
+        gameOver.SetActive(true);
     }
 
     private void QuitGame()

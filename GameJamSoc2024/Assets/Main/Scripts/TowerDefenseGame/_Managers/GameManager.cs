@@ -127,11 +127,18 @@ namespace Main.Scripts.TowerDefenseGame._Managers
             private void LoseGame()
             {
                 m_ui.ActivateGameOverScreen(false);
+            
             }
 
+        internal void ResetGame()
+        {
+            m_ui.ResetGame();
+
+        }
+
         #endregion
-        
-        
-        
+
+
+
     }
 }
