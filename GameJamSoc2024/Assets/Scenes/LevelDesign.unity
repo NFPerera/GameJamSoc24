@@ -7610,6 +7610,10 @@ PrefabInstance:
       propertyPath: <PathPoints>k__BackingField.Array.data[16]
       value: 
       objectReference: {fileID: 878534127}
+    - target: {fileID: 6145293374881098955, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: buildingMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 6243240693628951749, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
       propertyPath: lifeText
       value: 

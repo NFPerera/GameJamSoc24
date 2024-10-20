@@ -39,7 +39,8 @@ namespace Main.Scripts.TowerDefenseGame.Models
 
         private void ShrinkBody()
         {
-            StartCoroutine(ShrinkCoroutine());
+            body.gameObject.SetActive(false);
+            //StartCoroutine(ShrinkCoroutine());
         }
 
         private IEnumerator ShrinkCoroutine()
