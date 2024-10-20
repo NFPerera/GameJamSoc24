@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour, IDamageable
         // Check for sprinting input
         float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed;
 
-        transform.Translate(moveDirection * currentSpeed * Time.deltaTime);
+        transform.Translate(moveDirection * (currentSpeed * Time.deltaTime));
     }
 
     void Jump()

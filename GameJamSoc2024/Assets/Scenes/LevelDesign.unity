@@ -216,9 +216,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnButtonDownMortarTower
       objectReference: {fileID: 0}
+    - target: {fileID: 1325635287476861458, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
       propertyPath: initChap
-      value: 
+      value: TutoTD
       objectReference: {fileID: 0}
     - target: {fileID: 1584164749375524809, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
       propertyPath: m_Name
@@ -7606,6 +7610,10 @@ PrefabInstance:
       propertyPath: <PathPoints>k__BackingField.Array.data[16]
       value: 
       objectReference: {fileID: 878534127}
+    - target: {fileID: 6145293374881098955, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: buildingMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 6243240693628951749, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
       propertyPath: lifeText
       value: 
@@ -15409,7 +15417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 0}
   hud: {fileID: 1270633607}
-  mainMenu: {fileID: 0}
+  mainMenu: {fileID: 2139840089}
 --- !u!114 &2089124679
 MonoBehaviour:
   m_ObjectHideFlags: 0

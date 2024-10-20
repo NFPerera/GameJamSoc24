@@ -21,8 +21,9 @@ namespace Main.Scripts.TowerDefenseGame.Models
         {
             IsAvailable = false;
             //print("Building constructed");
-            if(body != null){
-            ShrinkBody(); // Call the shrink method when IsAvailable changes to false
+            if (body != null)
+            {
+                ShrinkBody(); // Call the shrink method when IsAvailable changes to false
             }
         }
 
@@ -38,7 +39,8 @@ namespace Main.Scripts.TowerDefenseGame.Models
 
         private void ShrinkBody()
         {
-            StartCoroutine(ShrinkCoroutine());
+            body.gameObject.SetActive(false);
+            //StartCoroutine(ShrinkCoroutine());
         }
 
         private IEnumerator ShrinkCoroutine()

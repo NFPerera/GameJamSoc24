@@ -1,6 +1,7 @@
 ﻿using System;
 using Main.Scripts.TowerDefenseGame.Commands;
 using Main.Scripts.TowerDefenseGame.Models;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace Main.Scripts.TowerDefenseGame._Managers
@@ -11,7 +12,7 @@ namespace Main.Scripts.TowerDefenseGame._Managers
         [SerializeField] private GameObject mortarTowerPrefab;
         [SerializeField] private GameObject gatlingTowerPrefab;
         [SerializeField] private GameObject rocketTowerPrefab;
-
+        [SerializeField] private LayerMask buildingMask;
         private GameObject _towerToBuild;
         private MousePosition _mousePosition;
 
@@ -35,12 +36,11 @@ namespace Main.Scripts.TowerDefenseGame._Managers
             
             if(_towerToBuild == null) return;
             
-            if (!Physics.Raycast(l_ray, out var l_raycastHit, Mathf.Infinity, 1 << 8)){
+            if (!Physics.Raycast(l_ray, out var l_raycastHit, Mathf.Infinity, buildingMask)){
                 return;}
 
 
             if (!l_raycastHit.transform.TryGetComponent(out BuildingModel l_buildingModel)){ 
-               
                 return;}
             
             if(!l_buildingModel.IsAvailable)
