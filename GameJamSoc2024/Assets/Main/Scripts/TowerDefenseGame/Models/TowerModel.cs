@@ -12,8 +12,9 @@ namespace Main.Scripts.TowerDefenseGame.Models
         [SerializeField] private TowerData data;
         [SerializeField] private Transform shootPoint;
         [SerializeField] private GameObject pivot;
+        [SerializeField] private AudioSource audioSource;
 
- 
+
         private List<IDamageable> m_enemiesInRange = new List<IDamageable>();
         private float m_timer;
 
@@ -22,17 +23,15 @@ namespace Main.Scripts.TowerDefenseGame.Models
         private void Start()
         {
             var trigger = GetComponent<SphereCollider>();
-            
-                
+
             trigger.radius = data.Range;
-            
         }
 
         private void Update()
         {
             m_timer += Time.deltaTime;
             if (m_enemiesInRange.Count == 0) return;
-             if( m_enemiesInRange.Count > 0 && m_enemiesInRange[0] != null)
+            if (m_enemiesInRange.Count > 0 && m_enemiesInRange[0] != null)
                 try
                 {
                     ChangeAimDir(m_enemiesInRange[0].GetTransform().position);
@@ -41,11 +40,12 @@ namespace Main.Scripts.TowerDefenseGame.Models
                 {
                     m_enemiesInRange.Remove(m_enemiesInRange[0]);
                 }
-                
-            
+
+
             if (m_timer >= data.AttackSpeed)
             {
                 Attack();
+                audioSource.Play();
                 m_timer = 0f;
             }
         }
@@ -58,7 +58,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
             Quaternion lookRotation = Quaternion.LookRotation(directionToTarget);
             pivot.transform.rotation = lookRotation;
         }
-        
+
         private void OnTriggerEnter(Collider p_col)
         {
             if (!p_col.TryGetComponent(out IDamageable l_damageable)) return;
@@ -75,16 +75,16 @@ namespace Main.Scripts.TowerDefenseGame.Models
         private void OnTriggerExit(Collider p_other)
         {
             if (!p_other.TryGetComponent(out IDamageable l_damageable)) return;
-            
+
             m_enemiesInRange.Remove(l_damageable);
         }
 
         #region Getters
-            public TowerData GetData() => data;
-            public List<IDamageable> GetEnemiesInRange() => m_enemiesInRange;
-            public Transform GetShootPoint() => shootPoint;
+        public TowerData GetData() => data;
+        public List<IDamageable> GetEnemiesInRange() => m_enemiesInRange;
+        public Transform GetShootPoint() => shootPoint;
 
-            
+
 
         #endregion
     }

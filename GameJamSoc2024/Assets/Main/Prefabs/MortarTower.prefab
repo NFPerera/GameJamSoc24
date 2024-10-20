@@ -52,6 +52,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 7c33a82c6ec6e2944a2b7817b7760037, type: 2}
   shootPoint: {fileID: 813764920302756173}
   pivot: {fileID: 4062823741120572617}
+  audioSource: {fileID: 4541840910424420035}
 --- !u!135 &7300247264295667181
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -116,8 +117,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a367516cbab2b0745bc92e704bcf33c1, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
