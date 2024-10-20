@@ -15,19 +15,34 @@ public class HudEventHandler : MonoBehaviour
 
     public List<ButtonKeybind> buttonKeybinds;
 
+    public GameObject pauseMenu;
 
     public GameObject gameManager;
+    public GameObject hud;
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Escape key pressed");
+
+            if (pauseMenu.activeSelf)
+            {
+                hud.SetActive(true);
+                Time.timeScale = 1f;
+                pauseMenu.SetActive(false);
+            }
+            else
+            {
+                hud.SetActive(false);
+                Time.timeScale = 0f;
+                pauseMenu.SetActive(true);
+            }
+
             if (gameManager != null) {
                 // gameManager.GetComponent<GameManager>().PauseGame();
             }
-            // Call the method to pause the game
+
         }
 
         foreach (var buttonKeybind in buttonKeybinds)

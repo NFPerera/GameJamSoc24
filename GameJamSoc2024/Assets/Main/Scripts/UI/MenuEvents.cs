@@ -3,68 +3,148 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-
 public class TDHudEvents : MonoBehaviour
 {
     private UIDocument _uiDocument;
     private List<Button> _buttons = new List<Button>();
     [SerializeField] private AudioSource _audioSource;
-    private Dictionary<KeyCode, Button> _keyToButton;
 
+    [SerializeField] private GameObject hud;
+
+    [SerializeField] private GameObject mainMenu;
 
     private void Awake()
     {
+        // Pause the game on start
+        Time.timeScale = 0f;
+        hud.SetActive(false);
         _uiDocument = GetComponent<UIDocument>();
         _audioSource = GetComponent<AudioSource>();
         _buttons = _uiDocument.rootVisualElement.Query<Button>().ToList();
         foreach (var button in _buttons)
         {
-            button.RegisterCallback<ClickEvent>(ev => OnButtonClicked(ev));
+            // Register the button click event using a named method
+            button.RegisterCallback<ClickEvent>(OnButtonClicked);
         }
-
-        _keyToButton = new Dictionary<KeyCode, Button>
-        {
-            { KeyCode.Alpha1, _uiDocument.rootVisualElement.Q<Button>("Button1") },
-            { KeyCode.Alpha2, _uiDocument.rootVisualElement.Q<Button>("Button2") },
-            { KeyCode.Alpha3, _uiDocument.rootVisualElement.Q<Button>("Button3") },
-            { KeyCode.Alpha4, _uiDocument.rootVisualElement.Q<Button>("Button4") },
-            { KeyCode.Alpha5, _uiDocument.rootVisualElement.Q<Button>("Button5") }
-        };
     }
 
-    private void onDisable() {
+    private void OnEnable()
+    {
+
+        Time.timeScale = 0f;
+        hud.SetActive(false);
+
+        // Disable input events
+        Input.simulateMouseWithTouches = false;
+        
+        // Re-query buttons on enable to ensure they're the active UI buttons
+        _buttons = _uiDocument.rootVisualElement.Query<Button>().ToList();
+
         foreach (var button in _buttons)
         {
-            button.UnregisterCallback<ClickEvent>(ev => OnButtonClicked(ev));
+            // Register the button click event using a named method
+            button.RegisterCallback<ClickEvent>(OnButtonClicked);
         }
     }
 
-    private void OnButtonClicked(ClickEvent ev)
+    private void OnDisable()
     {
-        // _audioSource.Play();
-        var button = (Button) ev.target;
-        var buttonName = button.name;
-        Debug.Log($"Button {buttonName} clicked");
+        Time.timeScale = 1f;
+        hud.SetActive(true);
+        foreach (var button in _buttons)
+        {
+            // Unregister using the same named method to ensure it's properly removed
+            button.UnregisterCallback<ClickEvent>(OnButtonClicked);
+        }
     }
 
-    // Start is called before the first frame update
-    void Start()
+
+    // This will be called whenever any button is clicked
+    private void OnButtonClicked(ClickEvent ev)
     {
-        
+        var button = (Button)ev.target;
+        var buttonName = button.name;
+        Debug.Log($"Button {buttonName} clicked");
+
+        switch (buttonName)
+        {
+            case "StartButton":
+                StartGame();
+                break;
+            case "CreditsButton":
+                CreditsScreen();
+                break;
+            case "QuitButton":
+                QuitGame();
+                break;
+            case "QuitToMainMenuButton":
+                QuitToMainMenuGame();
+                break;
+            case "ResumeButton":
+                ResumeGame();
+                break;
+            default:
+                Debug.Log("Unknown button clicked");
+                break;
+        }
+    }
+
+    private void StartGame()
+    {
+        Time.timeScale = 1f;
+        hud.SetActive(true);
+        gameObject.SetActive(false);
+
+        // gameManager.GetComponent<GameManager>().StartGame();
+    }
+
+    private void QuitToMainMenuGame()
+    {
+        Time.timeScale = 0f;
+        hud.SetActive(false);
+        gameObject.SetActive(false);
+        mainMenu.SetActive(true);
+        // call teh reset logic.
+    }
+
+    private void CreditsScreen()
+    {
+        // Show credits screen
+    }
+
+    private void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    private void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        hud.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
-{
-    foreach (var key in _keyToButton.Keys)
     {
-        if (Input.GetKeyDown(key))
+        foreach (var button in _buttons)
         {
-            // _audioSource.Play();
-            var button = _keyToButton[key];
-            var clickEvent = new ClickEvent { target = button };
-            OnButtonClicked(clickEvent);
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (button.name == "PauseButton")
+                {
+                    if (gameObject.activeSelf)
+                    {
+                        Time.timeScale = 1f;
+                        gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        Time.timeScale = 0f;
+                        gameObject.SetActive(true);
+                    }
+                }
+            }
         }
     }
-}
 }
