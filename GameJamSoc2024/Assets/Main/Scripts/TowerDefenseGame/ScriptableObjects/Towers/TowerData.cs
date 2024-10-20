@@ -26,6 +26,8 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Towers
 
         public String Description => description;
 
+        public bool GetHitsFlying => BulletPrefabs.GetHitsFlying();
+
         public float AttackSpeed
         {
             get

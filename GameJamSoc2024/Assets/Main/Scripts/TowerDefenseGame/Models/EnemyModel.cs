@@ -70,8 +70,10 @@ namespace Main.Scripts.TowerDefenseGame.Models
 
             public Transform GetTransform() => transform;
 
-            public void DoDamage(int p_damage)
+            public void DoDamage(int p_damage,bool p_isFlying)
             {
+                print(p_isFlying+" "+data.IsFlying);
+                if (data.IsFlying && !p_isFlying) return;
                 m_healthController?.TakeDamage(p_damage);
                 
                 if (m_healthController?.Hp <= 0)  LowerTier();
@@ -105,5 +107,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
             OnDeath?.Invoke(this);
             Destroy(gameObject);
         }
+
+        public bool GetIsFlying() => data.IsFlying;
     }
 }

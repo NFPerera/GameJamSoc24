@@ -72,10 +72,11 @@ public class PlayerMovement : MonoBehaviour, IDamageable
 
     public Transform GetTransform() => transform;
 
-    public void DoDamage(int damage)
+    public void DoDamage(int damage, bool affectFlying = false)
     {
         throw new NotImplementedException();
     }
+
 
     public void Heal(int healAmount)
     {

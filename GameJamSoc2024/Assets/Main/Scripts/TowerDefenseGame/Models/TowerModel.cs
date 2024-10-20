@@ -31,6 +31,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
         private void Update()
         {
             m_timer += Time.deltaTime;
+            if (m_enemiesInRange.Count == 0) return;
              if( m_enemiesInRange.Count > 0 && m_enemiesInRange[0] != null)
                 ChangeAimDir(m_enemiesInRange[0].GetTransform().position);
             
@@ -53,7 +54,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
         private void OnTriggerEnter(Collider p_col)
         {
             if (!p_col.TryGetComponent(out IDamageable l_damageable)) return;
-            
+            if (p_col.GetComponent<EnemyModel>().GetIsFlying() && !data.GetHitsFlying) return;
             m_enemiesInRange.Add(l_damageable);
             l_damageable.OnDeath += HandleEnemyDeath;
         }

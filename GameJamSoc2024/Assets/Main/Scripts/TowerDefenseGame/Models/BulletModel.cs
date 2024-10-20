@@ -68,7 +68,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
         }
         private void OnTriggerEnter(Collider p_col)
         {
-
+            print(data.HitsFlying);
             if (!p_col.TryGetComponent(out IDamageable l_damageable))
             {
                 if (data.TargetLayer.Includes(p_col.gameObject.layer))
@@ -95,9 +95,11 @@ namespace Main.Scripts.TowerDefenseGame.Models
             public int GetDamage() => m_damage;
             public Vector3 GetTargetPos() => m_targetPos;
 
-        #endregion
-        
+        public bool GetHitsFlying() => data.HitsFlying;
 
-        
+        #endregion
+
+
+
     }
 }

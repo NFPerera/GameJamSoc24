@@ -8,5 +8,11 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Enemies
         
         [field: SerializeField] public int MaxHealth { get; private set; }
         [field: SerializeField] public float Speed { get; private set; }
+
+        [field: SerializeField] public int MoneyReward { get; private set; }
+
+        [field: SerializeField] public int Damage { get; private set; }
+
+        [field: SerializeField] public bool IsFlying { get; private set; }
     }
 }
