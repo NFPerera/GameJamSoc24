@@ -7,27 +7,28 @@ using TMPro;
 public class ChapterDisplay : MonoBehaviour
 {
     [Header("Components")]
-    public Image background;
-    public Image leftchar, rightchar;
-    public TextMeshProUGUI textComponent;
-    public GameObject dialogueUI;
-    public DialogueDisplay dialogueDisplay;
+    [SerializeField] private Image background;
+    [SerializeField] private Image leftchar, rightchar;
+    [SerializeField] private TextMeshProUGUI textComponent;
+    [SerializeField] private GameObject dialogueUI;
+    [SerializeField] private DialogueDisplay dialogueDisplay;
 
     [Header("Lighting")]
-    public Color foregroundColor;
-    public Color backgroundColor;
+    [SerializeField] private Color foregroundColor;
+    [SerializeField] private Color backgroundColor;
 
     [Header("Text")]
     public bool instantText;
     public float textSpeed;
+
+    [Header("Audio")]
+    [SerializeField] AudioManager audio;
 
 
     // Dialogue vars
     Queue<Dialogue> dialogueQueue;
     Coroutine currDialogueCoroutine;
     bool is_running;
-
-
 
     void Awake()
     {
@@ -51,6 +52,9 @@ public class ChapterDisplay : MonoBehaviour
 
     public void LoadChapter(Chapter chapter)
     {
+        // Transiciona la musica al correspondiente
+        audio.PlayMusic(chapter.music);
+
         // Pone los personajes recibidos en sus imagenes correspondientes.
         leftchar.sprite = chapter.leftChar;
         rightchar.sprite = chapter.rightChar;
