@@ -12,6 +12,8 @@ public class TDHudEvents : MonoBehaviour
     [SerializeField] private GameObject hud;
 
     [SerializeField] private GameObject mainMenu;
+    
+    [SerializeField] private GameObject credits;
 
     private void Awake()
     {
@@ -101,6 +103,7 @@ public class TDHudEvents : MonoBehaviour
         Time.timeScale = 0f;
         hud.SetActive(false);
         gameObject.SetActive(false);
+        credits.SetActive(false);
         mainMenu.SetActive(true);
         // call teh reset logic.
     }
@@ -108,6 +111,10 @@ public class TDHudEvents : MonoBehaviour
     private void CreditsScreen()
     {
         // Show credits screen
+        hud.SetActive(false);
+        gameObject.SetActive(false);
+        credits.SetActive(true);
+        mainMenu.SetActive(false);
     }
 
     private void QuitGame()

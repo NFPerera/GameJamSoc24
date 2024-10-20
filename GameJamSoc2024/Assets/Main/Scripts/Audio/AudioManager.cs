@@ -6,7 +6,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] private AudioClip[] music;
-    AudioSource audio;
+    [SerializeField] AudioSource audio;
     [SerializeField][Range(0, 1)] float musicVol;
     [SerializeField][Range(1, 5)] float fadeTime;
 

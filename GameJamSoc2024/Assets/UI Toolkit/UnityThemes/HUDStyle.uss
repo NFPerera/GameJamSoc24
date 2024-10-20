@@ -34,8 +34,33 @@
     margin-top: 0;
 }
 
+.smallText {
+    font-size: 90px;
+    color: rgb(255, 190, 0);
+    height: 100px;
+    align-self: flex-start;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
+    opacity: 1;
+    visibility: visible;
+    align-items: center;
+    justify-content: flex-start;
+    -unity-font: url("project://database/Assets/Thaleah_PixelFont/Materials/ThaleahFat_TTF.ttf?fileID=12800000&guid=585188cdc4600544eb408bee749e4b3a&type=3#ThaleahFat_TTF");
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s, transform 0.3s;
+    -unity-font-definition: initial;
+    -unity-text-align: upper-left;
+    margin-top: 0;
+}
+
 .button:hover {
     background-color: rgba(255, 255, 255, 0);
-    
     color: rgb(212, 135, 117);
 }
