@@ -16,3 +16,7 @@ MonoBehaviour:
   <BulletLifeTime>k__BackingField: 1
   <BulletAttack>k__BackingField: {fileID: 11400000, guid: 7565152675be6cd4f9c3cee21de5e359, type: 2}
   <BulletMovement>k__BackingField: {fileID: 11400000, guid: 1a9b2efdc322c6f448717f452951df0b, type: 2}
+  <TargetLayer>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 0
+  <HitsFlying>k__BackingField: 1

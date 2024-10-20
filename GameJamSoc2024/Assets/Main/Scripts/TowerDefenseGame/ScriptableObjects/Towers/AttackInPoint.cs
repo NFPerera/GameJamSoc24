@@ -20,7 +20,7 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Towers
             
             var bullet = Instantiate(data.BulletPrefabs, model.GetShootPoint().position, Quaternion.identity);
             
-            bullet.InitializeBullet(firstEnemyInRange.GetTransform(), data.Damage, 10f, model.transform.position);
+            bullet.InitializeBullet(firstEnemyInRange.GetTransform(), data.Damage, model.transform.position);
         }
     }
 }

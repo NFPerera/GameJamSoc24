@@ -16,7 +16,7 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Attack
             if (model.GetTargetTransform() != null)
             {
                 if(model.GetTargetIDamageable() != null)
-                    GameManager.Instance.AddEventQueue(new CmdDoDamage(model.GetTargetIDamageable(), model.GetDamage()));
+                    GameManager.Instance.AddEventQueue(new CmdDoDamage(model.GetTargetIDamageable(), model.GetDamage(),model.GetHitsFlying()));
                 
                 var l_count = Physics.OverlapSphereNonAlloc(model.transform.position, 3, m_overlapResults, enemyLayer);
 
@@ -26,7 +26,7 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Attack
 
                     if (col.TryGetComponent(out IDamageable damageable))
                     {
-                        GameManager.Instance.AddEventQueue(new CmdDoDamage(damageable, model.GetDamage()));
+                        GameManager.Instance.AddEventQueue(new CmdDoDamage(damageable, model.GetDamage(),model.GetHitsFlying()));
                     }
                 }
                 

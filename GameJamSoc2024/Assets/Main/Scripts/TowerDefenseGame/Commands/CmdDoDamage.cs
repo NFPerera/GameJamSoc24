@@ -7,14 +7,17 @@ namespace Main.Scripts.TowerDefenseGame.Commands
     {
         private int _damage;
         private IDamageable _healthController;
+        private bool _affectFlying;
         
-        public CmdDoDamage(IDamageable healthController, int damage)
+        public CmdDoDamage(IDamageable healthController, int damage,bool affectFlying = false)
         {
+         
             _healthController = healthController;
             _damage = damage;
+            _affectFlying = affectFlying;
         }
 
-        public void Execute() => _healthController.DoDamage(_damage);
+        public void Execute() => _healthController.DoDamage(_damage, _affectFlying);
         public void Undo() => _healthController.Heal(_damage);
     }
 }
