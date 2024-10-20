@@ -64,7 +64,6 @@ public class TDHudEvents : MonoBehaviour
     {
         var button = (Button)ev.target;
         var buttonName = button.name;
-        Debug.Log($"Button {buttonName} clicked");
 
         switch (buttonName)
         {
