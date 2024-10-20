@@ -50,6 +50,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
                 if (m_indexPathPoints >= m_pathPoints.Count)
                 {
                     GameManager.Instance.OnChangeLifePoints.Invoke(index+ 1);
+                    OnDeath?.Invoke(this);
                     Destroy(gameObject);
                     
                     return;

@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6243240693628951749}
   - component: {fileID: 4135642055034199130}
   - component: {fileID: 7870361246788659404}
+  - component: {fileID: 5513520699795374996}
+  - component: {fileID: 8065145173436816277}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -66,7 +68,29 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mainCamera: {fileID: 0}
+  allBuildings:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &6145293374881098955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,6 +106,9 @@ MonoBehaviour:
   mortarTowerPrefab: {fileID: 38796001745360094, guid: bee6dd6edce777e48ade2a2cb330dde8, type: 3}
   gatlingTowerPrefab: {fileID: 4451705677217399460, guid: df9d03db6a391444fafe9dc14022177f, type: 3}
   rocketTowerPrefab: {fileID: 5958607261518383636, guid: 04ed4f1626ecf47448993c67e5f7f9b1, type: 3}
+  buildingMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &6243240693628951749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,12 +130,8 @@ MonoBehaviour:
   areaButton: {fileID: 0}
   rangeButton: {fileID: 0}
   rocketButton: {fileID: 0}
-  undoButton: {fileID: 0}
   lifeText: {fileID: 0}
   moneyText: {fileID: 0}
-  gameOverScreen: {fileID: 0}
-  youWonText: {fileID: 0}
-  youLoseText: {fileID: 0}
 --- !u!114 &4135642055034199130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,11 +159,41 @@ MonoBehaviour:
   levels:
   - Waves:
     - enemy:
+      - {fileID: 394002424552812880, guid: 4b1baaa88c282194cabe6164ef28c6f3, type: 3}
+      - {fileID: 4290338970657660532, guid: 76e35fde87c7f09409af672e781b71cd, type: 3}
+      numberOfEnemies: 5
+      countDownBetweenEnemies: 2
+    - enemy:
       - {fileID: 4377133440447333311, guid: 50d97c37cd6cead40a973f96d3794963, type: 3}
       numberOfEnemies: 5
       countDownBetweenEnemies: 2
     - enemy:
       - {fileID: 4377133440447333311, guid: 50d97c37cd6cead40a973f96d3794963, type: 3}
+      numberOfEnemies: 5
+      countDownBetweenEnemies: 2
+  - Waves:
+    - enemy:
+      - {fileID: 4377133440447333311, guid: 50d97c37cd6cead40a973f96d3794963, type: 3}
+      - {fileID: 4290338970657660532, guid: 76e35fde87c7f09409af672e781b71cd, type: 3}
+      numberOfEnemies: 5
+      countDownBetweenEnemies: 2
+    - enemy:
+      - {fileID: 4290338970657660532, guid: 76e35fde87c7f09409af672e781b71cd, type: 3}
+      numberOfEnemies: 5
+      countDownBetweenEnemies: 2
+    - enemy:
+      - {fileID: 4377133440447333311, guid: 50d97c37cd6cead40a973f96d3794963, type: 3}
+      numberOfEnemies: 5
+      countDownBetweenEnemies: 2
+  - Waves:
+    - enemy:
+      - {fileID: 4377133440447333311, guid: 50d97c37cd6cead40a973f96d3794963, type: 3}
+      - {fileID: 394002424552812880, guid: 4b1baaa88c282194cabe6164ef28c6f3, type: 3}
+      - {fileID: 3208172977964315661, guid: 6767563b2f17c8e49afc8ba596822fb1, type: 3}
+      numberOfEnemies: 5
+      countDownBetweenEnemies: 2
+    - enemy:
+      - {fileID: 6544322089092843592, guid: 2c340cc9e842a504bb84d718d8adde8a, type: 3}
       numberOfEnemies: 5
       countDownBetweenEnemies: 2
     - enemy:
@@ -173,34 +226,129 @@ MonoBehaviour:
       - {fileID: 4377133440447333311, guid: 50d97c37cd6cead40a973f96d3794963, type: 3}
       numberOfEnemies: 5
       countDownBetweenEnemies: 2
-  - Waves:
-    - enemy:
-      - {fileID: 4377133440447333311, guid: 50d97c37cd6cead40a973f96d3794963, type: 3}
-      numberOfEnemies: 5
-      countDownBetweenEnemies: 2
-    - enemy:
-      - {fileID: 4377133440447333311, guid: 50d97c37cd6cead40a973f96d3794963, type: 3}
-      numberOfEnemies: 5
-      countDownBetweenEnemies: 2
-    - enemy:
-      - {fileID: 4377133440447333311, guid: 50d97c37cd6cead40a973f96d3794963, type: 3}
-      numberOfEnemies: 5
-      countDownBetweenEnemies: 2
-  - Waves:
-    - enemy:
-      - {fileID: 4377133440447333311, guid: 50d97c37cd6cead40a973f96d3794963, type: 3}
-      numberOfEnemies: 5
-      countDownBetweenEnemies: 2
-    - enemy:
-      - {fileID: 4377133440447333311, guid: 50d97c37cd6cead40a973f96d3794963, type: 3}
-      numberOfEnemies: 5
-      countDownBetweenEnemies: 2
-    - enemy:
-      - {fileID: 4377133440447333311, guid: 50d97c37cd6cead40a973f96d3794963, type: 3}
-      numberOfEnemies: 5
-      countDownBetweenEnemies: 2
+  dialogNames:
+  - PostPrimeraInvasion
+  - CapturaDeStacy
+  - InterrogacionDeStacy
+  - PaseoPorTerrenoCalcinado
+  - VistaFunebre
   spawnPoint: {fileID: 0}
   waveButton: {fileID: 0}
+--- !u!114 &5513520699795374996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024034460013117371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdf1f31f2bd5a434fbf8aaf3ab451125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music:
+  - {fileID: 8300000, guid: 58f4ce2901ae52142a6cef589aec589f, type: 3}
+  - {fileID: 8300000, guid: 71d1400e411204d4c9e60e53a0588590, type: 3}
+  - {fileID: 8300000, guid: db4939c5f3927364f9f6d9fabdce3ffe, type: 3}
+  - {fileID: 8300000, guid: 56e23eddac41406438a7df963ea09e32, type: 3}
+  musicVol: 0.2
+  fadeTime: 1
+--- !u!82 &8065145173436816277
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024034460013117371}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8181737891203530287
 GameObject:
   m_ObjectHideFlags: 0

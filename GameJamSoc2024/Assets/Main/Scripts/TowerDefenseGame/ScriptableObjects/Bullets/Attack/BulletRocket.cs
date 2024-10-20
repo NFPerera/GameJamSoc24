@@ -30,13 +30,10 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Attack
                         GameManager.Instance.AddEventQueue(new CmdDoDamage(damageable, model.GetDamage(),model.GetHitsFlying()));
                     }
                 }
-                Debug.Log("destroy in rok");
                 Destroy(model.gameObject);
             }
             else
                 Destroy(model.gameObject);
-            
-            Debug.Log("destroy in rok222");
             
         }
     }
