@@ -904,6 +904,7 @@ MonoBehaviour:
     - RevolucionInminente
     - TutoTD
     - TutoFPS
+    - Epilogo
     m_values:
     - leftChar: {fileID: 21300000, guid: 1c9cb984457b0d5419139c74ce638e00, type: 3}
       rightChar: {fileID: 21300000, guid: 4f75c960d9059d74295bbd95bfb4948f, type: 3}
@@ -1206,6 +1207,49 @@ MonoBehaviour:
           y su plan es romper todas las defensas de Chudistan y derrocar al rey Jack."
         speaker: 2
       - text: Para hacer esto, movete utilizando WASD y dispara con el clic izquierdo.
+        speaker: 2
+      music: 3
+    - leftChar: {fileID: 21300000, guid: 1c9cb984457b0d5419139c74ce638e00, type: 3}
+      rightChar: {fileID: 21300000, guid: 4f75c960d9059d74295bbd95bfb4948f, type: 3}
+      bg: {fileID: 21300000, guid: 13ff744eb76d7ef42bc16b1ec36482ca, type: 3}
+      dialogues:
+      - text: "Despu\xE9s de una guerra brutal, Jack se encuentra solo y d\xE9bil."
+        speaker: 2
+      - text: "Porque hiciste esto Chad, rompiste un sistema limpio y eficiente.
+          Nosotros ten\xEDamos todo lo que quer\xEDamos y m\xE1s, y a\xFAn as\xED
+          decidiste meter la pata? \xBFEstas mal de la cabeza?"
+        speaker: 1
+      - text: "No me trates de tonto Jack, vos mataste a toda mi familia y me mentiste
+          desde el primer segundo que te conoci. Vos podes ser rey, vos podes ser
+          poderoso, pero al final del d\xEDa sos humano como el resto de nosotros. "
+        speaker: 0
+      - text: "\xBFComo el resto de nosotros? \xBFQui\xE9n es nosotros? \xBFEstos
+          inmundos que te rodean?"
+        speaker: 1
+      - text: SOY JACK! EL REY DE CHUDISTAN.
+        speaker: 1
+      - text: "A mi no me tomes como un ser menor, por algo pude mantener la ciudad
+          por tanto tiempo. Vos pensas que en la mano de un b\xE1rbaro todo va a
+          estar bien? Ridiculo, nadie va a est-"
+        speaker: 1
+      - text: "Con una bala solitaria, Chad termina el mon\xF3logo de Jack, el tirano.
+          Se da vuelta, mirando a los b\xE1rbaros que no saben c\xF3mo sentirse."
+        speaker: 2
+      - text: "Chicos, hoy creamos historia. Termin\xF3 la era donde a la gente se
+          le determina cu\xE1nta hambre iban a sufrir por en base a donde nacieron,
+          y progresamos hac\xEDa un mejor futuro."
+        speaker: 0
+      - text: "Yo aspiro a tomar poder de la ciudad sin cabeza, y completamente desarmar
+          la rama militar que manten\xEDa el ciclo de violencia y opresi\xF3n que
+          por tantos a\xF1os vivieron. Aunque a\xFAn se sientan in\xFAtiles, sepan
+          que para lograr esto necesito su ayuda."
+        speaker: 2
+      - text: "Con todo esto en mente, \xBFles gustar\xEDa conocer Chudistan?"
+        speaker: 2
+      - text: "Y con el discurso de Chad, la gente comienza a celebrar. No se puede
+          escuchar otra cosa que los llantos de felicidad\u2026"
+        speaker: 2
+      - text: Fin.
         speaker: 2
       music: 3
   initChap: TutoTD

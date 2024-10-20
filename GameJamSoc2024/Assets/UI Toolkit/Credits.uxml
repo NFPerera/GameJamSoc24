@@ -3,10 +3,11 @@
     <ui:VisualElement name="Container" style="flex-grow: 1; opacity: 1; background-color: rgba(61, 52, 36, 0.59);">
         <ui:GroupBox style="padding-top: 5px; margin-top: 200px; margin-left: 150px;">
             <ui:Label tabindex="-1" text="Oh my... king" parse-escape-sequences="true" display-tooltip-when-elided="true" class="header" style="width: 1160px;" />
-            <ui:Button text="Start game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="StartButton" class="button" />
-            <ui:Button text="Controls" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Controls" class="button" />
-            <ui:Button text="CREDITS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CreditsButton" class="button" />
-            <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitButton" class="button" />
+            <ui:Label tabindex="-1" text="Nicolas Perera" parse-escape-sequences="true" display-tooltip-when-elided="true" class="smallText" style="width: 1160px;" />
+            <ui:Label tabindex="-1" text="Joaquin Ramos" parse-escape-sequences="true" display-tooltip-when-elided="true" class="smallText" style="width: 1160px;" />
+            <ui:Label tabindex="-1" text="Uriel Sosa Vazquez" parse-escape-sequences="true" display-tooltip-when-elided="true" class="smallText" style="width: 1160px;" />
+            <ui:Label tabindex="-1" text="Ian dalton" parse-escape-sequences="true" display-tooltip-when-elided="true" class="smallText" style="width: 1160px;" />
+            <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitToMainMenuButton" class="button" />
         </ui:GroupBox>
     </ui:VisualElement>
 </ui:UXML>
