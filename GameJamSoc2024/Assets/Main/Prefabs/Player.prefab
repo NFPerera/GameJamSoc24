@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5808783155126774663}
   - component: {fileID: 5732554402153917661}
   - component: {fileID: 926486787249069660}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8419543814035639384}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 61797817864048051}
   - component: {fileID: 4833631712782884957}
   - component: {fileID: 224549685322962106}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,6 +306,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 238561912811810757}
     m_Modifications:
+    - target: {fileID: 36014542077028077, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 299587084824241858, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082871134635875301, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1750281649919912493, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -314,9 +326,33 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2274269746989749238, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735462960911959999, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4010464243474160777, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166773426584231157, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4278728980593701636, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691682908195226540, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4712174626212869259, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5091901527191665306, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -362,21 +398,49 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6391476559251619302, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6404845615159310740, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789078410651396163, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7027018506237647864, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7971874068077893999, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
       propertyPath: m_Name
       value: GatlingGun
       objectReference: {fileID: 0}
+    - target: {fileID: 7971874068077893999, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8299223786446275756, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1482965847053160314, guid: b7e62b4461ead3343aae7128c2858bee, type: 3}
     - target: {fileID: 8299223786446275756, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 5732554402153917661}
+    - target: {fileID: 8333202903216742213, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8344674634892390982, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410406544411970328, guid: 4c779495c3e19c542b11019776f4159e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

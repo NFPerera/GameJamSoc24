@@ -39,7 +39,8 @@ public class HudEventHandler : MonoBehaviour
                 pauseMenu.SetActive(true);
             }
 
-            if (gameManager != null) {
+            if (gameManager != null)
+            {
                 // gameManager.GetComponent<GameManager>().PauseGame();
             }
 
@@ -49,44 +50,50 @@ public class HudEventHandler : MonoBehaviour
         {
             if (Input.GetKeyDown(buttonKeybind.key))
             {
-            buttonKeybind.button.onClick.Invoke();
-            
+                buttonKeybind.button.onClick.Invoke();
+
                 // Trigger the button transition
                 switch (buttonKeybind.button.transition)
                 {
                     case Selectable.Transition.Animation:
-                    var animator = buttonKeybind.button.GetComponent<Animator>();
-                    if (animator != null)
-                    {
-                        animator.SetTrigger("Press");
-                    }
-                    break;
+                        var animator = buttonKeybind.button.GetComponent<Animator>();
+                        if (animator != null)
+                        {
+                            animator.SetTrigger("Press");
+                        }
+                        break;
 
                     case Selectable.Transition.ColorTint:
-                    var colors = buttonKeybind.button.colors;
-                    buttonKeybind.button.targetGraphic.color = colors.pressedColor;
-                    StartCoroutine(ResetColor(buttonKeybind.button, colors.normalColor));
-                    break;
+                        // Trigger button's transition to the pressed state
+                        var buttonColors = buttonKeybind.button.colors;
+                        buttonKeybind.button.targetGraphic.CrossFadeColor(buttonColors.pressedColor, buttonColors.fadeDuration, true, true);
+
+                        // Wait for the fade duration, then reset color
+                        StartCoroutine(ResetButtonColor(buttonKeybind.button, buttonColors.normalColor, buttonColors.fadeDuration));
+                        break;
 
                     case Selectable.Transition.SpriteSwap:
-                    var spriteState = buttonKeybind.button.spriteState;
-                    buttonKeybind.button.targetGraphic.GetComponent<Image>().sprite = spriteState.pressedSprite;
-                    StartCoroutine(ResetSprite(buttonKeybind.button, spriteState.highlightedSprite));
-                    break;
+                        var spriteState = buttonKeybind.button.spriteState;
+                        buttonKeybind.button.targetGraphic.GetComponent<Image>().sprite = spriteState.pressedSprite;
+                        StartCoroutine(ResetSprite(buttonKeybind.button, spriteState.highlightedSprite));
+                        break;
                 }
+
+
             }
         }
 
-         IEnumerator ResetColor(Button button, Color normalColor)
-        {
-        yield return new WaitForSeconds(0.1f);
-        button.targetGraphic.color = normalColor;
-        }
+        IEnumerator ResetButtonColor(Button button, Color targetColor, float duration)
+{
+    yield return new WaitForSeconds(duration); // Wait for the duration of the color fade
+    button.targetGraphic.CrossFadeColor(targetColor, duration, true, true);
+}
 
-         IEnumerator ResetSprite(Button button, Sprite normalSprite)
+
+        IEnumerator ResetSprite(Button button, Sprite normalSprite)
         {
-        yield return new WaitForSeconds(0.1f);
-        button.targetGraphic.GetComponent<Image>().sprite = normalSprite;
+            yield return new WaitForSeconds(0.1f);
+            button.targetGraphic.GetComponent<Image>().sprite = normalSprite;
         }
     }
 }

@@ -11,11 +11,13 @@ public class DialogueDisplay : MonoBehaviour
 
     private void OnEnable()
     {
+        Cursor.lockState = CursorLockMode.Confined;
         OpenDialogue();
     }
 
     private void OnDisable()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         CloseDialogue();
     }
 
