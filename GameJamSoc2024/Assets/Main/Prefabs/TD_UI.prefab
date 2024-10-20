@@ -2212,10 +2212,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.size
       value: 11
       objectReference: {fileID: 0}

@@ -224,6 +224,142 @@ PrefabInstance:
       propertyPath: initChap
       value: TutoTD
       objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_keys.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_keys.Array.data[8]
+      value: TutoFPS
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].bg
+      value: 
+      objectReference: {fileID: 21300000, guid: 13ff744eb76d7ef42bc16b1ec36482ca, type: 3}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].music
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].leftChar
+      value: 
+      objectReference: {fileID: 21300000, guid: 1c9cb984457b0d5419139c74ce638e00, type: 3}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].rightChar
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d3898d7553a1fd4a90ea90eafc0ab37, type: 3}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[7].dialogues.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[6].text
+      value: "Y con ese comentario, Jack se retira. La menci\xF3n de la familia de
+        Chad lo deja con una expresi\xF3n triste \u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[7].dialogues.Array.data[8].text
+      value: "Por \xFAltimo, podes cambiar de perspectiva con \u201CEspacio\u201D."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[0].text
+      value: "Chad y sus nuevos compa\xF1eros se encuentran cara a cara con lo que
+        una vez \xE9l llamaba su casa, Chudistan."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[1].text
+      value: "Gente, estuvimos meses prepar\xE1ndonos para este momento. Ya no m\xE1s
+        a la opresi\xF3n de los menos apreciados, ya no m\xE1s a violencia innecesaria.
+        \xA1Luchen conmigo, mis soldados!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[2].text
+      value: "\xA1Si General!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[3].text
+      value: "\xA1El ataque comienza! Chad y sus amigos estan armados con metralletas,
+        y su plan es romper todas las defensas de Chudistan y derrocar al rey Jack."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[4].text
+      value: Para hacer esto, movete utilizando WASD y dispara con el clic izquierdo.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[5].text
+      value: Para construir torretas, primero debe seleccionar el tipo de torreta
+        que quiere construir. Luego, haz clic sobre uno de las esferas rojas.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[6].text
+      value: "Tenga en cuenta que construir una torreta gasta recursos, que solamente
+        se consiguen defendiendo la ciudad de b\xE1rbaros."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[7].text
+      value: "Cuando estes listo para la pr\xF3xima oleada, haz clic sobre el bot\xF3n
+        que dice \u201CWave\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[8].text
+      value: "Por \xFAltimo, podes cambiar de perspectiva con \u201CEspacio\u201D."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[6].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[7].dialogues.Array.data[8].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[0].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[1].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[2].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[3].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[4].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[5].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[6].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[7].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339499537061709510, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
+      propertyPath: allChapters.m_values.Array.data[8].dialogues.Array.data[8].speaker
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1584164749375524809, guid: 7e0f23b0ec234a24e98f6d1b4b4cb2a8, type: 3}
       propertyPath: m_Name
       value: TD_UI

@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8733820200345290337}
+  isFPS: 0
 --- !u!111 &8733820200345290337
 Animation:
   m_ObjectHideFlags: 0
@@ -902,6 +903,7 @@ MonoBehaviour:
     - Confrontacion
     - RevolucionInminente
     - TutoTD
+    - TutoFPS
     m_values:
     - leftChar: {fileID: 21300000, guid: 1c9cb984457b0d5419139c74ce638e00, type: 3}
       rightChar: {fileID: 21300000, guid: 4f75c960d9059d74295bbd95bfb4948f, type: 3}
@@ -1184,7 +1186,28 @@ MonoBehaviour:
       - text: "Cuando estes listo para la pr\xF3xima oleada, haz clic sobre el bot\xF3n
           que dice \u201CWave\u201D"
         speaker: 2
+      - text: "Por \xFAltimo, podes cambiar de perspectiva con \u201CEspacio\u201D."
+        speaker: 2
       music: 1
+    - leftChar: {fileID: 21300000, guid: 1c9cb984457b0d5419139c74ce638e00, type: 3}
+      rightChar: {fileID: 21300000, guid: 6d3898d7553a1fd4a90ea90eafc0ab37, type: 3}
+      bg: {fileID: 21300000, guid: 13ff744eb76d7ef42bc16b1ec36482ca, type: 3}
+      dialogues:
+      - text: "Chad y sus nuevos compa\xF1eros se encuentran cara a cara con lo que
+          una vez \xE9l llamaba su casa, Chudistan."
+        speaker: 2
+      - text: "Gente, estuvimos meses prepar\xE1ndonos para este momento. Ya no m\xE1s
+          a la opresi\xF3n de los menos apreciados, ya no m\xE1s a violencia innecesaria.
+          \xA1Luchen conmigo, mis soldados!"
+        speaker: 0
+      - text: "\xA1Si General!"
+        speaker: 1
+      - text: "\xA1El ataque comienza! Chad y sus amigos estan armados con metralletas,
+          y su plan es romper todas las defensas de Chudistan y derrocar al rey Jack."
+        speaker: 2
+      - text: Para hacer esto, movete utilizando WASD y dispara con el clic izquierdo.
+        speaker: 2
+      music: 3
   initChap: TutoTD
   dialogueDisplay: {fileID: 4633479697887992963}
 --- !u!114 &6813642742194371306
@@ -1210,3 +1233,4 @@ MonoBehaviour:
   instantText: 0
   textSpeed: 40
   audio: {fileID: 0}
+  hud: {fileID: 0}
