@@ -4,6 +4,7 @@ using Main.Scripts.TowerDefenseGame.Interfaces;
 using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
 using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Main.Scripts.TowerDefenseGame._Managers
 {
@@ -39,7 +40,7 @@ namespace Main.Scripts.TowerDefenseGame._Managers
             if(Instance != null) Destroy(this);
             
             Instance = this;
-
+            DontDestroyOnLoad(this);
             m_ui = GetComponent<UIManager>();
             
             m_lifePoints = MaxLifePoints;
@@ -68,6 +69,10 @@ namespace Main.Scripts.TowerDefenseGame._Managers
             {
                 OnClick.Invoke();
             }
+            
+            
+            if(Input.GetKeyDown(KeyCode.N))
+                SceneManager.LoadScene("LevelDesignFPS");
         }
 
         [SerializeField] private List<BuildingModel> allBuildings;
