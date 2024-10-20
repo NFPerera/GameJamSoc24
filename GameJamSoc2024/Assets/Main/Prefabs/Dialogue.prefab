@@ -901,6 +901,7 @@ MonoBehaviour:
     - VisitaFunebre
     - Confrontacion
     - RevolucionInminente
+    - TutoTD
     m_values:
     - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
       rightChar: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
@@ -1146,6 +1147,36 @@ MonoBehaviour:
         speaker: 0
       - text: "Despu\xE9s de una serie de idas y vueltas, los b\xE1rbaros deciden
           apoyar a Chad en su misi\xF3n\u2026"
+        speaker: 2
+    - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+      rightChar: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
+      bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+      dialogues:
+      - text: "Hoy es un d\xEDa como cualquier otro en Chudistan, nubes de arena
+          que tapan el sol, aire escaso de humedad y un calor insufrible."
+        speaker: 2
+      - text: "Bienvenido General Chad, hoy es tu primer d\xEDa en tu nuevo puesto
+          como L\xEDder de Estrategias Defensivas. Como usted sabe, su objetivo es
+          simple: Que ning\xFAn b\xE1rbaro llegue a las puertas de nuestra querida
+          ciudad."
+        speaker: 1
+      - text: "\xA1Claro que s\xED general! Gracias por darme la oportunidad de ocupar
+          un rol tan importante."
+        speaker: 0
+      - text: "No fue mi decisi\xF3n. Sepa soldado que si usted falla en defender
+          nuestra frontera y entran los salvajes a nuestra ciudad, ser\xE1s el \xFAnico
+          responsable y las consecuencias son graves."
+        speaker: 1
+      - text: "\xA1Gracias general! No pasar\xE1 ni uno solo."
+        speaker: 0
+      - text: Para construir torretas, primero debe seleccionar el tipo de torreta
+          que quiere construir. Luego, haz clic sobre uno de las esferas rojas.
+        speaker: 2
+      - text: "Tenga en cuenta que construir una torreta gasta recursos, que solamente
+          se consiguen defendiendo la ciudad de b\xE1rbaros."
+        speaker: 2
+      - text: "Cuando estes listo para la pr\xF3xima oleada, haz clic sobre el bot\xF3n
+          que dice \u201CWave\u201D"
         speaker: 2
   initChap: Confrontacion
   dialogueDisplay: {fileID: 4633479697887992963}

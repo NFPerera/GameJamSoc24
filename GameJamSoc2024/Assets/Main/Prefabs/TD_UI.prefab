@@ -2168,14 +2168,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_keys.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: chapters.Array.data[0].leftChar
       value: 
       objectReference: {fileID: 0}
