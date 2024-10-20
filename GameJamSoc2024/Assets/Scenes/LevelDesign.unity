@@ -12499,7 +12499,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1684421057}
   - component: {fileID: 1684421059}
-  - component: {fileID: 1684421058}
   m_Layer: 0
   m_Name: CasteView
   m_TagString: Untagged
@@ -12522,14 +12521,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 503419086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1684421058
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1684421056}
-  m_Enabled: 1
 --- !u!20 &1684421059
 Camera:
   m_ObjectHideFlags: 0
@@ -13437,7 +13428,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1814338622}
   - component: {fileID: 1814338624}
-  - component: {fileID: 1814338623}
   m_Layer: 0
   m_Name: FrontView
   m_TagString: Untagged
@@ -13460,14 +13450,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 503419086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1814338623
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814338621}
-  m_Enabled: 1
 --- !u!20 &1814338624
 Camera:
   m_ObjectHideFlags: 0
@@ -13623,7 +13605,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1859177049}
   - component: {fileID: 1859177051}
-  - component: {fileID: 1859177050}
   m_Layer: 0
   m_Name: SpawnView
   m_TagString: Untagged
@@ -13646,14 +13627,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 503419086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1859177050
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859177048}
-  m_Enabled: 1
 --- !u!20 &1859177051
 Camera:
   m_ObjectHideFlags: 0

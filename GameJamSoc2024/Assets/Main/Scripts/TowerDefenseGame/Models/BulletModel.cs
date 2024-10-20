@@ -14,6 +14,8 @@ namespace Main.Scripts.TowerDefenseGame.Models
         [SerializeField] private BulletData data;
 
         private Transform m_target;
+
+        [SerializeField] public GameObject destroyEffect;
         [SerializeField] private Transform body;
         public Vector3 InitPos { get; private set; }
         private IDamageable m_targetDamageable;
@@ -38,6 +40,11 @@ namespace Main.Scripts.TowerDefenseGame.Models
         private void OnDestroy()
         {
             //print("Bullet destroyed");
+            if (destroyEffect != null)
+            {
+                GameObject l_destroyEffect = Instantiate(destroyEffect, transform.position, transform.rotation);
+                Destroy(l_destroyEffect, 2f);
+            }
             data.BulletMovement.OnReachTarget(this);
         }
 
