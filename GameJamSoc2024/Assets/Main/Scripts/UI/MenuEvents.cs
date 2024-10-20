@@ -36,7 +36,7 @@ public class TDHudEvents : MonoBehaviour
 
         // Disable input events
         Input.simulateMouseWithTouches = false;
-        
+
         // Re-query buttons on enable to ensure they're the active UI buttons
         _buttons = _uiDocument.rootVisualElement.Query<Button>().ToList();
 
@@ -50,7 +50,7 @@ public class TDHudEvents : MonoBehaviour
     private void OnDisable()
     {
         Time.timeScale = 1f;
-        hud.SetActive(true);
+        //hud.SetActive(true);
         foreach (var button in _buttons)
         {
             // Unregister using the same named method to ensure it's properly removed
@@ -91,7 +91,6 @@ public class TDHudEvents : MonoBehaviour
     private void StartGame()
     {
         Time.timeScale = 1f;
-        hud.SetActive(true);
         gameObject.SetActive(false);
 
         // gameManager.GetComponent<GameManager>().StartGame();

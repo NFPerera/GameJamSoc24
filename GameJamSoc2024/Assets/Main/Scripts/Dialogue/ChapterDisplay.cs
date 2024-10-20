@@ -24,6 +24,9 @@ public class ChapterDisplay : MonoBehaviour
     [Header("Audio")]
     [SerializeField] AudioManager audio;
 
+    [Header("Others")]
+    [SerializeField] private GameObject hud;
+
 
     // Dialogue vars
     Queue<Dialogue> dialogueQueue;
@@ -47,7 +50,12 @@ public class ChapterDisplay : MonoBehaviour
     public void CloseChapterUI()
     {
 
-        if (dialogueUI.activeInHierarchy) dialogueDisplay.CloseDialogue();
+        if (dialogueUI.activeInHierarchy)
+        {
+            hud.SetActive(true);
+            dialogueDisplay.CloseDialogue();
+        }
+
     }
 
     public void LoadChapter(Chapter chapter)

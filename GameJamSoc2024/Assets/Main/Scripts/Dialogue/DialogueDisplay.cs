@@ -7,7 +7,7 @@ using UnityEngine;
 public class DialogueDisplay : MonoBehaviour
 {
     [SerializeField] private Animation animator;
-
+    public bool isFPS;
 
     private void OnEnable()
     {
@@ -17,7 +17,9 @@ public class DialogueDisplay : MonoBehaviour
 
     private void OnDisable()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        if (isFPS) Cursor.lockState = CursorLockMode.Locked;
+        else Cursor.lockState = CursorLockMode.Confined;
+
         CloseDialogue();
     }
 
