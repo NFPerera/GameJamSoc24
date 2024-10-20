@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 5a88baa573e45d04a998b214de91e029, type: 2}
+  destroyEffect: {fileID: 1680426980983512017, guid: aba51dc8831ba5943b49f2fd6a5bd869, type: 3}
+  body: {fileID: 0}
 --- !u!54 &-2967441692303656070
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -43,7 +43,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
             if (destroyEffect != null)
             {
                 GameObject l_destroyEffect = Instantiate(destroyEffect, transform.position, transform.rotation);
-                Destroy(l_destroyEffect, 2f);
+                Destroy(l_destroyEffect, 1f);
             }
             data.BulletMovement.OnReachTarget(this);
         }
