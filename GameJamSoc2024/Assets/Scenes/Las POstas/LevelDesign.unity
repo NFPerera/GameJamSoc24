@@ -14239,6 +14239,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1024034460013117371, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
   m_PrefabInstance: {fileID: 1033915366}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1894193937 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1411309588329018809, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+  m_PrefabInstance: {fileID: 1033915366}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894193934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2e4084ca434df3bacedc4db5e56d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1907601920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16156,6 +16167,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 600
       objectReference: {fileID: 0}
+    - target: {fileID: 4861798814314380903, guid: 6607c772f434a9a4d9f56b50f5b3d29c, type: 3}
+      propertyPath: m_Text
+      value: '100
+
+        SCRAP'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5855344729785239102, guid: 6607c772f434a9a4d9f56b50f5b3d29c, type: 3}
+      propertyPath: m_Text
+      value: '50
+
+        SCRAP'
+      objectReference: {fileID: 0}
     - target: {fileID: 6231509478772536896, guid: 6607c772f434a9a4d9f56b50f5b3d29c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -16263,6 +16286,16 @@ PrefabInstance:
     - target: {fileID: 8110956145752161222, guid: 6607c772f434a9a4d9f56b50f5b3d29c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286401524838668070, guid: 6607c772f434a9a4d9f56b50f5b3d29c, type: 3}
+      propertyPath: sourceHealth
+      value: 
+      objectReference: {fileID: 1894193937}
+    - target: {fileID: 8758570758301665089, guid: 6607c772f434a9a4d9f56b50f5b3d29c, type: 3}
+      propertyPath: m_Text
+      value: '200
+
+        SCRAP'
       objectReference: {fileID: 0}
     - target: {fileID: 9129966786832807743, guid: 6607c772f434a9a4d9f56b50f5b3d29c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
