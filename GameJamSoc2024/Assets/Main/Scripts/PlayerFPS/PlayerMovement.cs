@@ -4,32 +4,35 @@ using System.Collections.Generic;
 using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour,IDamageable
+public class PlayerMovement : MonoBehaviour, IDamageable
 {
+    [Header("Public Attributes")]
     public float walkSpeed = 6f;
     public float sprintSpeed = 12f;
     public float jumpForce = 8f;
-    public float gravity = -20f;  // Increased gravity for quicker fall
     public float groundCheckDistance = 0.4f;
 
-    private CharacterController controller;
+    [Header("Ground Detection")]
+    public LayerMask groundMask;
+    public Transform groundCheck;
+
+    private Rigidbody rb;
     private Vector3 velocity;
     private bool isGrounded;
 
-    public LayerMask groundMask;
-    public Transform groundCheck;
 
     public event Action<IDamageable> OnDeath;
 
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
         // Check if the player is grounded
         isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckDistance, groundMask);
+
 
         // Reset velocity when grounded to ensure constant contact with the ground
         if (isGrounded && velocity.y < 0)
@@ -45,12 +48,6 @@ public class PlayerMovement : MonoBehaviour,IDamageable
         {
             Jump();
         }
-
-        // Apply gravity each frame
-        ApplyGravity();
-
-        // Apply the velocity to the CharacterController
-        controller.Move(velocity * Time.deltaTime);
     }
 
     void Move()
@@ -60,25 +57,17 @@ public class PlayerMovement : MonoBehaviour,IDamageable
         float moveZ = Input.GetAxis("Vertical");
 
         // Create a movement direction vector
-        Vector3 moveDirection = transform.right * moveX + transform.forward * moveZ;
+        Vector3 moveDirection = Vector3.right * moveX + Vector3.forward * moveZ;
 
         // Check for sprinting input
         float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed;
 
-        // Move the player based on the current speed
-        controller.Move(moveDirection * currentSpeed * Time.deltaTime);
+        transform.Translate(moveDirection * currentSpeed * Time.deltaTime);
     }
 
     void Jump()
     {
-        // Apply jump force
-        velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
-    }
-
-    void ApplyGravity()
-    {
-        // Apply gravity force over time
-        velocity.y += gravity * Time.deltaTime;
+        rb.AddForce(new Vector3(0, jumpForce, 0));
     }
 
     public Transform GetTransform() => transform;
