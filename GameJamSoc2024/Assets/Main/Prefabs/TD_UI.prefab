@@ -2168,14 +2168,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_keys.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: chapters.Array.data[0].leftChar
       value: 
       objectReference: {fileID: 0}
@@ -2212,89 +2204,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[0].bg
-      value: 
-      objectReference: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[1].bg
-      value: 
-      objectReference: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[2].bg
-      value: 
-      objectReference: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[3].bg
-      value: 
-      objectReference: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[4].bg
-      value: 
-      objectReference: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[5].bg
-      value: 
-      objectReference: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[6].bg
-      value: 
-      objectReference: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[0].leftChar
-      value: 
-      objectReference: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[1].leftChar
-      value: 
-      objectReference: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[2].leftChar
-      value: 
-      objectReference: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[3].leftChar
-      value: 
-      objectReference: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[4].leftChar
-      value: 
-      objectReference: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[5].leftChar
-      value: 
-      objectReference: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[6].leftChar
-      value: 
-      objectReference: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: chapters.Array.data[0].dialogues.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[0].rightChar
-      value: 
-      objectReference: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[1].rightChar
-      value: 
-      objectReference: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[2].rightChar
-      value: 
-      objectReference: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: allChapters.m_values.Array.data[3].rightChar
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[5].rightChar
-      value: 
-      objectReference: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[6].rightChar
-      value: 
-      objectReference: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.size
       value: 6
@@ -2572,12 +2488,6 @@ PrefabInstance:
         que no descubran la verdad. Fueron a Mak Tam Bu, no llegamos a tiempo. Los
         tuvimos que matar, no hab\xEDa opci\xF3n. Sab\xEDan demasiado, tenes que
         cree-"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
-      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[9].text
-      value: "Para, para, pUn ruido fuerte y singular call\xE1 el cuartel. Newells
-        est\xE1 muerto. Con l\xE1grimas cayendo como cataratas, Chad se escapa de
-        la ciudad."
       objectReference: {fileID: 0}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[0].text

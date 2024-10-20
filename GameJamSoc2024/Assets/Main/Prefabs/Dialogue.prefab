@@ -901,10 +901,11 @@ MonoBehaviour:
     - VisitaFunebre
     - Confrontacion
     - RevolucionInminente
+    - TutoTD
     m_values:
-    - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
-      rightChar: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
-      bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+    - leftChar: {fileID: 21300000, guid: 1c9cb984457b0d5419139c74ce638e00, type: 3}
+      rightChar: {fileID: 21300000, guid: 4f75c960d9059d74295bbd95bfb4948f, type: 3}
+      bg: {fileID: 21300000, guid: afd44191b80d6a3439931727d479b2a4, type: 3}
       dialogues:
       - text: "Despu\xE9s de la gran victoria, los soldados comienzan a celebrar.
           Chad se siente feliz de haber cumplido con su objetivo de tal manera, y
@@ -926,9 +927,9 @@ MonoBehaviour:
       - text: "Y con ese comentario, Jack se retira. La menci\xF3n de la familia
           de Chad lo deja con una expresi\xF3n triste \u2026"
         speaker: 2
-    - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
-      rightChar: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
-      bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+    - leftChar: {fileID: 21300000, guid: 1c9cb984457b0d5419139c74ce638e00, type: 3}
+      rightChar: {fileID: 21300000, guid: 80eacb4e576ff0349a5b658b3f5cf937, type: 3}
+      bg: {fileID: 21300000, guid: afd44191b80d6a3439931727d479b2a4, type: 3}
       dialogues:
       - text: "Tras otra invasi\xF3n frenada, los soldados nuevamente comienzan a
           festejar."
@@ -959,9 +960,9 @@ MonoBehaviour:
         speaker: 1
       - text: "Con eso, Newells se retira\u2026"
         speaker: 2
-    - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
-      rightChar: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
-      bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+    - leftChar: {fileID: 21300000, guid: 1c9cb984457b0d5419139c74ce638e00, type: 3}
+      rightChar: {fileID: 21300000, guid: a601a58b4b177184b8d2881e96aafd31, type: 3}
+      bg: {fileID: 21300000, guid: af3e8c066160d014bab4a08d758e0081, type: 3}
       dialogues:
       - text: "Chad finalmente encuentra un momento para ir a interrogar a la b\xE1rbara
           capturada. Entra a la c\xE1rcel, un lugar oscuro y con olores asquerosos.
@@ -1025,9 +1026,9 @@ MonoBehaviour:
         speaker: 1
       - text: "Y con ese \xFAltimo comentario, Chad se retira\u2026"
         speaker: 2
-    - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+    - leftChar: {fileID: 21300000, guid: 1c9cb984457b0d5419139c74ce638e00, type: 3}
       rightChar: {fileID: 0}
-      bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+      bg: {fileID: 21300000, guid: 13ff744eb76d7ef42bc16b1ec36482ca, type: 3}
       dialogues:
       - text: "Chad, cuestionando un poco las palabras de Stacy, comienza a caminar
           por el terreno donde previamente pasaron los b\xE1rbaros que fueron brutalmente
@@ -1047,9 +1048,9 @@ MonoBehaviour:
       - text: "Tomado por sorpresa y angustia, Chad se va caminando, fingiendo que
           no vi\xF3 nada."
         speaker: 2
-    - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+    - leftChar: {fileID: 21300000, guid: 1c9cb984457b0d5419139c74ce638e00, type: 3}
       rightChar: {fileID: 0}
-      bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+      bg: {fileID: 21300000, guid: df4cbd41b851dfb4eb9368a7d92be823, type: 3}
       dialogues:
       - text: "En b\xFAsqueda de respuestas, Chad se va a donde mataron a su familia.
           No sabe que busca pero necesita algo, un resto de b\xE1rbaro, alguna pieza
@@ -1062,10 +1063,10 @@ MonoBehaviour:
       - text: "\u201CPrivado Newells\u201D. No puede ser\u2026"
         speaker: 0
       - text: "Mortificado, Chad vuelve hacia Chudistan\u2026"
-        speaker: 0
-    - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
-      rightChar: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
-      bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+        speaker: 2
+    - leftChar: {fileID: 21300000, guid: 1c9cb984457b0d5419139c74ce638e00, type: 3}
+      rightChar: {fileID: 21300000, guid: 80eacb4e576ff0349a5b658b3f5cf937, type: 3}
+      bg: {fileID: 21300000, guid: afd44191b80d6a3439931727d479b2a4, type: 3}
       dialogues:
       - text: Furioso, Chad entra al cuartel de guerra donde se encuentra con Newells.
         speaker: 2
@@ -1090,13 +1091,12 @@ MonoBehaviour:
           Los tuvimos que matar, no hab\xEDa opci\xF3n. Sab\xEDan demasiado, tenes
           que cree-"
         speaker: 1
-      - text: "Para, para, pUn ruido fuerte y singular call\xE1 el cuartel. Newells
-          est\xE1 muerto. Con l\xE1grimas cayendo como cataratas, Chad se escapa
-          de la ciudad."
+      - text: "Un ruido fuerte y singular call\xE1 el cuartel. Newells est\xE1 muerto.
+          Con l\xE1grimas cayendo como cataratas, Chad se escapa de la ciudad."
         speaker: 2
-    - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
-      rightChar: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
-      bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+    - leftChar: {fileID: 21300000, guid: 1c9cb984457b0d5419139c74ce638e00, type: 3}
+      rightChar: {fileID: 21300000, guid: 6d3898d7553a1fd4a90ea90eafc0ab37, type: 3}
+      bg: {fileID: 21300000, guid: 13ff744eb76d7ef42bc16b1ec36482ca, type: 3}
       dialogues:
       - text: "Despu\xE9s de caminar por una eternidad, Chad se encuentra cara a
           cara con un grupo de personas desconocidas."
@@ -1147,7 +1147,37 @@ MonoBehaviour:
       - text: "Despu\xE9s de una serie de idas y vueltas, los b\xE1rbaros deciden
           apoyar a Chad en su misi\xF3n\u2026"
         speaker: 2
-  initChap: Confrontacion
+    - leftChar: {fileID: 21300000, guid: 1c9cb984457b0d5419139c74ce638e00, type: 3}
+      rightChar: {fileID: 21300000, guid: 80eacb4e576ff0349a5b658b3f5cf937, type: 3}
+      bg: {fileID: 21300000, guid: afd44191b80d6a3439931727d479b2a4, type: 3}
+      dialogues:
+      - text: "Hoy es un d\xEDa como cualquier otro en Chudistan, nubes de arena
+          que tapan el sol, aire escaso de humedad y un calor insufrible."
+        speaker: 2
+      - text: "Bienvenido General Chad, hoy es tu primer d\xEDa en tu nuevo puesto
+          como L\xEDder de Estrategias Defensivas. Como usted sabe, su objetivo es
+          simple: Que ning\xFAn b\xE1rbaro llegue a las puertas de nuestra querida
+          ciudad."
+        speaker: 1
+      - text: "\xA1Claro que s\xED general! Gracias por darme la oportunidad de ocupar
+          un rol tan importante."
+        speaker: 0
+      - text: "No fue mi decisi\xF3n. Sepa soldado que si usted falla en defender
+          nuestra frontera y entran los salvajes a nuestra ciudad, ser\xE1s el \xFAnico
+          responsable y las consecuencias son graves."
+        speaker: 1
+      - text: "\xA1Gracias general! No pasar\xE1 ni uno solo."
+        speaker: 0
+      - text: Para construir torretas, primero debe seleccionar el tipo de torreta
+          que quiere construir. Luego, haz clic sobre uno de las esferas rojas.
+        speaker: 2
+      - text: "Tenga en cuenta que construir una torreta gasta recursos, que solamente
+          se consiguen defendiendo la ciudad de b\xE1rbaros."
+        speaker: 2
+      - text: "Cuando estes listo para la pr\xF3xima oleada, haz clic sobre el bot\xF3n
+          que dice \u201CWave\u201D"
+        speaker: 2
+  initChap: TutoTD
   dialogueDisplay: {fileID: 4633479697887992963}
 --- !u!114 &6813642742194371306
 MonoBehaviour:
