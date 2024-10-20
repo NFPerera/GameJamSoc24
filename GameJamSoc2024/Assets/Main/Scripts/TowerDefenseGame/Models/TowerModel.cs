@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
 using Main.Scripts.TowerDefenseGame.Interfaces.TowerInterfaces;
 using Main.Scripts.TowerDefenseGame.ScriptableObjects.Towers;
@@ -62,7 +63,12 @@ namespace Main.Scripts.TowerDefenseGame.Models
         private void OnTriggerEnter(Collider p_col)
         {
             if (!p_col.TryGetComponent(out IDamageable l_damageable)) return;
-            if (p_col.GetComponent<EnemyModel>().GetIsFlying() && !data.GetHitsFlying) return;
+
+            
+            
+            if(p_col.TryGetComponent<EnemyModel>(out var l_enemyModel))
+                if (l_enemyModel.GetIsFlying() && !data.GetHitsFlying) return;
+            
             m_enemiesInRange.Add(l_damageable);
             l_damageable.OnDeath += HandleEnemyDeath;
         }
