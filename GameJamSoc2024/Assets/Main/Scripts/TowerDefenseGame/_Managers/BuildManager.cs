@@ -1,4 +1,5 @@
-﻿using Main.Scripts.TowerDefenseGame.Commands;
+﻿using System;
+using Main.Scripts.TowerDefenseGame.Commands;
 using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
 
@@ -33,7 +34,7 @@ namespace Main.Scripts.TowerDefenseGame._Managers
             
             if(_towerToBuild == null) return;
             
-            if (!Physics.Raycast(l_ray, out var l_raycastHit))
+            if (!Physics.Raycast(l_ray, out var l_raycastHit, Mathf.Infinity))
                 return;
 
             if (!l_raycastHit.transform.TryGetComponent(out BuildingModel l_buildingModel)) 
