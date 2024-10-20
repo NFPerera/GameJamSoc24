@@ -49,7 +49,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
                 
                 if (m_indexPathPoints >= m_pathPoints.Count)
                 {
-                    GameManager.Instance.OnChangeLifePoints.Invoke(index+ 1);
+                    GameManager.Instance.OnChangeLifePoints.Invoke(data.Damage);
                     OnDeath?.Invoke(this);
                     Destroy(gameObject);
                     
@@ -93,7 +93,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
                 OnDie();
                 return;
             }
-            GameManager.Instance.OnChangeMoney.Invoke(5);
+            GameManager.Instance.OnChangeMoney.Invoke(data.MoneyReward);
             ChangeStats();
         }
         
@@ -104,7 +104,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
         }
         private void OnDie()
         {
-            GameManager.Instance.OnChangeMoney.Invoke(10);
+            GameManager.Instance.OnChangeMoney.Invoke(data.MoneyReward);
             OnDeath?.Invoke(this);
             Destroy(gameObject);
         }

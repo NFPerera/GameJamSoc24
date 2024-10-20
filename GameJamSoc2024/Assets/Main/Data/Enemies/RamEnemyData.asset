@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MaxHealth>k__BackingField: 200
   <Speed>k__BackingField: 4
+  <MoneyReward>k__BackingField: 10
+  <Damage>k__BackingField: 10
+  <IsFlying>k__BackingField: 0

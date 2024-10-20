@@ -3715,6 +3715,8 @@ MonoBehaviour:
   mainMenu: {fileID: 2089124677}
   credits: {fileID: 0}
   gameOver: {fileID: 0}
+  isGameOver: 0
+  gameManager: {fileID: 0}
 --- !u!1001 &523685045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7665,6 +7667,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5944621914481377892}
     - target: {fileID: 1411309588329018809, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: <MaxLifePoints>k__BackingField
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411309588329018809, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: <StartMoneyPoints>k__BackingField
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411309588329018809, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
       propertyPath: <PathPoints>k__BackingField.Array.data[0]
       value: 
       objectReference: {fileID: 1653114429}
@@ -9465,7 +9475,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
   m_PrefabInstance: {fileID: 1033915366}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1894193934}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46e65552ef3d455c8ec72329e2fbe012, type: 3}
@@ -9476,7 +9486,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4135642055034199130, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
   m_PrefabInstance: {fileID: 1033915366}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1894193934}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf641ae9a2b52c94ba3ae907042d4e4a, type: 3}
@@ -9487,7 +9497,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5513520699795374996, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
   m_PrefabInstance: {fileID: 1033915366}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1894193934}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdf1f31f2bd5a434fbf8aaf3ab451125, type: 3}
@@ -11341,7 +11351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1143, y: 813}
+  m_AnchoredPosition: {x: -1126, y: 888}
   m_SizeDelta: {x: 306.044, y: 133.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1559025981
@@ -11478,6 +11488,8 @@ MonoBehaviour:
   mainMenu: {fileID: 2089124677}
   credits: {fileID: 1577399008}
   gameOver: {fileID: 1577399008}
+  isGameOver: 0
+  gameManager: {fileID: 0}
 --- !u!114 &1577399010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13737,6 +13749,8 @@ MonoBehaviour:
   mainMenu: {fileID: 2089124677}
   credits: {fileID: 1842162793}
   gameOver: {fileID: 1577399008}
+  isGameOver: 0
+  gameManager: {fileID: 0}
 --- !u!114 &1842162795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14022,6 +14036,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 998927dd8c965444f8790d487bc72e44, type: 3}
   m_PrefabInstance: {fileID: 950194372}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1894193934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1024034460013117371, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+  m_PrefabInstance: {fileID: 1033915366}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1907601920
 PrefabInstance:
@@ -15510,6 +15529,8 @@ MonoBehaviour:
   mainMenu: {fileID: 0}
   credits: {fileID: 0}
   gameOver: {fileID: 1577399008}
+  isGameOver: 0
+  gameManager: {fileID: 0}
 --- !u!114 &2089124679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15962,6 +15983,10 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 521812626}
+    - target: {fileID: 8043726892421524426, guid: 6607c772f434a9a4d9f56b50f5b3d29c, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1894193934}
     - target: {fileID: 8110956145752161222, guid: 6607c772f434a9a4d9f56b50f5b3d29c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
