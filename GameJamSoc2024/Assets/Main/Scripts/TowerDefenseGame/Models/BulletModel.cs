@@ -66,6 +66,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
              transform.position += p_dir * (p_speed * Time.deltaTime);
              if (Vector3.Distance(transform.position, m_targetPos) < 0.1f)
              {
+                 
                  m_reachTarget = true;
                  Destroy(gameObject);
              }
@@ -85,6 +86,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
             {
                 if (data.TargetLayer.Includes(p_col.gameObject.layer))
                 {
+                    print("dest");
                     data.BulletAttack.Attack(this);
                     m_reachTarget = true;
                 }
