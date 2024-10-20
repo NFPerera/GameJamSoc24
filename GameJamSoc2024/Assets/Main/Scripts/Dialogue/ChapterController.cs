@@ -13,7 +13,7 @@ public class ChapterController : MonoBehaviour
         display = GetComponent<ChapterDisplay>();
 
         // TEMP
-        display.LoadChapter(chapters[0]);
+        //display.LoadChapter(chapters[0]);
     }
 
     public void StartChapter(string p_id)

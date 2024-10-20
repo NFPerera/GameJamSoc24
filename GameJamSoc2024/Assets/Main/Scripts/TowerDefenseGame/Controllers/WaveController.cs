@@ -52,6 +52,7 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
 
         private void Update()
         {
+            print(m_levelId+""+ m_isWaveActive);
             if(m_levelId > levels.Length)
                 return;
             

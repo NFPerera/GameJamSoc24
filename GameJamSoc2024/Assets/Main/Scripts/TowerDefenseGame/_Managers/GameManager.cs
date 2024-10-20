@@ -66,6 +66,7 @@ namespace Main.Scripts.TowerDefenseGame._Managers
 
             if (Input.GetMouseButtonDown(0))
             {
+                print("asdsa");
                 OnClick.Invoke();
             }
         }
