@@ -2,6 +2,7 @@
 using Main.Scripts.TowerDefenseGame.Commands;
 using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
 using Main.Scripts.TowerDefenseGame.Models;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Attack
@@ -29,11 +30,13 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Attack
                         GameManager.Instance.AddEventQueue(new CmdDoDamage(damageable, model.GetDamage(),model.GetHitsFlying()));
                     }
                 }
-                
+                Debug.Log("destroy in rok");
                 Destroy(model.gameObject);
             }
             else
                 Destroy(model.gameObject);
+            
+            Debug.Log("destroy in rok222");
             
         }
     }

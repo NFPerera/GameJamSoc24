@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 8877777425078877117}
   - component: {fileID: 5152413074026001760}
   - component: {fileID: 7300247264295667181}
-  m_Layer: 0
+  - component: {fileID: 8937658388325712839}
+  - component: {fileID: 4471959829384448127}
+  m_Layer: 9
   m_Name: MortarTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,6 +76,54 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &8937658388325712839
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38796001745360094}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.28, z: 0}
+--- !u!54 &4471959829384448127
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38796001745360094}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3056252644246742755
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687319052345352105}
   - component: {fileID: 4541840910424420035}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5776776108594155067}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +299,7 @@ GameObject:
   - component: {fileID: 763856978529054859}
   - component: {fileID: 3281295295920348895}
   - component: {fileID: 17375258307164944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +403,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8331412683402070011}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +440,7 @@ GameObject:
   - component: {fileID: 6817240804549946029}
   - component: {fileID: 4941824294577356035}
   - component: {fileID: 6275233257226250539}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +545,7 @@ GameObject:
   - component: {fileID: 3531527959856337536}
   - component: {fileID: 1691897690106658823}
   - component: {fileID: 771436233179495982}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +650,7 @@ GameObject:
   - component: {fileID: 1122983000622595460}
   - component: {fileID: 3426015032211458400}
   - component: {fileID: 4337903938828573689}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -702,7 +752,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 813764920302756173}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -736,7 +786,7 @@ GameObject:
   - component: {fileID: 1746042714763531110}
   - component: {fileID: 559874711606359785}
   - component: {fileID: 4178001833244959346}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,7 +893,7 @@ GameObject:
   - component: {fileID: 1556348318659982299}
   - component: {fileID: 6167254238043527767}
   - component: {fileID: 957559981368351267}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -948,7 +998,7 @@ GameObject:
   - component: {fileID: 657706848078185975}
   - component: {fileID: 3814111146169677133}
   - component: {fileID: 3262490713512996646}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1110,6 +1160,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: deb051dafd23344b7b439db6e7aef4e2, type: 3}
       propertyPath: m_Name
       value: weapon-catapult
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: deb051dafd23344b7b439db6e7aef4e2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2829518461224114169, guid: deb051dafd23344b7b439db6e7aef4e2, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
