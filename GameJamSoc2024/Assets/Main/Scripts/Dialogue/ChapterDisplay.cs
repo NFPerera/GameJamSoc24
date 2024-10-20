@@ -29,7 +29,7 @@ public class ChapterDisplay : MonoBehaviour
 
 
 
-    void Start()
+    void Awake()
     {
         dialogueQueue = new();
     }
