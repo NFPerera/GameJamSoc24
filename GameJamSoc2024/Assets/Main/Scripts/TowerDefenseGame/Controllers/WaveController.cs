@@ -6,6 +6,7 @@ using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
 using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = System.Random;
 
 namespace Main.Scripts.TowerDefenseGame.Controllers
 {
@@ -143,7 +144,9 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
             
             if (m_timer <= 0)
             {
-                var enemie = Instantiate(m_currLevel.Waves[m_nextWave].enemy[0], spawnPoint.position,
+                var rnd = new Random();
+                var num = rnd.Next(0, m_currLevel.Waves[m_nextWave].enemy.Length);
+                var enemie = Instantiate(m_currLevel.Waves[m_nextWave].enemy[num], spawnPoint.position,
                     Quaternion.identity);
                 var model = enemie.GetComponent<EnemyModel>();
                 

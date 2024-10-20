@@ -27,10 +27,10 @@ namespace Main.Scripts.TowerDefenseGame.Models
         private void Awake()
         {
             m_pathPoints = GameManager.Instance.PathPoints;
-            m_healthController = new HealthController(data.enemiesTierDatas[index].MaxHealth);
+            m_healthController = new HealthController(data.MaxHealth);
             
             m_movementController = gameObject.GetComponent<MovementController>();
-            m_movementController.SetSpeed(data.enemiesTierDatas[index].Speed);
+            m_movementController.SetSpeed(data.Speed);
 
             //m_sprite = gameObject.GetComponent<SpriteRenderer>();
             //m_sprite.sprite = data.enemiesTierDatas[index].Sprite;
@@ -60,8 +60,10 @@ namespace Main.Scripts.TowerDefenseGame.Models
             
             if(m_indexPathPoints < m_pathPoints.Count)
                 l_dir = (m_pathPoints[m_indexPathPoints].position - l_position).normalized;
-            
-            transform.Translate(l_dir * (data.enemiesTierDatas[index].Speed * Time.deltaTime));
+
+            transform.LookAt(m_pathPoints[m_indexPathPoints]);
+            transform.position += l_dir * (data.Speed * Time.deltaTime);
+            //transform.Translate(l_dir * (data.Speed * Time.deltaTime));
         }
 
         #region IDamageable
@@ -94,9 +96,8 @@ namespace Main.Scripts.TowerDefenseGame.Models
         
         private void ChangeStats()
         {
-            m_healthController = new HealthController(data.enemiesTierDatas[index].MaxHealth);
-            m_movementController.SetSpeed(data.enemiesTierDatas[index].Speed);
-            m_sprite.sprite = data.enemiesTierDatas[index].Sprite;
+            m_healthController = new HealthController(data.MaxHealth);
+            m_movementController.SetSpeed(data.Speed);
         }
         private void OnDie()
         {

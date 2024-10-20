@@ -70,15 +70,13 @@ namespace Main.Scripts.TowerDefenseGame._Managers
             }
         }
 
-        public void SpawnBullet(Transform p_target, int p_damage, float p_lifeTime)
+        [SerializeField] private List<BuildingModel> allBuildings;
+        public void ToggleBuildingView()
         {
-            
-            
-        }
-
-        private void ReturnBulletToPool(BulletModel p_model)
-        {
-            
+            foreach (var building in allBuildings)
+            {
+                building.ToggleLight();
+            }
         }
 
         #region Facade

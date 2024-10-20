@@ -39,6 +39,7 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
         private void BuyTower(GameObject tower)
         {
             BuildManager.Instance.SetTowerToBuild(tower);
+            GameManager.Instance.ToggleBuildingView();
             GameManager.Instance.OnChangeMoney(-tower.GetComponent<TowerModel>().GetData().Cost);
         } 
     }

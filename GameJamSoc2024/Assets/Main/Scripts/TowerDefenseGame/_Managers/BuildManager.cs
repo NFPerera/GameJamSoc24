@@ -41,10 +41,11 @@ namespace Main.Scripts.TowerDefenseGame._Managers
             
             
             CmdSpawn l_cmdSpawn = new CmdSpawn(_towerToBuild, l_buildingModel.GetConstructionPos());
-                
-            GameManager.Instance.AddEventQueue(l_cmdSpawn);
-            GameManager.Instance.AddSellEvent(l_cmdSpawn);
-                
+
+            var ins = GameManager.Instance;
+            ins.AddEventQueue(l_cmdSpawn);
+            ins.AddSellEvent(l_cmdSpawn);
+            ins.ToggleBuildingView();
             _towerToBuild = null;
         }
 
