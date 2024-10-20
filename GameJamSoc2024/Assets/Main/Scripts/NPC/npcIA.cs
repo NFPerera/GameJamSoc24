@@ -72,7 +72,7 @@ public class npcIA : MonoBehaviour
     public float health = 100f;
     private Vector3 wanderTarget;
     private float wanderTimer = 0f;
-    private float wanderInterval = 2f; // Change interval every 2 seconds
+    //private float wanderInterval = 2f; // Change interval every 2 seconds
     private float wanderSpeed = 3f;
 
     public float minSpeed = 2f;
@@ -127,7 +127,7 @@ public class npcIA : MonoBehaviour
 
         // Move towards the target
         Vector3 direction = (wanderTarget - transform.position).normalized;
-        transform.position += direction * wanderSpeed * Time.deltaTime;
+        transform.position += direction * (wanderSpeed * Time.deltaTime);
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.1f);
 
         // If close to the target, reset the timer

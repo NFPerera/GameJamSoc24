@@ -21,8 +21,9 @@ namespace Main.Scripts.TowerDefenseGame.Models
         {
             IsAvailable = false;
             //print("Building constructed");
-            if(body != null){
-            ShrinkBody(); // Call the shrink method when IsAvailable changes to false
+            if (body != null)
+            {
+                ShrinkBody(); // Call the shrink method when IsAvailable changes to false
             }
         }
 
