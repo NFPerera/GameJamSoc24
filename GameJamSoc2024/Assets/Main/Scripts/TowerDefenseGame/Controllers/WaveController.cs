@@ -13,7 +13,7 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
 {
     public class WaveController : MonoBehaviour
     {
-        
+
         [System.Serializable]
         public class Level
         {
@@ -120,7 +120,7 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
 
             if (m_spawnedEnemies > m_currLevel.Waves[m_nextWave].numberOfEnemies)
             {
-                waveButton.interactable = true;
+                waveButton.gameObject.SetActive(true);
                 m_nextWave++;
                 m_isWaveActive = false;
             }
@@ -162,7 +162,7 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
 
             if (m_spawnedEnemies > m_currLevel.Waves[m_nextWave].numberOfEnemies) 
             {
-                waveButton.interactable = true;
+                waveButton.gameObject.SetActive(true);
                 m_nextWave++;
                 m_isWaveActive = false;
                 m_isLevelFinished = true;
