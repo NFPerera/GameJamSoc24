@@ -40,7 +40,7 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
         {
             BuildManager.Instance.SetTowerToBuild(tower);
             GameManager.Instance.ToggleBuildingView();
-            GameManager.Instance.OnChangeMoney(-tower.GetComponent<TowerModel>().GetData().Cost);
+            
         } 
     }
 }

@@ -39,13 +39,17 @@ namespace Main.Scripts.TowerDefenseGame._Managers
             if (!l_raycastHit.transform.TryGetComponent(out BuildingModel l_buildingModel)) 
                 return;
             
-            
+            if(!l_buildingModel.IsAvailable)
+                return;
+            l_buildingModel.Construct();
             CmdSpawn l_cmdSpawn = new CmdSpawn(_towerToBuild, l_buildingModel.GetConstructionPos());
 
             var ins = GameManager.Instance;
             ins.AddEventQueue(l_cmdSpawn);
             ins.AddSellEvent(l_cmdSpawn);
             ins.ToggleBuildingView();
+            var tower = _towerToBuild.GetComponent<TowerModel>();
+            GameManager.Instance.OnChangeMoney(-tower.GetData().Cost);
             _towerToBuild = null;
         }
 
