@@ -15,5 +15,6 @@ public struct Chapter
     public Sprite leftChar, rightChar;
     public Sprite bg;
     public Dialogue[] dialogues;
+    public int music;
 
 }
