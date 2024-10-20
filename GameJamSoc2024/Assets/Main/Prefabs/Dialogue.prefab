@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 620}
+  m_SizeDelta: {x: 1200, y: 625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2194476397252938075
 CanvasRenderer:
@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70e39595bc91ebd45a8821bfd672da14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 8733820200345290337}
 --- !u!111 &8733820200345290337
 Animation:
   m_ObjectHideFlags: 0
@@ -891,59 +892,262 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67005c10780ad5b499a9c081fbacb4ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapters:
-  - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
-    rightChar: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
-    bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
-    dialogues:
-    - text: "Despu\xE9s de la gran victoria, los soldados comienzan a celebrar. Chad
-        se siente feliz de haber cumplido con su objetivo de tal manera, y se une
-        a los cantos. Poco despu\xE9s, una oleada de silencio entra al cuarto."
-      speaker: 2
-    - text: Los soldados se ponen en fila, y se escuchan trompetas. Llego el Rey
-        Jack
-      speaker: 2
-    - text: "\xBFC\xF3mo andas querido primo? Hace tanto tiempo que no te veo, y
-        ahora lograste defender nuestra gran ciudad de los sucios bandidos que la
-        quieren ver arder. Es un logro no solo para Chudistan sino para nuestra misma
-        sangre."
-      speaker: 1
-    - text: Es un honor muy grande recibir semejantes bendiciones, rey Jack.
-      speaker: 0
-    - text: "Es lo minimo que puedo hacer. Estoy seguro que tu familia dir\xEDa lo
-        mismo."
-      speaker: 1
-    - text: "Y con ese comentario, Jack se retira. La menci\xF3n de la familia de
-        Chad lo deja con una expresi\xF3n triste \u2026"
-      speaker: 2
-  - leftChar: {fileID: 0}
-    rightChar: {fileID: 0}
-    bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
-    dialogues:
-    - text: "Chad! Ven\xED para ac\xE1, te tengo que decir algo importante."
-      speaker: 0
-    - text: "Qu\xE9 pasa General, \xBFcual es el problema?"
-      speaker: 0
-    - text: "No es tanto un problema sino una oportunidad. En la \xFAltima invasi\xF3n
-        encontramos que un b\xE1rbaro sobrevivi\xF3 nuestras defensas y la pudimos
-        capturar. Se encuentra ahora mismo en nuestras c\xE1rceles."
-      speaker: 0
-    - text: "\xBFC\xF3mo que \u201Cla\u201D capturamos? \xBFEs una mujer? "
-      speaker: 0
-    - text: "No cualquier mujer, sospechamos que ocupaba un rol importante entre
-        ellos. Intentamos sacarle informaci\xF3n pero no abre la boca, por eso quiero
-        que en alg\xFAn momento vayas a interrogarla."
-      speaker: 0
-    - text: "\xBFPor qu\xE9? Si tenemos gente que se dedica a extraer informaci\xF3n
-        de prisioneros."
-      speaker: 0
-    - text: "\xBFMe est\xE1s cuestionando? De donde sacaste la confianza para desobedecer
-        a tus superiores. "
-      speaker: 0
-    - text: "Perd\xF3n General, me descuide. Har\xE9 lo que usted diga."
-      speaker: 0
-    - text: "M\xE1s te vale."
-      speaker: 0
+  allChapters:
+    m_keys:
+    - PostPrimeraInvasion
+    - CapturaDeStacy
+    - InterrogacionDeStacy
+    - PaseoPorTerrenoCalcinado
+    - VisitaFunebre
+    - Confrontacion
+    - RevolucionInminente
+    m_values:
+    - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+      rightChar: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
+      bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+      dialogues:
+      - text: "Despu\xE9s de la gran victoria, los soldados comienzan a celebrar.
+          Chad se siente feliz de haber cumplido con su objetivo de tal manera, y
+          se une a los cantos. Poco despu\xE9s, una oleada de silencio entra al cuarto."
+        speaker: 2
+      - text: Los soldados se ponen en fila, y se escuchan trompetas. Llego el Rey
+          Jack.
+        speaker: 2
+      - text: "\xBFC\xF3mo andas querido primo? Hace tanto tiempo que no te veo,
+          y ahora lograste defender nuestra gran ciudad de los sucios bandidos que
+          la quieren ver arder. Es un logro no solo para Chudistan sino para nuestra
+          misma sangre."
+        speaker: 1
+      - text: Es un honor muy grande recibir semejantes bendiciones, rey Jack.
+        speaker: 0
+      - text: "Es lo minimo que puedo hacer. Estoy seguro que tu familia dir\xEDa
+          lo mismo."
+        speaker: 1
+      - text: "Y con ese comentario, Jack se retira. La menci\xF3n de la familia
+          de Chad lo deja con una expresi\xF3n triste \u2026"
+        speaker: 2
+    - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+      rightChar: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
+      bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+      dialogues:
+      - text: "Tras otra invasi\xF3n frenada, los soldados nuevamente comienzan a
+          festejar."
+        speaker: 2
+      - text: "Chad! Ven\xED para ac\xE1, te tengo que decir algo importante."
+        speaker: 1
+      - text: "Qu\xE9 pasa General, \xBFcual es el problema?"
+        speaker: 0
+      - text: "No es tanto un problema sino una oportunidad. En la \xFAltima invasi\xF3n
+          encontramos que un b\xE1rbaro sobrevivi\xF3 nuestras defensas y la pudimos
+          capturar. Se encuentra ahora mismo en nuestras c\xE1rceles."
+        speaker: 1
+      - text: "\xBFC\xF3mo que \u201Cla\u201D capturamos? \xBFEs una mujer?"
+        speaker: 0
+      - text: "No cualquier mujer, sospechamos que ocupaba un rol importante entre
+          ellos. Intentamos sacarle informaci\xF3n pero no abre la boca, por eso
+          quiero que en alg\xFAn momento vayas a interrogarla."
+        speaker: 1
+      - text: "\xBFPor qu\xE9? Si tenemos gente que se dedica a extraer informaci\xF3n
+          de prisioneros."
+        speaker: 0
+      - text: "\xBFMe est\xE1s cuestionando? De donde sacaste la confianza para desobedecer
+          a tus superiores."
+        speaker: 1
+      - text: "Perd\xF3n General, me descuide. Har\xE9 lo que usted diga."
+        speaker: 0
+      - text: "M\xE1s te vale."
+        speaker: 1
+      - text: "Con eso, Newells se retira\u2026"
+        speaker: 2
+    - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+      rightChar: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
+      bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+      dialogues:
+      - text: "Chad finalmente encuentra un momento para ir a interrogar a la b\xE1rbara
+          capturada. Entra a la c\xE1rcel, un lugar oscuro y con olores asquerosos.
+          Un guardia lo gu\xEDa a una celda, donde se encuentra con la mujer herida."
+        speaker: 2
+      - text: "\xBFC\xF3mo te llamas? Yo soy Chad."
+        speaker: 0
+      - text: ...
+        speaker: 1
+      - text: "\xBFNo tenes ganas de hablar? \xBFDespu\xE9s de todo el caos que crearon
+          ustedes? \xBFPor qu\xE9 invaden Chudistan? \xBFPor qu\xE9 tienen que masacrar
+          a nuestra gente?"
+        speaker: 0
+      - text: ...
+        speaker: 1
+      - text: "Dios, ya sab\xEDa que esto no iba a funcionar."
+        speaker: 0
+      - text: Chad se para y se dirige hacia la puerta. Justo antes de abrirla, frena
+          y se da vuelta.
+        speaker: 2
+      - text: "\xBFSabes que? Te voy a contar una historia. \xBFQueres saber porque
+          soy el general encargado de defender la ciudad?"
+        speaker: 0
+      - text: ...
+        speaker: 1
+      - text: "Yo cuando era chico ten\xEDa una familia espectacular. Mi padre, mi
+          madre y mi hermano. Hoy, no tengo a nadie. Mis padres eran exploradores,
+          amantes del viejo mundo. Siempre hac\xEDan expediciones en b\xFAsqueda
+          de artefactos y los tra\xEDan a mi casa."
+        speaker: 0
+      - text: "Se tomaban el tiempo de contarme sobre sus aventuras, sus teor\xEDas
+          de c\xF3mo era vivir en tiempos pasados, y me prometieron que alg\xFAn
+          d\xEDa iba a ir con ellos a explorar. Naturalmente, a mi hermano mayor
+          tambi\xE9n le dijeron lo mismo."
+        speaker: 0
+      - text: "En el cumplea\xF1os de 13 de mi hermano, decidieron que era lo suficientemente
+          grande para acompa\xF1arlos, y fueron a unas ruinas cercanas llamadas Mak
+          Tam Bu."
+        speaker: 0
+      - text: "Los ojos de Chad se enrojecen y se le escapa una l\xE1grima."
+        speaker: 2
+      - text: "Ese dia, tu gente los embosc\xF3. Los capturaron, los torturaron y
+          los mataron. \xBFPara qu\xE9? \xBFPara entrar a esta ciudad y adue\xF1arse
+          de ella? Mi hermano ten\xEDa 13 a\xF1os, y no le tuvieron ni una gota de
+          piedad."
+        speaker: 0
+      - text: "Un silencio inc\xF3modo ocupa el cuarto por unos minutos. Chad se
+          levanta de nuevo para irse, pero es interrumpido antes de que pueda abrir
+          la puerta."
+        speaker: 2
+      - text: "Me llamo Stacy. No te voy a decir nada acerca de mi gente, pero lo
+          que s\xED te puedo asegurar es que nosotros no somos b\xE1rbaros como vos
+          decis. Nosotros nunca har\xEDamos lo que le hicieron a tu familia."
+        speaker: 1
+      - text: "\xBFY porque te deber\xEDa creer?"
+        speaker: 0
+      - text: "Nosotros solamente tratamos de entrar a la ciudad porque no tenemos
+          que comer ni tomar, ustedes acumularon todos los recursos y se los guardan
+          para su propio beneficio. Estos b\xE1rbaros que vos decis no son m\xE1s
+          que hombres, mujeres y ni\xF1os."
+        speaker: 1
+      - text: "Y con ese \xFAltimo comentario, Chad se retira\u2026"
+        speaker: 2
+    - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+      rightChar: {fileID: 0}
+      bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+      dialogues:
+      - text: "Chad, cuestionando un poco las palabras de Stacy, comienza a caminar
+          por el terreno donde previamente pasaron los b\xE1rbaros que fueron brutalmente
+          asesinados por sus torretas."
+        speaker: 2
+      - text: "Entre cuerpo y cuerpo, empieza a notar que muchos no estaban muy armados
+          para ir a la guerra, varios parec\xEDan deshidratados y hambrientos, casi
+          como Stacy misma lo describe. Detr\xE1s de \xE9l, se escucha un movimiento."
+        speaker: 2
+      - text: "Chad r\xE1pidamente se da vuelta y saca su arma."
+        speaker: 2
+      - text: Manos arriba!
+        speaker: 0
+      - text: "Sale un ni\xF1o, llorando. Est\xE1 pidiendo que ayude a su pap\xE1,
+          que se encontraba muerto delante de Chad."
+        speaker: 2
+      - text: "Tomado por sorpresa y angustia, Chad se va caminando, fingiendo que
+          no vi\xF3 nada."
+        speaker: 2
+    - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+      rightChar: {fileID: 0}
+      bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+      dialogues:
+      - text: "En b\xFAsqueda de respuestas, Chad se va a donde mataron a su familia.
+          No sabe que busca pero necesita algo, un resto de b\xE1rbaro, alguna pieza
+          que demuestre que est\xE1 del lado correcto de la historia."
+        speaker: 2
+      - text: "Despu\xE9s de horas de nada, ve un brillo en la arena. Chad se aproxima,
+          y pesca del piso un medall\xF3n. Siente un escalofr\xEDo, tiene un s\xEDmbolo
+          que reconoce. Da vuelta la medalla, y lee para afuera."
+        speaker: 2
+      - text: "\u201CPrivado Newells\u201D. No puede ser\u2026"
+        speaker: 0
+      - text: "Mortificado, Chad vuelve hacia Chudistan\u2026"
+        speaker: 0
+    - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+      rightChar: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
+      bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+      dialogues:
+      - text: Furioso, Chad entra al cuartel de guerra donde se encuentra con Newells.
+        speaker: 2
+      - text: "Newells, \xBFque carajo es esto?"
+        speaker: 0
+      - text: "Newells se da vuelta, ve el medall\xF3n y su cara seria r\xE1pidamente
+          se transforma en una de horror."
+        speaker: 2
+      - text: "\xBFDe donde sacaste eso?"
+        speaker: 1
+      - text: "Lo encontr\xE9 en Mak Tam Bu. Todos me dijeron que fueron los bandidos
+          y todos me dijeron que fueron solos."
+        speaker: 0
+      - text: "\xBFPOR QU\xC9 ENCONTR\xC9 ESTO AH\xCD?"
+        speaker: 0
+      - text: Chad saca su pistola y apunta hacia Newells.
+        speaker: 2
+      - text: DECIME YA.
+        speaker: 0
+      - text: "Para, para, para. No me mates. Te digo todo. Nos mand\xF3 Jack a frenarlos,
+          que no descubran la verdad. Fueron a Mak Tam Bu, no llegamos a tiempo.
+          Los tuvimos que matar, no hab\xEDa opci\xF3n. Sab\xEDan demasiado, tenes
+          que cree-"
+        speaker: 1
+      - text: "Para, para, pUn ruido fuerte y singular call\xE1 el cuartel. Newells
+          est\xE1 muerto. Con l\xE1grimas cayendo como cataratas, Chad se escapa
+          de la ciudad."
+        speaker: 2
+    - leftChar: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+      rightChar: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
+      bg: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+      dialogues:
+      - text: "Despu\xE9s de caminar por una eternidad, Chad se encuentra cara a
+          cara con un grupo de personas desconocidas."
+        speaker: 2
+      - text: "Ey, \xBFque haces ac\xE1?"
+        speaker: 1
+      - text: ...
+        speaker: 0
+      - text: "Si tenes hambre no te puedo ayudar tristemente, a\xFAn no encontramos
+          suficiente comida para nosotros. Si tan solo los de la ciudad nos ayudar\xEDan
+          un poco ser\xEDa distinto esto\u2026"
+        speaker: 1
+      - text: "L\xE1stima."
+        speaker: 0
+      - text: "\xBFL\xE1stima? M\xE1s que l\xE1stima, es cruel. Mis amigos el otro
+          d\xEDa intentaron ir hasta la entrada y nunca m\xE1s volvieron. "
+        speaker: 1
+      - text: "Por generaciones mi familia tuvo que vivir en estas condiciones indignantes
+          y estos bur\xF3cratas tienen torres m\xE1s altas que sus propias paredes."
+        speaker: 1
+      - text: "\xBFConoces a Stacy?"
+        speaker: 0
+      - text: "Si, \xA1estaba entre ellos! \xBFEst\xE1 viva?"
+        speaker: 1
+      - text: 'La tienen encarcelada ellos. '
+        speaker: 0
+      - text: "\xBFEllos?"
+        speaker: 1
+      - text: Los de la ciudad.
+        speaker: 0
+      - text: "\xBFY por qu\xE9 sabes eso\u2026?"
+        speaker: 1
+      - text: "Porque vengo de ah\xED."
+        speaker: 0
+      - text: "Los b\xE1rbaros lo rodean a Chad con una colecci\xF3n de cuchillos,
+          tuber\xEDa vieja y garrotes."
+        speaker: 2
+      - text: Esos monstruos, te venden un cuento terrible. De que son inhumanos,
+          que nos quieren robar todo, de que no son humanos.
+        speaker: 0
+      - text: "Pero ac\xE1 est\xE1s vos, hablando del hambre de tu familia, y ac\xE1
+          estoy yo, con la m\xEDa muerta a manos de Chudistan."
+        speaker: 0
+      - text: "Ya no m\xE1s. Saben qu\xE9, si necesito ayuda. Vamos a terminar con
+          este ciclo de opresi\xF3n, violencia y censura. Voy a salvar a Stacy y
+          derrocar a mi primo, Jack."
+        speaker: 0
+      - text: "Despu\xE9s de una serie de idas y vueltas, los b\xE1rbaros deciden
+          apoyar a Chad en su misi\xF3n\u2026"
+        speaker: 2
+  initChap: Confrontacion
 --- !u!114 &6813642742194371306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -961,6 +1165,7 @@ MonoBehaviour:
   rightchar: {fileID: 3223485590900013106}
   textComponent: {fileID: 4018677916499840167}
   dialogueUI: {fileID: 2317213136122479128}
+  dialogueDisplay: {fileID: 4633479697887992963}
   foregroundColor: {r: 1, g: 1, b: 1, a: 1}
   backgroundColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   instantText: 0
