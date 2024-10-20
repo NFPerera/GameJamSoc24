@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0557c51396f43389a5d9ec734d4173a, type: 3}
-  m_Name: EnemyData
+  m_Name: SiegeEnemyData
   m_EditorClassIdentifier: 
-  enemiesTierDatas:
-  - {fileID: 11400000, guid: c99942cbbcd2dae4c9bea34286b2fa61, type: 2}
+  <MaxHealth>k__BackingField: 500
+  <Speed>k__BackingField: 2

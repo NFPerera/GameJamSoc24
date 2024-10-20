@@ -5,7 +5,9 @@ using Main.Scripts.TowerDefenseGame._Managers;
 using Main.Scripts.TowerDefenseGame.Interfaces.EnemiesInterfaces;
 using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Random = System.Random;
 
 namespace Main.Scripts.TowerDefenseGame.Controllers
 {
@@ -53,7 +55,6 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
 
         private void Update()
         {
-            print(m_levelId+""+ m_isWaveActive);
             if(m_levelId > levels.Length)
                 return;
             
@@ -81,7 +82,6 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
         {
             if (m_levelId < levels.Length - 1)
             {
-                Debug.Log("final del nivel");
                 MasterManager.Instance.StartDialogue(dialogNames[m_levelId]);
                 m_levelId++;
                 m_currLevel = levels[m_levelId];
@@ -90,7 +90,7 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
             }
             else
             {
-                Debug.Log("final todoss los nivel");
+                SceneManager.LoadScene("FPS");
                 //Final cut and load scene
             }
                 
@@ -105,7 +105,9 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
             
             if (m_timer <= 0)
             {
-                var enemie = Instantiate(m_currLevel.Waves[m_nextWave].enemy[0], spawnPoint.position,
+                var rnd = new Random();
+                var randomNum = rnd.Next(0, m_currLevel.Waves[m_nextWave].enemy.Length);
+                var enemie = Instantiate(m_currLevel.Waves[m_nextWave].enemy[randomNum], spawnPoint.position,
                     Quaternion.identity);
                 var model = enemie.GetComponent<EnemyModel>();
                 
@@ -144,7 +146,9 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
             
             if (m_timer <= 0)
             {
-                var enemie = Instantiate(m_currLevel.Waves[m_nextWave].enemy[0], spawnPoint.position,
+                var rnd = new Random();
+                var num = rnd.Next(0, m_currLevel.Waves[m_nextWave].enemy.Length);
+                var enemie = Instantiate(m_currLevel.Waves[m_nextWave].enemy[num], spawnPoint.position,
                     Quaternion.identity);
                 var model = enemie.GetComponent<EnemyModel>();
                 
