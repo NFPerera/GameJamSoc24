@@ -19,24 +19,16 @@ namespace Main.Scripts.TowerDefenseGame._Managers
         [SerializeField] private Button areaButton;
         [SerializeField] private Button rangeButton;
         [SerializeField] private Button rocketButton;
-        [SerializeField] private Button undoButton;
 
         [Header("Texts")] 
         [SerializeField] private TextMeshProUGUI lifeText;
         [SerializeField] private TextMeshProUGUI moneyText;
         
-        [Header("Screens")]
-        [SerializeField] private GameObject gameOverScreen;
-        [SerializeField] private GameObject youWonText;
-        [SerializeField] private GameObject youLoseText;
 
         private bool _toggle;
 
         private void Start()
         {
-            gameOverScreen.SetActive(false);
-            youWonText.SetActive(false);
-            youLoseText.SetActive(false);
             
             GameManager.Instance.OnChangeLifePoints += SetLifeText;
             GameManager.Instance.OnChangeMoney += SetMoneyText;
@@ -56,8 +48,6 @@ namespace Main.Scripts.TowerDefenseGame._Managers
             areaButton.interactable = areaTowerData.Cost <= money;
             rangeButton.interactable = rangeTowerData.Cost <= money;
             rocketButton.interactable = rocketTowerData.Cost <= money;
-            
-            undoButton.interactable = GameManager.Instance.GetSellableEvents().Count > 0;
         }
 
         public void OnUndoButtonEvent() => GameManager.Instance.SellLastTower();
@@ -66,13 +56,11 @@ namespace Main.Scripts.TowerDefenseGame._Managers
 
         public void ActivateGameOverScreen(bool isWinning)
         {
-            gameOverScreen.SetActive(true);
-
             if (isWinning)
             {
-                youWonText.SetActive(true);
+                SceneManager.LoadScene("YouWin");
             }
-            else youLoseText.SetActive(true);
+            else SceneManager.LoadScene("YouLoose");
         }
         public void OnFastButton()
         {
