@@ -43,7 +43,7 @@ namespace Main.Scripts.TowerDefenseGame.Models
             if (destroyEffect != null)
             {
                 GameObject l_destroyEffect = Instantiate(destroyEffect, transform.position, transform.rotation);
-                Destroy(l_destroyEffect, 1f);
+                Destroy(l_destroyEffect, 1.5f);
             }
             data.BulletMovement.OnReachTarget(this);
         }
@@ -64,7 +64,11 @@ namespace Main.Scripts.TowerDefenseGame.Models
         public void Move(Vector3 p_dir, float p_speed)
         {
              transform.position += p_dir * (p_speed * Time.deltaTime);
-             
+             if (Vector3.Distance(transform.position, m_targetPos) < 0.1f)
+             {
+                 m_reachTarget = true;
+                 Destroy(gameObject);
+             }
 
             // Rotate the bullet to face the direction it is moving
             if (p_dir != Vector3.zero)

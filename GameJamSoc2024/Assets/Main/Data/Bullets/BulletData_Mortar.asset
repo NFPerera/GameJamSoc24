@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: BulletData_Mortar
   m_EditorClassIdentifier: 
   <Speed>k__BackingField: 5
+  <BulletLifeTime>k__BackingField: 4.5
   <BulletAttack>k__BackingField: {fileID: 11400000, guid: 7565152675be6cd4f9c3cee21de5e359, type: 2}
   <BulletMovement>k__BackingField: {fileID: 11400000, guid: ce66278557fbb4d48a19d070458b47f1, type: 2}
+  <TargetLayer>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 0
+  <HitsFlying>k__BackingField: 0

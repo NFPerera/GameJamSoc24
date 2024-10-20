@@ -7675,6 +7675,10 @@ PrefabInstance:
       value: VistaFunebre
       objectReference: {fileID: 0}
     - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: levels.Array.data[0].Waves.Array.data[0].enemy.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
       propertyPath: levels.Array.data[1].Waves.Array.data[0].enemy.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -7686,6 +7690,10 @@ PrefabInstance:
       propertyPath: levels.Array.data[0].Waves.Array.data[0].enemy.Array.data[0]
       value: 
       objectReference: {fileID: 394002424552812880, guid: 4b1baaa88c282194cabe6164ef28c6f3, type: 3}
+    - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: levels.Array.data[0].Waves.Array.data[0].enemy.Array.data[1]
+      value: 
+      objectReference: {fileID: 4290338970657660532, guid: 76e35fde87c7f09409af672e781b71cd, type: 3}
     - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
       propertyPath: levels.Array.data[1].Waves.Array.data[0].enemy.Array.data[1]
       value: 
