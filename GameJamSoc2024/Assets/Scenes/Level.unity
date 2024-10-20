@@ -1298,19 +1298,83 @@ PrefabInstance:
       value: Dialogue
       objectReference: {fileID: 0}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: chapters.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: chapters.Array.data[0].bg
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: allChapters.m_keys.Array.size
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: allChapters.m_values.Array.size
-      value: 1
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: chapters.Array.data[0].leftChar
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: allChapters.m_keys.Array.data[0]
-      value: asd
+      value: PostPrimeraInvasion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_keys.Array.data[1]
+      value: CapturaDeStacy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_keys.Array.data[2]
+      value: InterrogacionDeStacy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_keys.Array.data[3]
+      value: PaseoPorTerrenoCalcinado
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_keys.Array.data[4]
+      value: VisitaFunebre
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_keys.Array.data[5]
+      value: Confrontacion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_keys.Array.data[6]
+      value: RevolucionInminente
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: chapters.Array.data[0].rightChar
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: allChapters.m_values.Array.data[0].bg
+      value: 
+      objectReference: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].bg
+      value: 
+      objectReference: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].bg
+      value: 
+      objectReference: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].bg
+      value: 
+      objectReference: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[4].bg
+      value: 
+      objectReference: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].bg
+      value: 
+      objectReference: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].bg
       value: 
       objectReference: {fileID: 21300000, guid: cc014f9dee307204aa6f1de0799f790b, type: 3}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
@@ -1318,12 +1382,84 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].leftChar
+      value: 
+      objectReference: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].leftChar
+      value: 
+      objectReference: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].leftChar
+      value: 
+      objectReference: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[4].leftChar
+      value: 
+      objectReference: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].leftChar
+      value: 
+      objectReference: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].leftChar
+      value: 
+      objectReference: {fileID: 21300000, guid: 369d41aea2124f54aa7aa3efcae5a20c, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: chapters.Array.data[0].dialogues.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: allChapters.m_values.Array.data[0].rightChar
+      value: 
+      objectReference: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].rightChar
+      value: 
+      objectReference: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].rightChar
+      value: 
+      objectReference: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].rightChar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].rightChar
+      value: 
+      objectReference: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].rightChar
       value: 
       objectReference: {fileID: 21300000, guid: cd9e18eab0588ff499f7054f43a2c902, type: 3}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.size
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[4].dialogues.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.size
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[0].text
@@ -1334,7 +1470,7 @@ PrefabInstance:
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[1].text
       value: Los soldados se ponen en fila, y se escuchan trompetas. Llego el Rey
-        Jack
+        Jack.
       objectReference: {fileID: 0}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[2].text
@@ -1358,6 +1494,421 @@ PrefabInstance:
         Chad lo deja con una expresi\xF3n triste \u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[0].text
+      value: "Tras otra invasi\xF3n frenada, los soldados nuevamente comienzan a
+        festejar."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[1].text
+      value: "Chad! Ven\xED para ac\xE1, te tengo que decir algo importante."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[2].text
+      value: "Qu\xE9 pasa General, \xBFcual es el problema?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[3].text
+      value: "No es tanto un problema sino una oportunidad. En la \xFAltima invasi\xF3n
+        encontramos que un b\xE1rbaro sobrevivi\xF3 nuestras defensas y la pudimos
+        capturar. Se encuentra ahora mismo en nuestras c\xE1rceles."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[4].text
+      value: "\xBFC\xF3mo que \u201Cla\u201D capturamos? \xBFEs una mujer?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[5].text
+      value: "No cualquier mujer, sospechamos que ocupaba un rol importante entre
+        ellos. Intentamos sacarle informaci\xF3n pero no abre la boca, por eso quiero
+        que en alg\xFAn momento vayas a interrogarla."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[6].text
+      value: "\xBFPor qu\xE9? Si tenemos gente que se dedica a extraer informaci\xF3n
+        de prisioneros."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[7].text
+      value: "\xBFMe est\xE1s cuestionando? De donde sacaste la confianza para desobedecer
+        a tus superiores."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[8].text
+      value: "Perd\xF3n General, me descuide. Har\xE9 lo que usted diga."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[9].text
+      value: "M\xE1s te vale."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[0].text
+      value: "Chad finalmente encuentra un momento para ir a interrogar a la b\xE1rbara
+        capturada. Entra a la c\xE1rcel, un lugar oscuro y con olores asquerosos.
+        Un guardia lo gu\xEDa a una celda, donde se encuentra con la mujer herida."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[1].text
+      value: "\xBFC\xF3mo te llamas? Yo soy Chad."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[2].text
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[3].text
+      value: "\xBFNo tenes ganas de hablar? \xBFDespu\xE9s de todo el caos que crearon
+        ustedes? \xBFPor qu\xE9 invaden Chudistan? \xBFPor qu\xE9 tienen que masacrar
+        a nuestra gente?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[4].text
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[5].text
+      value: "Dios, ya sab\xEDa que esto no iba a funcionar."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[6].text
+      value: Chad se para y se dirige hacia la puerta. Justo antes de abrirla, frena
+        y se da vuelta.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[7].text
+      value: "\xBFSabes que? Te voy a contar una historia. \xBFQueres saber porque
+        soy el general encargado de defender la ciudad?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[8].text
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[9].text
+      value: "Yo cuando era chico ten\xEDa una familia espectacular. Mi padre, mi
+        madre y mi hermano. Hoy, no tengo a nadie. Mis padres eran exploradores,
+        amantes del viejo mundo. Siempre hac\xEDan expediciones en b\xFAsqueda de
+        artefactos y los tra\xEDan a mi casa."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[0].text
+      value: "Chad, cuestionando un poco las palabras de Stacy, comienza a caminar
+        por el terreno donde previamente pasaron los b\xE1rbaros que fueron brutalmente
+        asesinados por sus torretas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[1].text
+      value: "Entre cuerpo y cuerpo, empieza a notar que muchos no estaban muy armados
+        para ir a la guerra, varios parec\xEDan deshidratados y hambrientos, casi
+        como Stacy misma lo describe. Detr\xE1s de \xE9l, se escucha un movimiento."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[2].text
+      value: "Chad r\xE1pidamente se da vuelta y saca su arma."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[3].text
+      value: Manos arriba!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[4].text
+      value: "Sale un ni\xF1o, llorando. Est\xE1 pidiendo que ayude a su pap\xE1,
+        que se encontraba muerto delante de Chad."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[5].text
+      value: "Tomado por sorpresa y angustia, Chad se va caminando, fingiendo que
+        no vi\xF3 nada."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[6].text
+      value: Chad se para y se dirige hacia la puerta. Justo antes de abrirla, frena
+        y se da vuelta.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[7].text
+      value: "\xBFSabes que? Te voy a contar una historia. \xBFQueres saber porque
+        soy el general encargado de defender la ciudad?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[8].text
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[9].text
+      value: "Yo cuando era chico ten\xEDa una familia espectacular. Mi padre, mi
+        madre y mi hermano. Hoy, no tengo a nadie. Mis padres eran exploradores,
+        amantes del viejo mundo. Siempre hac\xEDan expediciones en b\xFAsqueda de
+        artefactos y los tra\xEDan a mi casa."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[4].dialogues.Array.data[0].text
+      value: "En b\xFAsqueda de respuestas, Chad se va a donde mataron a su familia.
+        No sabe que busca pero necesita algo, un resto de b\xE1rbaro, alguna pieza
+        que demuestre que est\xE1 del lado correcto de la historia."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[4].dialogues.Array.data[1].text
+      value: "Despu\xE9s de horas de nada, ve un brillo en la arena. Chad se aproxima,
+        y pesca del piso un medall\xF3n. Siente un escalofr\xEDo, tiene un s\xEDmbolo
+        que reconoce. Da vuelta la medalla, y lee para afuera."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[4].dialogues.Array.data[2].text
+      value: "\u201CPrivado Newells\u201D. No puede ser\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[4].dialogues.Array.data[3].text
+      value: "Mortificado, Chad vuelve hacia Chudistan\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[4].dialogues.Array.data[4].text
+      value: "Tomado por sorpresa y angustia, Chad se va caminando, fingiendo que
+        no vi\xF3 nada."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[4].dialogues.Array.data[5].text
+      value: "Tomado por sorpresa y angustia, Chad se va caminando, fingiendo que
+        no vi\xF3 nada."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[0].text
+      value: Furioso, Chad entra al cuartel de guerra donde se encuentra con Newells.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[1].text
+      value: "Newells, \xBFque carajo es esto?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[2].text
+      value: "Newells se da vuelta, ve el medall\xF3n y su cara seria r\xE1pidamente
+        se transforma en una de horror."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[3].text
+      value: "\xBFDe donde sacaste eso?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[4].text
+      value: "Lo encontr\xE9 en Mak Tam Bu. Todos me dijeron que fueron los bandidos
+        y todos me dijeron que fueron solos."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[5].text
+      value: "\xBFPOR QU\xC9 ENCONTR\xC9 ESTO AH\xCD?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[6].text
+      value: Chad saca su pistola y apunta hacia Newells.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[7].text
+      value: DECIME YA.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[8].text
+      value: "Para, para, para. No me mates. Te digo todo. Nos mand\xF3 Jack a frenarlos,
+        que no descubran la verdad. Fueron a Mak Tam Bu, no llegamos a tiempo. Los
+        tuvimos que matar, no hab\xEDa opci\xF3n. Sab\xEDan demasiado, tenes que
+        cree-"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[9].text
+      value: "Para, para, pUn ruido fuerte y singular call\xE1 el cuartel. Newells
+        est\xE1 muerto. Con l\xE1grimas cayendo como cataratas, Chad se escapa de
+        la ciudad."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[0].text
+      value: "Despu\xE9s de caminar por una eternidad, Chad se encuentra cara a cara
+        con un grupo de personas desconocidas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[1].text
+      value: "Ey, \xBFque haces ac\xE1?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[2].text
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[3].text
+      value: "Si tenes hambre no te puedo ayudar tristemente, a\xFAn no encontramos
+        suficiente comida para nosotros. Si tan solo los de la ciudad nos ayudar\xEDan
+        un poco ser\xEDa distinto esto\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[4].text
+      value: "L\xE1stima."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[5].text
+      value: "\xBFL\xE1stima? M\xE1s que l\xE1stima, es cruel. Mis amigos el otro
+        d\xEDa intentaron ir hasta la entrada y nunca m\xE1s volvieron. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[6].text
+      value: "Por generaciones mi familia tuvo que vivir en estas condiciones indignantes
+        y estos bur\xF3cratas tienen torres m\xE1s altas que sus propias paredes."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[7].text
+      value: "\xBFConoces a Stacy?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[8].text
+      value: "Si, \xA1estaba entre ellos! \xBFEst\xE1 viva?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[9].text
+      value: 'La tienen encarcelada ellos. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[10].text
+      value: "Con eso, Newells se retira\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[10].text
+      value: "Se tomaban el tiempo de contarme sobre sus aventuras, sus teor\xEDas
+        de c\xF3mo era vivir en tiempos pasados, y me prometieron que alg\xFAn d\xEDa
+        iba a ir con ellos a explorar. Naturalmente, a mi hermano mayor tambi\xE9n
+        le dijeron lo mismo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[11].text
+      value: "En el cumplea\xF1os de 13 de mi hermano, decidieron que era lo suficientemente
+        grande para acompa\xF1arlos, y fueron a unas ruinas cercanas llamadas Mak
+        Tam Bu."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[12].text
+      value: "Los ojos de Chad se enrojecen y se le escapa una l\xE1grima."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[13].text
+      value: "Ese dia, tu gente los embosc\xF3. Los capturaron, los torturaron y
+        los mataron. \xBFPara qu\xE9? \xBFPara entrar a esta ciudad y adue\xF1arse
+        de ella? Mi hermano ten\xEDa 13 a\xF1os, y no le tuvieron ni una gota de
+        piedad."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[14].text
+      value: "Un silencio inc\xF3modo ocupa el cuarto por unos minutos. Chad se levanta
+        de nuevo para irse, pero es interrumpido antes de que pueda abrir la puerta."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[15].text
+      value: "Me llamo Stacy. No te voy a decir nada acerca de mi gente, pero lo
+        que s\xED te puedo asegurar es que nosotros no somos b\xE1rbaros como vos
+        decis. Nosotros nunca har\xEDamos lo que le hicieron a tu familia."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[16].text
+      value: "\xBFY porque te deber\xEDa creer?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[17].text
+      value: "Nosotros solamente tratamos de entrar a la ciudad porque no tenemos
+        que comer ni tomar, ustedes acumularon todos los recursos y se los guardan
+        para su propio beneficio. Estos b\xE1rbaros que vos decis no son m\xE1s que
+        hombres, mujeres y ni\xF1os."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[18].text
+      value: "Y con ese \xFAltimo comentario, Chad se retira\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[10].text
+      value: "Se tomaban el tiempo de contarme sobre sus aventuras, sus teor\xEDas
+        de c\xF3mo era vivir en tiempos pasados, y me prometieron que alg\xFAn d\xEDa
+        iba a ir con ellos a explorar. Naturalmente, a mi hermano mayor tambi\xE9n
+        le dijeron lo mismo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[11].text
+      value: "En el cumplea\xF1os de 13 de mi hermano, decidieron que era lo suficientemente
+        grande para acompa\xF1arlos, y fueron a unas ruinas cercanas llamadas Mak
+        Tam Bu."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[12].text
+      value: "Los ojos de Chad se enrojecen y se le escapa una l\xE1grima."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[13].text
+      value: "Ese dia, tu gente los embosc\xF3. Los capturaron, los torturaron y
+        los mataron. \xBFPara qu\xE9? \xBFPara entrar a esta ciudad y adue\xF1arse
+        de ella? Mi hermano ten\xEDa 13 a\xF1os, y no le tuvieron ni una gota de
+        piedad."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[14].text
+      value: "Un silencio inc\xF3modo ocupa el cuarto por unos minutos. Chad se levanta
+        de nuevo para irse, pero es interrumpido antes de que pueda abrir la puerta."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[15].text
+      value: "Me llamo Stacy. No te voy a decir nada acerca de mi gente, pero lo
+        que s\xED te puedo asegurar es que nosotros no somos b\xE1rbaros como vos
+        decis. Nosotros nunca har\xEDamos lo que le hicieron a tu familia."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[16].text
+      value: "\xBFY porque te deber\xEDa creer?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[17].text
+      value: "Nosotros solamente tratamos de entrar a la ciudad porque no tenemos
+        que comer ni tomar, ustedes acumularon todos los recursos y se los guardan
+        para su propio beneficio. Estos b\xE1rbaros que vos decis no son m\xE1s que
+        hombres, mujeres y ni\xF1os."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[18].text
+      value: "Y con ese \xFAltimo comentario, Chad se retira\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[10].text
+      value: "\xBFEllos?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[11].text
+      value: Los de la ciudad.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[12].text
+      value: "\xBFY por qu\xE9 sabes eso\u2026?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[13].text
+      value: "Porque vengo de ah\xED."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[14].text
+      value: "Los b\xE1rbaros lo rodean a Chad con una colecci\xF3n de cuchillos,
+        tuber\xEDa vieja y garrotes."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[15].text
+      value: Esos monstruos, te venden un cuento terrible. De que son inhumanos,
+        que nos quieren robar todo, de que no son humanos.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[16].text
+      value: "Pero ac\xE1 est\xE1s vos, hablando del hambre de tu familia, y ac\xE1
+        estoy yo, con la m\xEDa muerta a manos de Chudistan."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[17].text
+      value: "Ya no m\xE1s. Saben qu\xE9, si necesito ayuda. Vamos a terminar con
+        este ciclo de opresi\xF3n, violencia y censura. Voy a salvar a Stacy y derrocar
+        a mi primo, Jack."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[18].text
+      value: "Despu\xE9s de una serie de idas y vueltas, los b\xE1rbaros deciden
+        apoyar a Chad en su misi\xF3n\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[0].speaker
       value: 2
       objectReference: {fileID: 0}
@@ -1375,6 +1926,286 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
       propertyPath: allChapters.m_values.Array.data[0].dialogues.Array.data[5].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[0].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[1].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[2].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[3].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[4].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[5].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[6].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[7].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[8].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[9].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[0].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[1].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[2].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[3].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[4].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[5].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[6].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[7].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[8].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[9].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[0].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[1].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[2].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[4].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[5].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[6].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[8].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[4].dialogues.Array.data[0].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[4].dialogues.Array.data[1].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[4].dialogues.Array.data[2].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[4].dialogues.Array.data[4].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[4].dialogues.Array.data[5].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[0].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[1].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[2].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[3].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[4].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[6].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[7].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[8].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[5].dialogues.Array.data[9].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[0].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[1].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[2].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[3].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[5].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[6].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[8].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[9].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[1].dialogues.Array.data[10].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[10].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[12].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[13].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[14].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[15].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[16].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[17].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[2].dialogues.Array.data[18].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[12].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[14].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[15].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[17].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[3].dialogues.Array.data[18].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[10].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[11].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[12].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[13].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[14].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[15].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781818028171428744, guid: 3f869ddd8fb02084b8ef6556f2647b4d, type: 3}
+      propertyPath: allChapters.m_values.Array.data[6].dialogues.Array.data[18].speaker
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
