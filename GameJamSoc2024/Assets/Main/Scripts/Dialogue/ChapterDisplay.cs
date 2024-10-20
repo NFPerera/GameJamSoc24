@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Main.Scripts;
+using Main.Scripts.TowerDefenseGame._Managers;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -36,6 +39,11 @@ public class ChapterDisplay : MonoBehaviour
     void Awake()
     {
         dialogueQueue = new();
+    }
+
+    private void Start()
+    {
+        audio = GameManager.Instance.gameObject.GetComponent<AudioManager>();
     }
 
     public void OpenChapterUI()

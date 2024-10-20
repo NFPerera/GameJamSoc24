@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - NPC
   - Turret
+  - Bullet
   layers:
   - Default
   - TransparentFX
