@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -5,17 +6,28 @@ using UnityEngine;
 
 public class DialogueDisplay : MonoBehaviour
 {
-    Animation animator;
-    void OnEnable()
+    [SerializeField] private Animation animator;
+
+
+    private void OnEnable()
+    {
+        OpenDialogue();
+    }
+
+    private void OnDisable()
+    {
+        CloseDialogue();
+    }
+
+    public void OpenDialogue()
     {
         animator = GetComponent<Animation>();
         animator.Play("DialogueDisplayOnEnable");
     }
 
-    public void OnDisable_()
+    public void CloseDialogue()
     {
         animator.Play("DialogueDisplayOnDisable");
-        Debug.Log("This has been disabled");
     }
 
     public void Deactivate()

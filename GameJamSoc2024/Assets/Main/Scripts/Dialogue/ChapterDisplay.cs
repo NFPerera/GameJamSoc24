@@ -11,6 +11,7 @@ public class ChapterDisplay : MonoBehaviour
     public Image leftchar, rightchar;
     public TextMeshProUGUI textComponent;
     public GameObject dialogueUI;
+    public DialogueDisplay dialogueDisplay;
 
     [Header("Lighting")]
     public Color foregroundColor;
@@ -35,13 +36,17 @@ public class ChapterDisplay : MonoBehaviour
 
     public void OpenChapterUI()
     {
-        if (!dialogueUI.activeInHierarchy) dialogueUI.SetActive(true);
+        if (!dialogueUI.activeInHierarchy)
+        {
+            dialogueUI.SetActive(true);
+            dialogueDisplay.OpenDialogue();
+        }
     }
 
     public void CloseChapterUI()
     {
 
-        if (dialogueUI.activeInHierarchy) dialogueUI.GetComponent<DialogueDisplay>().OnDisable_();
+        if (dialogueUI.activeInHierarchy) dialogueDisplay.CloseDialogue();
     }
 
     public void LoadChapter(Chapter chapter)

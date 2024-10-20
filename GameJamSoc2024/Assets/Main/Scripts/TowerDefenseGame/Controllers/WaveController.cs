@@ -27,6 +27,7 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
         }
 
         [SerializeField] private Level[] levels;
+        [SerializeField] private List<string> dialogNames;
         private int m_levelId;
         private Level m_currLevel;
         private int m_nextWave;
@@ -52,7 +53,6 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
 
         private void Update()
         {
-            print(m_levelId+""+ m_isWaveActive);
             if(m_levelId > levels.Length)
                 return;
             
@@ -80,15 +80,16 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
         {
             if (m_levelId < levels.Length - 1)
             {
+                Debug.Log("final del nivel");
+                MasterManager.Instance.StartDialogue(dialogNames[m_levelId]);
                 m_levelId++;
                 m_currLevel = levels[m_levelId];
                 m_nextWave = 0;
                 OnLevelFinished?.Invoke();
-                
             }
             else
             {
-                
+                Debug.Log("final todoss los nivel");
                 //Final cut and load scene
             }
                 
