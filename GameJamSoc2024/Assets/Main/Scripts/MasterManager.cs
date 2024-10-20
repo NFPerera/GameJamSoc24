@@ -26,6 +26,22 @@ namespace Main.Scripts
             DontDestroyOnLoad(this.gameObject);
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                StartDialogue("CapturaDeStacy");
+            }
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                StartDialogue("InterrogacionDeStacy");
+            }
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                StartDialogue("PaseoPorTerrenoCalcinado");
+            }
+        }
+
         public void StartDialogue(string p_id)
         {
             chapterController.StartChapter(p_id);

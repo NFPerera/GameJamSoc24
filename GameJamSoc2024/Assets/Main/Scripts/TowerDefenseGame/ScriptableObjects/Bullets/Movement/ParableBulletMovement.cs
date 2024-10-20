@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Security.Cryptography;
 using Main.Scripts.TowerDefenseGame.Models;
 using UnityEngine;
 
@@ -12,12 +13,10 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Movement
         [SerializeField] private float timer;
         private class MovementData
         {
-            public Vector3 StartPos;
             public Transform TargetTransform;
+            public Vector3 TargetInitPos;
             public Vector3 InitVel;
-
             public float currentTime;
-
             public Rigidbody rb;
         }
 
@@ -26,9 +25,9 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Movement
         public override void Initialize(BulletModel p_model)
         {
             m_dictionary[p_model] = new MovementData();
-            m_dictionary[p_model].StartPos = p_model.transform.position;
             
             m_dictionary[p_model].TargetTransform = p_model.GetTargetTransform();
+            m_dictionary[p_model].TargetInitPos = p_model.GetTargetTransform().position;
 
             m_dictionary[p_model].currentTime= timer;
 
@@ -50,15 +49,19 @@ namespace Main.Scripts.TowerDefenseGame.ScriptableObjects.Bullets.Movement
                 if (m_dictionary[p_model].rb.velocity.y > 0){
                     m_dictionary[p_model].rb.velocity = Vector3.zero;
                 }
-                Vector3 l_targetPosition = m_dictionary[p_model].TargetTransform.position;
+
+                Vector3 l_targetPosition = m_dictionary[p_model].TargetInitPos;
+                
+                if(m_dictionary[p_model].TargetTransform != null)
+                    l_targetPosition = m_dictionary[p_model].TargetTransform.position;
+                
                 p_model.transform.position  = new Vector3(l_targetPosition.x, p_model.transform.position.y,l_targetPosition.z);
             }
-
-            
         }
 
         public override void OnReachTarget(BulletModel p_model)
         {
+            m_dictionary.Remove(p_model);
         }
 
     }
