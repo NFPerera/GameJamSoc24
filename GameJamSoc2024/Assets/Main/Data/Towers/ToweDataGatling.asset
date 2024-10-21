@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ToweDataGatling
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Gatling
-  <Cost>k__BackingField: 100
+  <Cost>k__BackingField: 50
   <Damage>k__BackingField: 10
   <Range>k__BackingField: 10
   <TowerAttack>k__BackingField: {fileID: 11400000, guid: f0a9f4b5a449b8f45a488dc66625b9a3, type: 2}
   <BulletPrefabs>k__BackingField: {fileID: 6971945648323598557, guid: b7e62b4461ead3343aae7128c2858bee, type: 3}
-  Speed: 2
+  Speed: 3
   description: 

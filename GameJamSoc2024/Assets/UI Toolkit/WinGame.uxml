@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/UnityThemes/HUDStyle.uss?fileID=7433441132597879392&amp;guid=fd3029f8c09f949c1ba6353107fc5b20&amp;type=3#HUDStyle" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; opacity: 1; background-color: rgba(61, 52, 36, 0.59);">
+        <ui:GroupBox style="padding-top: 5px; margin-top: 200px; margin-left: 150px;">
+            <ui:Label tabindex="-1" text="Oh my... king" parse-escape-sequences="true" display-tooltip-when-elided="true" class="header" style="width: 1160px;" />
+            <ui:Label tabindex="-1" text="Derrocaste al malvado rey jack y &#10;rompiste el ciclo de abuso y&#10;violencia del reino de chudistan" parse-escape-sequences="true" display-tooltip-when-elided="true" class="smallText" style="width: 2568px; left: auto; top: auto; right: auto; -unity-text-align: upper-left; align-items: flex-start; height: 308px;" />
+            <ui:Button text="Back to menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitToMainMenuButton" class="button" style="width: 519px; -unity-text-align: upper-center; left: auto;" />
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>

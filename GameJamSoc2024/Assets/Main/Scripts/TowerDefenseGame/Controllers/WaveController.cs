@@ -90,7 +90,7 @@ namespace Main.Scripts.TowerDefenseGame.Controllers
             }
             else
             {
-                SceneManager.LoadScene("FPS");
+                SceneManager.LoadScene("LevelDesignFPS");
                 //Final cut and load scene
             }
                 

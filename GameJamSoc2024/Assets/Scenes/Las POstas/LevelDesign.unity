@@ -7772,8 +7772,44 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: dialogNames.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: dialogNames.Array.data[0]
+      value: TutoTD
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: dialogNames.Array.data[1]
+      value: PostPrimeraInvasion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: dialogNames.Array.data[2]
+      value: CapturaDeStacy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: dialogNames.Array.data[3]
+      value: InterrogacionDeStacy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: dialogNames.Array.data[4]
+      value: PaseoPorTerrenoCalcinado
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: dialogNames.Array.data[5]
+      value: VisitaFunebre
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: dialogNames.Array.data[6]
+      value: Confrontacion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
       propertyPath: dialogNames.Array.data[7]
-      value: VistaFunebre
+      value: RevolucionInminente
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: dialogNames.Array.data[8]
+      value: TutoFPS
       objectReference: {fileID: 0}
     - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
       propertyPath: levels.Array.data[5].Waves.Array.size
@@ -7859,6 +7895,14 @@ PrefabInstance:
       propertyPath: levels.Array.data[7].Waves.Array.data[2].enemy.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: levels.Array.data[0].Waves.Array.data[0].enemy.Array.data[0]
+      value: 
+      objectReference: {fileID: 3208172977964315661, guid: 6767563b2f17c8e49afc8ba596822fb1, type: 3}
+    - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
+      propertyPath: levels.Array.data[0].Waves.Array.data[2].enemy.Array.data[0]
+      value: 
+      objectReference: {fileID: 6544322089092843592, guid: 2c340cc9e842a504bb84d718d8adde8a, type: 3}
     - target: {fileID: 7870361246788659404, guid: 07f946d978bca244b9404c8816aa8cca, type: 3}
       propertyPath: levels.Array.data[5].Waves.Array.data[0].enemy.Array.data[0]
       value: 
